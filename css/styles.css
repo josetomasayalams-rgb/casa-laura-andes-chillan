@@ -110,11 +110,21 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (hover: hover) and (pointer: fine) {
-  .bg-home, .bg-checkin, .bg-checkout, .bg-clima, .bg-tickets,
-  .bg-instrucciones, .bg-restaurantes, .bg-actividades {
-    background-attachment: fixed;
-  }
+/* Fixed-viewport photo layer for the 7 inner pages (home uses the JS rotator).
+   A position:fixed ::before — NOT background-attachment:fixed on <body> — so
+   cover sizes to the VIEWPORT, not the full document height. On touch (where
+   fixed-attachment was gated off) the body bg used to scroll with content and
+   stretch the photo across the whole long page, washing it out under the fade
+   → "sin fondo". Now every scroll position shows a crisp viewport-sized photo.
+   Mirrors the home rotator's .bg-rotator__layer (position:fixed, z-index:-1). */
+.bg-checkin::before, .bg-checkout::before, .bg-clima::before, .bg-tickets::before,
+.bg-instrucciones::before, .bg-restaurantes::before, .bg-actividades::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* BACKGROUND ROTATOR LAYERS */
@@ -155,7 +165,7 @@ body {
 }
 
 /* CHECK-IN — camino nieve */
-.bg-checkin {
+.bg-checkin::before {
   background-position: center 40%;
   background-image:
     linear-gradient(180deg, rgba(243,247,250,0.15) 0%, rgba(243,247,250,0.45) 50%, rgba(243,247,250,0.8) 100%),
@@ -166,7 +176,7 @@ body {
 }
 
 /* CHECK-OUT — bosque atardecer */
-.bg-checkout {
+.bg-checkout::before {
   background-position: center 35%;
   background-image:
     linear-gradient(180deg, rgba(243,247,250,0.15) 0%, rgba(243,247,250,0.45) 50%, rgba(243,247,250,0.8) 100%),
@@ -177,7 +187,7 @@ body {
 }
 
 /* CLIMA — nieve panoramica */
-.bg-clima {
+.bg-clima::before {
   background-position: center 50%;
   background-image:
     linear-gradient(180deg, rgba(243,247,250,0.15) 0%, rgba(243,247,250,0.45) 50%, rgba(243,247,250,0.8) 100%),
@@ -188,7 +198,7 @@ body {
 }
 
 /* TICKETS — pistas nevados */
-.bg-tickets {
+.bg-tickets::before {
   background-position: center 45%;
   background-image:
     linear-gradient(180deg, rgba(243,247,250,0.15) 0%, rgba(243,247,250,0.45) 50%, rgba(243,247,250,0.8) 100%),
@@ -199,7 +209,7 @@ body {
 }
 
 /* INSTRUCCIONES — termas nieve */
-.bg-instrucciones {
+.bg-instrucciones::before {
   background-position: center 45%;
   background-image:
     linear-gradient(180deg, rgba(243,247,250,0.15) 0%, rgba(243,247,250,0.45) 50%, rgba(243,247,250,0.8) 100%),
@@ -210,7 +220,7 @@ body {
 }
 
 /* RESTAURANTES — atardecer bosque */
-.bg-restaurantes {
+.bg-restaurantes::before {
   background-position: center 50%;
   background-image:
     linear-gradient(180deg, rgba(243,247,250,0.15) 0%, rgba(243,247,250,0.45) 50%, rgba(243,247,250,0.8) 100%),
@@ -221,7 +231,7 @@ body {
 }
 
 /* ACTIVIDADES — montana otono */
-.bg-actividades {
+.bg-actividades::before {
   background-position: center 50%;
   background-image:
     linear-gradient(180deg, rgba(243,247,250,0.15) 0%, rgba(243,247,250,0.45) 50%, rgba(243,247,250,0.8) 100%),
