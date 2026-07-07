@@ -253,7 +253,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 28px 24px;
-  padding-bottom: 120px; /* clears the floating quick-contact toolbar */
 }
 
 /* Typography — Inter, one family; wordmark gets confident scale + display tracking */
@@ -476,10 +475,10 @@ a.card:active { transform: scale(0.985); transition: transform var(--motion-snap
 .is-winter .season-summer { display: none; }
 .is-summer .season-winter { display: none; }
 
-/* Quick Contact — always-visible floating toolbar. Frosted so content scrolling
-   beneath reads as an intentional overlay (iOS bottom-bar pattern), not a collision. */
+/* Quick Contact — in-flow closing CTA at the bottom of the hub. Was a sticky
+   floating bar; ponytail: moved into normal flow so it stops covering cards on scroll. */
 .quick-contact {
-  position: sticky; bottom: 16px; z-index: var(--layer-float);
+  position: relative;
   display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;
   padding: 12px;
   border-radius: var(--radius-lg);
@@ -772,7 +771,7 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
   margin: 2px 0 0;
 }
 .forecast-day__snow-val {
-  font-size: 2.4rem;
+  font-size: clamp(1.5rem, 8.5vw, 2.4rem); /* ponytail: base ≤4 chars (0/5/10 cm); .snow-m/.snow-s shrink longer strings */
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -780,6 +779,8 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+.forecast-day__snow-val.snow-m { font-size: clamp(1.3rem, 7vw, 2rem); }   /* 5 chars: 0.3 cm, 0.5 in */
+.forecast-day__snow-val.snow-s { font-size: clamp(1.1rem, 6vw, 1.7rem); } /* 6 chars: 12.5 cm, 10.5 in */
 .forecast-day__precip {
   display: inline-flex;
   align-items: center;
@@ -982,7 +983,6 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
   pointer-events: none;
   z-index: 0;
 }
-.bg-home .quick-contact { position: sticky; }
 .bg-home .quick-contact > * { position: relative; z-index: 1; }
 @media (hover: hover) {
   .bg-home a.card:hover {
@@ -1645,7 +1645,7 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
   padding: 10px 14px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius-pill);
+  border-radius: 28px; /* ponytail: was 999px pill — rounded-rect lets wrapped chips clear the corners */
   align-items: center;
   position: sticky;
   top: 8px;
@@ -1684,14 +1684,13 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
   border-color: var(--night);
 }
 .rest-filter__count {
-  margin-left: auto;
+  flex: 1 0 100%; /* ponytail: own row below the chips — never shares a line with them */
+  text-align: right;
+  margin: 4px 0 0;
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--rock);
   font-variant-numeric: tabular-nums;
-  padding: 4px 10px;
-  background: var(--tint-ice);
-  border-radius: var(--radius-pill);
   white-space: nowrap;
 }
 
@@ -2167,6 +2166,8 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
   position: relative;
   z-index: 1;
 }
+/* ponytail: override the shared overflow:hidden above — chips must not be clipped at the tray corners */
+.rest-filter-bar { overflow: visible; }
 .ficha-card.ficha-card--hero {
   background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.52));
   box-shadow: 0 18px 50px rgba(11,37,56,0.14), inset 0 1px 0 rgba(255,255,255,0.78);

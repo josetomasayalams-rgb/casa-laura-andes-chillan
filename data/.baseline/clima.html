@@ -706,6 +706,11 @@
    var pressureLine = pressure > 0 ? '<div class="forecast-day__metric" title="' + t('clima.fc.pressure') + '"><span class="forecast-day__metric-icon">🌡</span><span class="forecast-day__metric-val num">' + fmtPressure(pressure) + '</span></div>' : '';
    var cloudLine = cloud > 0 ? '<div class="forecast-day__metric forecast-day__metric--cloud" title="' + t('clima.fc.cloud') + '"><span class="forecast-day__metric-icon">☁</span><span class="forecast-day__metric-val num">' + fmtPercent(cloud) + '</span></div>' : '';
 
+   var snowText = fmtSnow(snow);
+   var snowLen = snowText.replace(/\s+/g, '').length;
+   /* ponytail: snow font scales by rendered-string length so '12.5 cm' can't overflow the 3-col card */
+   var snowSize = snowLen <= 4 ? '' : snowLen === 5 ? ' snow-m' : ' snow-s';
+
    day.innerHTML =
     '<div class="forecast-day__top">' +
      '<div class="forecast-day__date">' +
@@ -719,7 +724,7 @@
      '<span class="forecast-day__phrase">' + t(wmoKey(code)) + '</span>' +
     '</div>' +
     '<div class="forecast-day__snow">' +
-     '<span class="forecast-day__snow-val num">' + fmtSnow(snow) + '</span>' +
+     '<span class="forecast-day__snow-val num' + snowSize + '">' + snowText + '</span>' +
     '</div>' +
     precipLine +
     '<div class="forecast-day__metrics">' +
