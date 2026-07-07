@@ -4,3 +4,9 @@
 # Editor / OS cruft
 *.swp
 Thumbs.db
+
+# Agent runtime (ruflo / agentdb / ruvector) — written into cwd by hooks, not part of the landing
+.claude-flow/
+agentdb.rvf
+agentdb.rvf.lock
+ruvector.db
