@@ -386,6 +386,31 @@ a.card:active { transform: scale(0.985); transition: transform var(--motion-snap
   align-items: center;
   gap: 16px;
 }
+
+/* ── Check-in card: main action + subtle WhatsApp accent ── */
+/* ponytail: WA href is a static placeholder (matches the hardcoded tel:133 pattern);
+   host swaps '#' for the real wa.me URL when the number is confirmed — no build wiring for one link */
+.checkin-card { flex-direction: row; align-items: center; gap: 0; }
+.checkin-card__main { flex: 1 1 auto; text-decoration: none; color: inherit; }
+.checkin-card__wa {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  align-self: stretch;
+  margin-left: 12px;
+  color: var(--forest);
+  text-decoration: none;
+  border-left: 1px solid rgba(90, 98, 108, 0.14);
+  transition: color var(--motion-snap), background var(--motion-snap);
+}
+.checkin-card__wa:hover,
+.checkin-card__wa:focus-visible {
+  background: rgba(31, 77, 58, 0.08);
+  outline: none;
+}
+.checkin-card__wa:focus-visible { box-shadow: inset 0 0 0 2px var(--forest); }
+.checkin-card__wa svg { display: block; }
 .icon-box {
   width: 48px;
   height: 48px;
