@@ -1,22 +1,18 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'gh-theme-v2';
+  // Storage bumped so prior dark selections don't survive this deploy.
+  var STORAGE_KEY = 'gh-theme-v3';
   var root = document.documentElement;
   var control = null;
   var userSelected = false;
 
   function readTheme() {
-    var saved = '';
     try {
+      // Drop legacy keys; this run is light-by-default.
       localStorage.removeItem('gh-theme');
-      saved = localStorage.getItem(STORAGE_KEY) || '';
+      localStorage.removeItem('gh-theme-v2');
     } catch (e) {}
-    if (saved === 'light' || saved === 'dark') {
-      userSelected = true;
-      return saved;
-    }
-    userSelected = false;
     return 'light';
   }
 
