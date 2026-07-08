@@ -5,14 +5,16 @@
   var STORAGE_KEY = 'gh-theme-v3';
   var root = document.documentElement;
   var control = null;
-  var userSelected = false;
 
   function readTheme() {
     try {
-      // Drop legacy keys; this run is light-by-default.
+      // Drop legacy keys; clean slate.
       localStorage.removeItem('gh-theme');
       localStorage.removeItem('gh-theme-v2');
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'light' || saved === 'dark') return saved;
     } catch (e) {}
+    // Default: light. This is also the brand default and the home page rule.
     return 'light';
   }
 
@@ -29,7 +31,6 @@
 
   function setTheme(theme) {
     var next = theme === 'dark' ? 'dark' : 'light';
-    userSelected = true;
     try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
     applyTheme(next);
   }
@@ -90,6 +91,7 @@
     });
   }
 
+  // Apply once on load — readTheme() now honors the user's saved choice.
   applyTheme(readTheme());
 
   if (document.readyState === 'loading') {
