@@ -45,10 +45,12 @@ landingpage/
 ├── data/
 │   ├── host-data.json            ← live data (the "truth" the script reads)
 │   ├── host-data.sample.json     ← fake data for dry-runs
-│   └── .baseline/                ← frozen snapshot of canonical files (12 files)
+│   └── .baseline/                ← frozen snapshot of canonical files (14 files)
 │       ├── index.html
 │       ├── check-in.html
 │       ├── check-out.html
+│       ├── botiquin.html
+│       ├── buggy.html
 │       ├── actividades.html
 │       ├── clima.html
 │       ├── tickets.html
@@ -71,7 +73,7 @@ landingpage/
     └── verify-gates.sh          ← runs all 3 no-regression gates
 ```
 
-## Canonical files (12)
+## Canonical files (14)
 
 `apply-host-data.mjs` regenerates these from `data/host-data.json`:
 
@@ -80,6 +82,8 @@ landingpage/
 | `index.html` | Home / hub |
 | `check-in.html` | Arrival instructions |
 | `check-out.html` | Departure instructions |
+| `botiquin.html` | First-aid kit / emergency supply |
+| `buggy.html` | Ski buggy coordination |
 | `actividades.html` | Activities (filtros: Todos/Nieve/Termas/Senderos/Bici/Aventura/Servicios) |
 | `clima.html` | Weather widget |
 | `tickets.html` | Ski tickets |
@@ -123,13 +127,14 @@ The script will:
 
 ## No-regression gates
 
-`bash tests/verify-gates.sh` runs three checks:
+`bash tests/verify-gates.sh` runs four checks:
 
-- **Gate 1 (snapshot drift):** All 12 canonical files must match `.baseline/`.
+- **Gate 1 (snapshot drift):** All 14 canonical files must match `.baseline/`.
 - **Gate 2 (prototype leak):** No forbidden names (Tienda Café, Stripe, etc.) in the HTML or lang.js.
 - **Gate 3 (real http hrefs):** All real URLs are in the exemption list (Google Maps, Instagram, etc.).
+- **Bonus (script idempotency):** running `apply-host-data.mjs` twice with the same input produces identical SHA-256 for the touched files.
 
-All three must return 0 hits.
+All four must return 0 hits.
 
 ## Design philosophy
 

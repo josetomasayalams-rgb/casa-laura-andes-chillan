@@ -6,13 +6,14 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo "=== Gate 1: snapshot drift (12 canonical files) ==="
+echo "=== Gate 1: snapshot drift (14 canonical files) ==="
 failed=0
 # Map relative-to-root path → relative-to-baseline path.
 # Baseline uses a flat layout (js/lang.js, css-styles.css) while the
 # landingpage folder uses subdirs (js/lang.js, css/styles.css).
 for f in css/styles.css:css-styles.css js/lang.js:js/lang.js js/restaurants.js:js/restaurants.js \
          index.html:index.html check-in.html:check-in.html check-out.html:check-out.html \
+         botiquin.html:botiquin.html buggy.html:buggy.html \
          restaurantes.html:restaurantes.html actividades.html:actividades.html \
          clima.html:clima.html tickets.html:tickets.html instrucciones.html:instrucciones.html \
          staff/README.md:staff/README.md; do

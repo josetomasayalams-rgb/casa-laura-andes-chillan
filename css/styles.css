@@ -11,6 +11,8 @@
   --rock: #5A626C; /* darker, blue-tinted → AA contrast headroom on snow (~5.8:1) */
   --rock-light: #E5E7EB;
   --copper: #C46A3A;
+  --alert: #C84D4D;
+  --alert-strong: #8F2A2A;
 
   /* UI Tokens — card-bg bumped .88→.92 so cards stay readable over photo
      backgrounds (WCAG contrast headroom against varying photo luminance). */
@@ -416,6 +418,43 @@ a.card:active { transform: scale(0.985); transition: transform var(--motion-snap
 .checkin-card__wa:hover svg { transform: scale(1.08); }
 .checkin-card__wa:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; border-radius: var(--radius-md); }
 .checkin-card__wa svg { display: block; transition: transform var(--motion-snap); }
+.wa-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--forest);
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform var(--motion-snap), color var(--motion-snap), opacity var(--motion-snap);
+  opacity: 0.9;
+}
+.wa-icon-link svg { display: block; width: 24px; height: 24px; transition: transform var(--motion-snap); }
+.wa-icon-link:hover { transform: scale(1.08); opacity: 1; }
+.wa-icon-link:hover svg { transform: scale(1.05); }
+.wa-icon-link:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
+.buggy-contact-card {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 14px;
+}
+.buggy-contact-card__content {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.buggy-contact-card__text {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  max-width: 320px;
+}
+.buggy-contact-card__text h3 { margin: 0; letter-spacing: -0.02em; }
+.buggy-contact-card__text p { margin: 0; color: var(--rock); line-height: 1.5; }
+.buggy-contact-card__wa { margin-top: 2px; }
 .icon-box {
   width: 48px;
   height: 48px;
@@ -432,6 +471,7 @@ a.card:active { transform: scale(0.985); transition: transform var(--motion-snap
 .bg-summer { background: linear-gradient(135deg, var(--forest), #2E7D5A); }
 .bg-warm { background: linear-gradient(135deg, var(--wood), var(--copper)); }
 .bg-copper { background: linear-gradient(135deg, var(--copper), var(--copper-strong)); }
+.bg-alert { background: linear-gradient(135deg, var(--alert), var(--alert-strong)); }
 .card:hover .icon-box { transform: translateY(-2px) scale(1.05); }
 
 /* Metric — big number + unit row inside a card. Unifies the hero-data size
@@ -455,6 +495,7 @@ a.card:active { transform: scale(0.985); transition: transform var(--motion-snap
 .tag-winter { background: rgba(221,234,243,0.6); color: var(--deep-blue); }
 .tag-summer { background: rgba(31,77,58,0.1); color: var(--forest); }
 .tag-alert { background: rgba(196,106,58,0.15); color: #8F3E17; }
+.tag-danger { background: rgba(200,77,77,0.14); color: var(--alert-strong); }
 
 /* Grid for sub-items */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -2242,6 +2283,11 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
   background: linear-gradient(135deg, rgba(240,248,245,0.78), rgba(255,255,255,0.52));
   border-color: rgba(31,77,58,0.35);
 }
+.card.card--tint-alert {
+  background: linear-gradient(135deg, rgba(255,241,241,0.84), rgba(255,255,255,0.56));
+  border-color: rgba(200,77,77,0.38);
+}
+.btn-alert { background: var(--alert); color: #fff; }
 .forecast-day--today {
   background: linear-gradient(135deg, rgba(221,234,243,0.85), rgba(255,255,255,0.58));
 }
