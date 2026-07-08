@@ -22,7 +22,7 @@
       'nav.actividades.t': 'Actividades', 'nav.actividades.s': 'Qué hacer',
       'nav.clima.t': 'Clima y nieve',     'nav.clima.s': 'Pronóstico',
       'nav.tickets.t': 'Tickets de ski',  'nav.tickets.s': 'Centro de ski',
-      'nav.info.t': 'Manual del depto',   'nav.info.s': 'Wi-Fi, calefacción, normas',
+      'nav.info.t': 'Manual',   'nav.info.s': 'Wi-Fi, calefacción, normas',
 
       'checkin.time.tag': 'Horario',
       'checkin.location.tag': 'Ubicación',
@@ -1620,7 +1620,7 @@
       'nav.actividades.t': 'Atividades',  'nav.actividades.s': 'O que fazer',
       'nav.clima.t': 'Clima e neve',       'nav.clima.s': 'Previsão',
       'nav.tickets.t': 'Tickets de ski',   'nav.tickets.s': 'Centro de ski',
-      'nav.info.t': 'Manual do apê',       'nav.info.s': 'Wi-Fi, aquecimento, regras',
+      'nav.info.t': 'Manual',       'nav.info.s': 'Wi-Fi, aquecimento, regras',
 
       'checkin.time.tag': 'Horário',
       'checkin.location.tag': 'Localização',
@@ -3191,7 +3191,7 @@
       'nav.actividades.t': 'Activities',   'nav.actividades.s': 'What to do',
       'nav.clima.t': 'Weather & snow',     'nav.clima.s': 'Forecast',
       'nav.tickets.t': 'Ski tickets',      'nav.tickets.s': 'Ski resort',
-      'nav.info.t': 'Apartment manual',    'nav.info.s': 'Wi-Fi, heating, rules',
+      'nav.info.t': 'Manual',    'nav.info.s': 'Wi-Fi, heating, rules',
 
       'checkin.time.tag': 'Schedule',
       'checkin.location.tag': 'Location',

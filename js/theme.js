@@ -74,7 +74,11 @@
       }
       stack.appendChild(control);
     } else {
-      lang.insertAdjacentElement('afterend', control);
+      var inlineStack = document.createElement('div');
+      inlineStack.className = 'prefs-stack prefs-stack--inline';
+      top.replaceChild(inlineStack, lang);
+      inlineStack.appendChild(lang);
+      inlineStack.appendChild(control);
     }
 
     if (window.GH_I18N && typeof window.GH_I18N.apply === 'function' && typeof window.GH_I18N.getLang === 'function') {

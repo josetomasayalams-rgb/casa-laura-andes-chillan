@@ -567,7 +567,6 @@ const filterBar = `      <div id="rest-filter-bar" class="rest-filter-bar">
       </div>
       <script type="application/json" id="restaurants-data">${safeJson}</script>`;
 regenListings('restaurantes.html', `    <h2 class="section-title" data-i18n="rest.title">Comida y provisiones en Las Trancas</h2>
-    <p class="mb-4" data-i18n="rest.intro">Una guía curada para que elijas rápido: dónde comer, qué probar, y dónde abastecerte.</p>
 ${filterBar}
     <div class="rest-grid">
 ${restCards}

@@ -316,7 +316,11 @@
     "nav.clima.s": "Pronóstico",
     "nav.tickets.t": "Tickets de ski",
     "nav.tickets.s": "Centro de ski",
-    "nav.info.t": "Manual del depto",
+    "nav.info.t": {
+      "es": "Manual",
+      "pt": "Manual",
+      "en": "Manual"
+    },
     "nav.info.s": "Wi-Fi, calefacción, normas",
     "checkin.time.tag": "Horario",
     "checkin.location.tag": "Ubicación",
