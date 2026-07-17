@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 echo "=== Gate 1: JavaScript syntax ==="
-for file in js/*.js scripts/*.mjs tests/*.mjs; do
+for file in js/*.js scripts/*.mjs research/*.js research/*.mjs tests/*.mjs; do
   node --check "$file"
 done
 echo "  PASS"
@@ -18,6 +18,7 @@ node tests/verify-section-palettes.mjs
 
 echo "=== Gate 4: preregistered section-theme study ==="
 node tests/verify-section-study.mjs
+node tests/verify-session-recorder.mjs
 
 echo "=== Gate 5: public CordalSur contract ==="
 node tests/verify-public-contract.mjs

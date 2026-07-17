@@ -17,6 +17,7 @@ const REQUIRED_COLUMNS = [
   'visual_aesthetics',
   'task_success_rate',
   'error_count',
+  'duration_seconds',
   'reuse_intention',
   'included',
   'exclusion_reason'
@@ -284,6 +285,7 @@ function prepareRows(csvRows, config) {
       normalized.visual_aesthetics = numeric(row.visual_aesthetics, `${label} visual_aesthetics`, 1, 7);
       normalized.task_success_rate = numeric(row.task_success_rate, `${label} task_success_rate`, 0, 1);
       normalized.error_count = numeric(row.error_count, `${label} error_count`, 0);
+      normalized.duration_seconds = numeric(row.duration_seconds, `${label} duration_seconds`, 0);
       normalized.reuse_intention = numeric(row.reuse_intention, `${label} reuse_intention`, 1, 7);
       const taskCount = config.randomization.tasks.length;
       const completedTasks = normalized.task_success_rate * taskCount;
@@ -349,11 +351,17 @@ export function analyzeStudyCsv(csvText, configText) {
     throw new Error('Both counterbalanced sequences need at least one complete participant');
   }
 
-  const metricNames = ['visual_aesthetics', 'task_success_rate', 'error_count', 'reuse_intention'];
+  const metricNames = [
+    'visual_aesthetics',
+    'task_success_rate',
+    'error_count',
+    'duration_seconds',
+    'reuse_intention'
+  ];
   const analyzed = Object.fromEntries(
     metricNames.map((metric) => [metric, adjustedCrossover(pairs, metric, config.alpha)])
   );
-  const secondaryNames = ['task_success_rate', 'error_count', 'reuse_intention'];
+  const secondaryNames = ['task_success_rate', 'error_count', 'duration_seconds', 'reuse_intention'];
   const adjustedSecondary = holmAdjust(secondaryNames.map((name) => analyzed[name]));
   secondaryNames.forEach((name, index) => {
     analyzed[name] = adjustedSecondary[index];

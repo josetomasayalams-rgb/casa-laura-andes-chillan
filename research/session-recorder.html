@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'self'">
+  <title>Registro de estudio A/B · CordalSur</title>
+  <link rel="stylesheet" href="session-recorder.css?v=1">
+</head>
+<body>
+  <header class="study-header">
+    <div class="brand-lockup">
+      <img src="../assets/brand/cordal-sur-symbol-reverse.svg" alt="" width="42" height="42">
+      <div>
+        <span class="eyebrow">CordalSur Research</span>
+        <h1>Registro de estudio A/B</h1>
+      </div>
+    </div>
+    <div class="header-status">
+      <span class="privacy-badge">Datos locales</span>
+      <strong id="pair-progress">0 / 80 pares</strong>
+    </div>
+  </header>
+
+  <main class="study-shell">
+    <section class="panel setup-panel" aria-labelledby="setup-title">
+      <div class="panel-heading">
+        <div>
+          <span class="step-index">01</span>
+          <h2 id="setup-title">Sesión</h2>
+        </div>
+        <span class="condition-code" id="condition-code">Código —</span>
+      </div>
+
+      <div class="setup-grid">
+        <label class="field">
+          <span>Participante</span>
+          <select id="participant-select" autocomplete="off"></select>
+        </label>
+
+        <div class="field">
+          <span>Período</span>
+          <div class="segmented" role="group" aria-label="Período">
+            <button type="button" data-period="1" aria-pressed="true">1</button>
+            <button type="button" data-period="2" aria-pressed="false">2</button>
+          </div>
+        </div>
+
+        <label class="field">
+          <span>Dispositivo</span>
+          <select id="device-select">
+            <option value="mobile">Celular</option>
+            <option value="tablet">Tablet</option>
+            <option value="desktop">Escritorio</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Tema</span>
+          <select id="theme-select">
+            <option value="light">Claro</option>
+            <option value="dark">Oscuro</option>
+          </select>
+        </label>
+      </div>
+
+      <a class="launch-button" id="launch-condition" target="_blank" rel="noopener noreferrer">Abrir condición asignada</a>
+    </section>
+
+    <section class="panel tasks-panel" aria-labelledby="tasks-title">
+      <div class="panel-heading">
+        <div>
+          <span class="step-index">02</span>
+          <h2 id="tasks-title">Tareas</h2>
+        </div>
+        <strong id="total-duration">0:00</strong>
+      </div>
+      <div class="task-columns" aria-hidden="true">
+        <span>Tarea</span><span>Resultado</span><span>Errores</span><span>Segundos</span><span></span>
+      </div>
+      <div class="task-list" id="task-list"></div>
+    </section>
+
+    <section class="panel outcome-panel" aria-labelledby="outcome-title">
+      <div class="panel-heading">
+        <div>
+          <span class="step-index">03</span>
+          <h2 id="outcome-title">Resultados</h2>
+        </div>
+        <span id="period-state" class="state-badge">Borrador</span>
+      </div>
+
+      <div class="score-grid">
+        <label class="score-field">
+          <span>Estética visual <output id="aesthetics-output">4.0</output></span>
+          <input id="aesthetics-input" type="range" min="1" max="7" step="0.1" value="4">
+        </label>
+        <label class="score-field">
+          <span>Intención de reutilización <output id="reuse-output">4.0</output></span>
+          <input id="reuse-input" type="range" min="1" max="7" step="0.1" value="4">
+        </label>
+      </div>
+
+      <div class="inclusion-row">
+        <label class="field">
+          <span>Incluir en análisis</span>
+          <select id="included-select">
+            <option value="yes">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+        <label class="field exclusion-field" id="exclusion-field" hidden>
+          <span>Motivo de exclusión</span>
+          <input id="exclusion-input" type="text" maxlength="180" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="primary-actions">
+        <button type="button" class="button button-primary" id="save-period">Guardar período</button>
+        <button type="button" class="button button-quiet" id="reset-draft">Restablecer borrador</button>
+      </div>
+    </section>
+
+    <section class="panel cohort-panel" aria-labelledby="cohort-title">
+      <div class="panel-heading">
+        <div>
+          <span class="step-index">04</span>
+          <h2 id="cohort-title">Cohorte</h2>
+        </div>
+        <span id="saved-periods">0 períodos</span>
+      </div>
+
+      <div class="cohort-grid" id="cohort-grid" aria-label="Estado por participante"></div>
+
+      <div class="export-actions">
+        <button type="button" class="button button-primary" id="export-csv">Exportar CSV</button>
+        <button type="button" class="button button-quiet" id="copy-csv">Copiar CSV</button>
+        <button type="button" class="button button-quiet" id="export-backup">Respaldar JSON</button>
+        <label class="button button-quiet file-button">
+          Importar respaldo
+          <input id="import-backup" type="file" accept="application/json,.json">
+        </label>
+        <button type="button" class="button button-danger" id="clear-data">Borrar datos</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="status" role="status" aria-live="polite"></div>
+  <script type="module" src="session-recorder.js?v=1"></script>
+</body>
+</html>

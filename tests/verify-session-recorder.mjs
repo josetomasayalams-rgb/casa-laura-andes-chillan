@@ -1,0 +1,98 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { analyzeStudyCsv } from '../scripts/analyze-section-theme-study.mjs';
+import {
+  STUDY_COLUMNS,
+  buildStudyRows,
+  createBackup,
+  parseCsv,
+  readBackup,
+  toCsv,
+  validatePeriodRecord
+} from '../research/session-recorder-core.mjs';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const read = (relative) => fs.readFileSync(path.join(ROOT, relative), 'utf8');
+const html = read('research/session-recorder.html');
+const css = read('research/session-recorder.css');
+const browserScript = read('research/session-recorder.js');
+const configText = read('research/study-config.json');
+const config = JSON.parse(configText);
+const schedule = parseCsv(read('research/randomization.csv'));
+
+assert.match(html, /Content-Security-Policy/);
+assert.match(html, /session-recorder\.js\?v=1/);
+assert.match(html, /id="task-list"/);
+assert.match(html, /id="export-csv"/);
+assert.match(html, /id="import-backup"/);
+assert.match(css, /prefers-color-scheme: dark/);
+assert.match(browserScript, /fetch\('study-config\.json'\)/);
+assert.match(browserScript, /fetch\('randomization\.csv'\)/);
+assert.doesNotMatch(browserScript, /https?:\/\/|sendBeacon|WebSocket|XMLHttpRequest/);
+assert.ok(STUDY_COLUMNS.includes('duration_seconds'));
+
+const records = [];
+for (const assignment of schedule.slice(0, 4)) {
+  for (const period of [1, 2]) {
+    const tasks = assignment[`period_${period}_task_order`].split('|');
+    const condition = assignment[`period_${period}_condition`];
+    records.push({
+      participantId: assignment.participant_id,
+      period,
+      device: 'mobile',
+      theme: 'dark',
+      visualAesthetics: condition === 'section-adaptive' ? 5.2 : 4.4,
+      reuseIntention: condition === 'section-adaptive' ? 5.1 : 4.3,
+      included: 'yes',
+      exclusionReason: '',
+      taskResults: tasks.map((task, index) => ({
+        task,
+        success: index !== 8,
+        errors: index === 0 ? 1 : 0,
+        durationSeconds: condition === 'section-adaptive' ? 42 + index : 48 + index
+      }))
+    });
+  }
+}
+
+const rows = buildStudyRows(records, schedule, config.randomization.tasks);
+assert.equal(rows.length, 8);
+assert.ok(rows.every((row) => row.dataset_kind === 'observed'));
+assert.ok(rows.every((row) => row.task_success_rate === 0.888888889));
+assert.ok(rows.every((row) => row.duration_seconds > 0));
+const csv = toCsv(rows);
+assert.match(csv, /\r\n/);
+assert.deepEqual(parseCsv(csv), rows.map((row) => Object.fromEntries(
+  STUDY_COLUMNS.map((column) => [column, String(row[column])])
+)));
+
+const analysis = analyzeStudyCsv(csv, configText);
+assert.equal(analysis.sample.datasetKind, 'observed');
+assert.equal(analysis.sample.completeParticipants, 4);
+assert.equal(analysis.decision.verdict, 'insufficient-sample');
+assert.ok(analysis.metrics.duration_seconds);
+
+assert.deepEqual(readBackup(createBackup(records)), records);
+const invalid = structuredClone(records[0]);
+invalid.taskResults[0].success = null;
+invalid.taskResults[1].durationSeconds = 0;
+assert.ok(validatePeriodRecord(invalid, config.randomization.tasks).length >= 2);
+
+const mismatched = structuredClone(records);
+mismatched[1].theme = 'light';
+assert.throws(
+  () => buildStudyRows(mismatched, schedule, config.randomization.tasks),
+  /dispositivo y tema/
+);
+
+const excluded = structuredClone(records[0]);
+excluded.included = 'no';
+excluded.exclusionReason = 'documented technical failure';
+excluded.taskResults = [];
+const excludedRow = buildStudyRows([excluded], schedule, config.randomization.tasks)[0];
+assert.equal(excludedRow.duration_seconds, '');
+assert.equal(excludedRow.included, 'no');
+
+console.log('  PASS (local recorder, duration outcome, CSV analysis and privacy contract)');

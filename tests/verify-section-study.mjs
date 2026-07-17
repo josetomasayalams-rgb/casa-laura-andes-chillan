@@ -38,6 +38,8 @@ assert.match(result.protocol.configSha256, /^[a-f0-9]{64}$/);
 assert.equal(result.metrics.visual_aesthetics.estimate, 0.591667);
 assert.deepEqual(result.metrics.visual_aesthetics.confidenceInterval, [0.491676, 0.691657]);
 assert.equal(result.metrics.task_success_rate.holmAdjustedPValue, 0.020239);
+assert.equal(result.metrics.duration_seconds.estimate, -32.5);
+assert.deepEqual(result.metrics.duration_seconds.confidenceInterval, [-42.516304, -22.483696]);
 
 assert.equal(renderRandomization(config), randomizationText);
 const randomizationLines = randomizationText.trim().split('\n');
@@ -81,7 +83,7 @@ assert.equal(tooSmallResult.decision.verdict, 'insufficient-sample');
 
 const excludedRows = fixtureText.split('\n').map((line) => {
   if (!line.startsWith('synthetic,P001,uniform-section-adaptive,2,')) return line;
-  return 'synthetic,P001,uniform-section-adaptive,2,section-adaptive,mobile,dark,,,,,no,documented technical failure';
+  return 'synthetic,P001,uniform-section-adaptive,2,section-adaptive,mobile,dark,,,,,,no,documented technical failure';
 }).join('\n');
 const excludedResult = analyzeStudyCsv(excludedRows, configText);
 assert.equal(excludedResult.sample.completeParticipants, 11);
@@ -101,7 +103,7 @@ assert.throws(
   /visual_aesthetics/
 );
 assert.throws(
-  () => analyzeStudyCsv(fixtureText.replace('0.888888889,2,4.3', '0.8,2,4.3'), configText),
+  () => analyzeStudyCsv(fixtureText.replace('0.888888889,2,510,4.3', '0.8,2,510,4.3'), configText),
   /9 tasks/
 );
 

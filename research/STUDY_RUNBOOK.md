@@ -25,6 +25,12 @@ https://josetomasayalams-rgb.github.io/CordalSur/?condition=b
 
 La aplicación conserva el código al navegar entre páginas, pero no lo guarda en `localStorage` ni `sessionStorage`. Abre cada período desde su enlace asignado y comprueba que la URL siga mostrando el mismo código. No mezcles pestañas de condiciones distintas durante una sesión.
 
+Registra la sesión desde:
+
+<https://josetomasayalams-rgb.github.io/CordalSur/research/session-recorder.html>
+
+El registrador carga la asignación, abre la condición correcta, cronometra las nueve tareas y conserva borradores solo en el navegador del investigador. Exporta un respaldo JSON después de cada jornada y el CSV observado al cerrar la muestra. No ingreses nombres, correos, teléfonos ni texto identificable en el motivo de exclusión.
+
 ## Aplicación
 
 - Cada participante completa las mismas nueve tareas en ambas condiciones: Wi-Fi, check-in, restaurante, actividad, servicio cercano, clima, tickets, check-out y emergencia.
@@ -40,7 +46,7 @@ La aplicación conserva el código al navegar entre páginas, pero no lo guarda 
 Usa CSV UTF-8 con una fila por participante y condición. Las columnas exactas son:
 
 ```text
-dataset_kind,participant_id,sequence,period,condition,device,theme,visual_aesthetics,task_success_rate,error_count,reuse_intention,included,exclusion_reason
+dataset_kind,participant_id,sequence,period,condition,device,theme,visual_aesthetics,task_success_rate,error_count,duration_seconds,reuse_intention,included,exclusion_reason
 ```
 
 - `dataset_kind`: `observed` para datos reales o `synthetic` para ensayos del proceso.
@@ -48,6 +54,7 @@ dataset_kind,participant_id,sequence,period,condition,device,theme,visual_aesthe
 - `sequence`: una de las dos secuencias declaradas en la configuración.
 - `period`: `1` o `2`.
 - `condition`: `uniform` o `section-adaptive`.
+- `duration_seconds`: suma de los nueve cronómetros de tarea para ese período.
 - `included`: `yes` o `no`; toda exclusión necesita motivo.
 
 El fixture en `fixtures/section-theme-study.sample.csv` es sintético. Sirve solamente para comprobar el proceso y el analizador se niega a convertirlo en evidencia.

@@ -48,6 +48,11 @@
       "favorableDirection": "lower",
       "nonInferiorityUpperBound": 0.25
     },
+    "duration_seconds": {
+      "range": [0, null],
+      "favorableDirection": "lower",
+      "multiplicityCorrection": "Holm"
+    },
     "reuse_intention": {
       "range": [1, 7],
       "favorableDirection": "higher",
