@@ -18,7 +18,6 @@
   var modeGroup = document.getElementById('guide-mode');
   var routeFeatured = document.getElementById('guide-route-featured');
   var modeSummary = document.getElementById('guide-mode-summary');
-  var quality = document.getElementById('guide-quality');
   var mapCanvas = document.getElementById('guide-map-canvas');
   var mapFallback = document.getElementById('guide-map-fallback');
   var mapShell = document.getElementById('guide-map-shell');
@@ -158,25 +157,16 @@
   }
 
   function ratingHtml(place) {
-    var chunks = [];
-    if (place.googleRating) chunks.push('<span class="guide-source-rating"><b>Google ' + escapeHtml(place.googleRating.value) + '</b> · ' + escapeHtml(place.googleRating.reviewCount || 0) + ' ' + escapeHtml(t('guide.reviews')) + '</span>');
-    if (place.tripadvisorRating) chunks.push('<span class="guide-source-rating"><b>Tripadvisor ' + escapeHtml(place.tripadvisorRating.value) + '</b> · ' + escapeHtml(place.tripadvisorRating.reviewCount || 0) + ' ' + escapeHtml(t('guide.reviews')) + '</span>');
-    return chunks.join('');
+    var rating = place.googleRating || place.tripadvisorRating;
+    if (!rating) return '';
+    return '<span class="guide-source-rating"><b>★ ' + escapeHtml(rating.value) + '</b><span aria-hidden="true"> · </span>' + escapeHtml(rating.reviewCount || 0) + ' ' + escapeHtml(t('guide.reviews')) + '</span>';
   }
-
-  var ACTION_ASSETS = {
-    navigation: 'assets/icons/navigation.svg',
-    maps: 'assets/icons/google-maps.svg',
-    website: 'assets/icons/website.svg',
-    instagram: 'assets/icons/instagram.svg',
-    phone: 'assets/icons/phone.svg'
-  };
 
   function action(href, key, type, primary) {
     if (!href) return '';
     var label = t(key);
     var external = /^https?:\/\//.test(href) ? ' target="_blank" rel="noopener"' : '';
-    return '<a class="guide-action guide-action--' + escapeHtml(type) + (primary ? ' guide-action--primary' : '') + '" href="' + escapeHtml(href) + '"' + external + ' aria-label="' + escapeHtml(label) + '" title="' + escapeHtml(label) + '" data-i18n-aria="' + escapeHtml(key) + '" data-i18n-title="' + escapeHtml(key) + '"><img src="' + ACTION_ASSETS[type] + '" alt="" aria-hidden="true"><span class="sr-only" data-i18n="' + escapeHtml(key) + '">' + escapeHtml(label) + '</span></a>';
+    return '<a class="guide-action guide-action--' + escapeHtml(type) + (primary ? ' guide-action--primary' : '') + '" href="' + escapeHtml(href) + '"' + external + ' aria-label="' + escapeHtml(label) + '" title="' + escapeHtml(label) + '" data-i18n-aria="' + escapeHtml(key) + '" data-i18n-title="' + escapeHtml(key) + '"><span class="action-icon action-icon--' + escapeHtml(type) + '" aria-hidden="true"></span><span class="sr-only" data-i18n="' + escapeHtml(key) + '">' + escapeHtml(label) + '</span></a>';
   }
 
   function renderCards() {
@@ -187,16 +177,11 @@
       var phone = value(place.phone);
       var address = value(place.address);
       var addressLabel = [address, place.municipality && place.municipality !== address ? place.municipality : ''].filter(Boolean).join(' · ') || t('guide.location.unknown');
-      var sources = (place.sources || []).slice(0, 3).map(function (source) {
-        var label = source.sourceLabel || source.provider;
-        return source.url ? '<a href="' + escapeHtml(source.url) + '" target="_blank" rel="noopener">' + escapeHtml(label) + '</a>' : '<span>' + escapeHtml(label) + '</span>';
-      }).join('');
       return '<article class="nearby-card guide-place" data-place-id="' + escapeHtml(place.id) + '" tabindex="0" style="--place-color:' + escapeHtml(categoryColor(place.category)) + '">' +
         '<div class="nearby-card__top"><span class="guide-place__dot" aria-hidden="true"></span><div class="guide-place__heading"><span class="guide-place__category">' + escapeHtml(categoryLabel(place.category)) + '</span><h3>' + escapeHtml(place.name) + '</h3><p class="guide-place__address">' + escapeHtml(addressLabel) + '</p></div><strong class="nearby-card__distance">≈ ' + escapeHtml(formatDistance(place._distanceKm)) + '<small>' + escapeHtml(t('guide.straightLine')) + '</small></strong></div>' +
         (approximate ? '<p class="guide-place__warning">' + escapeHtml(t('guide.coordinate.warning')) + '</p>' : '') +
         (closed ? '<p class="guide-place__warning guide-place__warning--closed">' + escapeHtml(t('guide.status.closed')) + '</p>' : '') +
         '<div class="guide-place__ratings">' + ratingHtml(place) + '</div>' +
-        '<div class="guide-place__sources"><span>' + escapeHtml(t('guide.sources')) + '</span>' + sources + '</div>' +
         '<div class="nearby-card__actions">' + action(place.navigationUrl, 'guide.action.navigate', 'navigation', !closed) + action(place.googleMapsUrl, 'guide.action.maps', 'maps') + action(value(place.website), 'guide.action.website', 'website') + action(value(place.instagram), 'guide.action.instagram', 'instagram') + (phone ? action('tel:' + String(phone).replace(/[^+\d]/g, ''), 'nearby.call', 'phone') : '') + '</div></article>';
     }).join('');
     count.textContent = String(filteredPlaces.length);
@@ -235,7 +220,7 @@
   }
 
   function homeIcon() {
-    return L.divIcon({ className: 'guide-special-wrap', html: '<span class="guide-special guide-special--home" aria-hidden="true">⌂</span>', iconSize: [34, 34], iconAnchor: [17, 17] });
+    return L.divIcon({ className: 'guide-special-wrap', html: '<span class="guide-special guide-special--home" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7v9h-6v-5h-4v5H4Z"/></svg></span>', iconSize: [34, 34], iconAnchor: [17, 17] });
   }
 
   function userIcon() {
@@ -353,9 +338,7 @@
   }
 
   function renderQuality() {
-    var stats = data.meta.statistics;
     var canonicalCount = publicPlaces.filter(function (place) { return place.discovery.apartment; }).length;
-    quality.innerHTML = '<span><b>' + escapeHtml(canonicalCount) + '</b> ' + escapeHtml(t('guide.quality.places')) + '</span><span><b>' + escapeHtml(stats.duplicatesMerged) + '</b> ' + escapeHtml(t('guide.quality.merged')) + '</span><span><b>' + escapeHtml(data.providers.filter(function (provider) { return provider.enabled; }).length) + '</b> ' + escapeHtml(t('guide.quality.providers')) + '</span>';
     total.textContent = String(canonicalCount);
   }
 

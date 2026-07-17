@@ -54,27 +54,20 @@
     ].join('');
 
     var top = lang.parentElement;
+    var preferenceBar = null;
     if (top && top.classList.contains('top-controls')) {
-      top.appendChild(control);
-    } else if (top && top.classList.contains('hero-panel__top')) {
-      var stack = top.querySelector('.prefs-stack');
-      if (!stack) {
-        stack = document.createElement('div');
-        stack.className = 'prefs-stack';
-        top.replaceChild(stack, lang);
-        stack.appendChild(lang);
-      } else {
-        lang.remove();
-        stack.appendChild(lang);
-      }
-      stack.appendChild(control);
-    } else {
-      var inlineStack = document.createElement('div');
-      inlineStack.className = 'prefs-stack prefs-stack--inline';
-      top.replaceChild(inlineStack, lang);
-      inlineStack.appendChild(lang);
-      inlineStack.appendChild(control);
+      preferenceBar = top;
+      preferenceBar.classList.add('preference-bar');
+    } else if (top && top.classList.contains('preference-bar')) {
+      preferenceBar = top;
+    } else if (top) {
+      preferenceBar = document.createElement('div');
+      preferenceBar.className = 'preference-bar prefs-stack prefs-stack--inline';
+      top.replaceChild(preferenceBar, lang);
+      preferenceBar.appendChild(lang);
     }
+    if (!preferenceBar) return;
+    preferenceBar.appendChild(control);
 
     function localizeControl() {
       if (!window.GH_I18N || typeof window.GH_I18N.t !== 'function') return;

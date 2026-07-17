@@ -57,11 +57,30 @@ if (!catalog.includes('GH_I18N.subscribe(update)') || catalog.includes("addEvent
 for (const page of ['actividades.html', 'restaurantes.html']) {
   const source = read(page);
   const iconLinks = [...source.matchAll(/<a class="catalog-action[^>]+>.*?<\/a>/g)];
-  if (!iconLinks.length || iconLinks.some(([link]) => !/aria-label="[^"]+"/.test(link) || !/data-i18n-aria="[^"]+"/.test(link) || !/<img[^>]+alt=""/.test(link))) {
-    fail(`${page}: every icon action needs a localized accessible name and decorative local image`);
+  if (!iconLinks.length || iconLinks.some(([link]) => !/aria-label="[^"]+"/.test(link) || !/data-i18n-aria="[^"]+"/.test(link) || !/<span class="action-icon action-icon--[a-z-]+" aria-hidden="true"/.test(link))) {
+    fail(`${page}: every icon action needs a localized accessible name and a decorative local theme-aware icon`);
   }
   if (/data-category="(?:hotel|cabin)"/.test(source)) fail(`${page}: lodging leaked into the canonical catalog`);
+  if (/class="catalog-sources"|>Fuentes<|>Fontes<|>Sources</.test(source)) fail(`${page}: editorial provenance must not appear in the guest catalog`);
 }
 if (/[🔑📍🍽️🚵❄️🎿🚙📖🩹🚪]/u.test(read('index.html'))) fail('home section icons must use theme-aware SVG instead of emoji');
+if (!read('index.html').includes('class="card nearby-home-card') || !read('index.html').includes('Restaurantes, panoramas y servicios cercanos')) {
+  fail('home must present Explore the Valley as a featured, descriptive entry');
+}
+if (!theme.includes("classList.add('preference-bar')") || !styles.includes('.preference-bar .theme-selector')) {
+  fail('language and theme must share one reusable preference bar');
+}
+if (nearby.includes('guide-place__sources') || nearby.includes('<b>Google ') || nearby.includes('<b>Tripadvisor ')) {
+  fail('nearby cards must keep provenance internal and show a compact provider-neutral rating');
+}
+if (nearby.includes('duplicatesMerged') || nearby.includes('guide.quality.providers') || html.includes('id="guide-quality"')) {
+  fail('guest UI must not expose provider or deduplication metadata');
+}
+if (!styles.includes('.action-icon') || !styles.includes('.catalog-action--maps { width: 44px')) {
+  fail('external actions must use compact theme-aware icons instead of a Maps wordmark');
+}
+for (const asset of ['navigation', 'google-maps', 'website', 'instagram', 'phone']) {
+  if (!styles.includes(`../assets/icons/${asset}.svg`)) fail(`theme-aware action icon mapping missing: ${asset}`);
+}
 
-if (!process.exitCode) console.log('  PASS (map toggle/reflow, themes, languages, clean hero, canonical icon actions)');
+if (!process.exitCode) console.log('  PASS (premium icons, unified preferences, private provenance, responsive guide actions)');

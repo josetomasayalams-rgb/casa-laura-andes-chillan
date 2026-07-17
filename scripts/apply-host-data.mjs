@@ -467,18 +467,10 @@ function categoryFor(id) {
   return destinationGuide.categories.find((category) => category.id === id) || { id, label: id, color: '#66706c' };
 }
 
-const CATALOG_ACTION_ASSETS = {
-  navigation: 'assets/icons/navigation.svg',
-  maps: 'assets/icons/google-maps.svg',
-  website: 'assets/icons/website.svg',
-  instagram: 'assets/icons/instagram.svg',
-  phone: 'assets/icons/phone.svg'
-};
-
 function catalogAction(url, key, label, type, className = '') {
   if (!url) return '';
   const external = /^https?:\/\//.test(url) ? ' target="_blank" rel="noopener"' : '';
-  return `<a class="catalog-action catalog-action--${type} ${className}" href="${attrEsc(url)}"${external} aria-label="${attrEsc(label)}" title="${attrEsc(label)}" data-i18n-aria="${key}" data-i18n-title="${key}"><img src="${CATALOG_ACTION_ASSETS[type]}" alt="" aria-hidden="true"><span class="sr-only" data-i18n="${key}">${attrEsc(label)}</span></a>`;
+  return `<a class="catalog-action catalog-action--${type} ${className}" href="${attrEsc(url)}"${external} aria-label="${attrEsc(label)}" title="${attrEsc(label)}" data-i18n-aria="${key}" data-i18n-title="${key}"><span class="action-icon action-icon--${type}" aria-hidden="true"></span><span class="sr-only" data-i18n="${key}">${attrEsc(label)}</span></a>`;
 }
 
 function canonicalCard(place) {
@@ -492,16 +484,9 @@ function canonicalCard(place) {
   const phone = fieldValue(place.phone);
   const website = fieldValue(place.website);
   const instagram = fieldValue(place.instagram);
-  const sourceLinks = (place.sources || []).slice(0, 3).map((source) => {
-    const label = source.sourceLabel || String(source.provider || '').toUpperCase();
-    return source.url
-      ? `<a href="${attrEsc(source.url)}" target="_blank" rel="noopener">${attrEsc(label)}</a>`
-      : `<span>${attrEsc(label)}</span>`;
-  }).join('');
   const rating = place.googleRating || place.tripadvisorRating;
-  const ratingProvider = place.googleRating ? 'Google' : (place.tripadvisorRating ? 'Tripadvisor' : '');
   const ratingHtml = rating
-    ? `<span class="catalog-rating"><b>★ ${attrEsc(rating.value)}</b> · ${attrEsc(rating.reviewCount || 0)} <span data-i18n="guide.reviews">reseñas</span> · ${ratingProvider}</span>`
+    ? `<span class="catalog-rating"><b>★ ${attrEsc(rating.value)}</b><span aria-hidden="true"> · </span>${attrEsc(rating.reviewCount || 0)} <span data-i18n="guide.reviews">reseñas</span></span>`
     : '';
   const phoneHref = phone ? `tel:${String(phone).replace(/[^+\d]/g, '')}` : '';
   return `      <article class="rest-card catalog-card" data-id="${attrEsc(place.id)}" data-category="${attrEsc(place.category)}" data-distance="${distanceMeters}" style="--catalog-color:${attrEsc(category.color)}">
@@ -515,9 +500,8 @@ function canonicalCard(place) {
           <strong class="catalog-distance" data-distance-label>${distanceLabel}</strong>
         </header>
         ${approximate ? '<p class="catalog-warning" data-i18n="guide.coordinate.warning">Coordenada aproximada: confirma la entrada antes de viajar.</p>' : ''}
-        ${closed ? '<p class="catalog-warning catalog-warning--closed" data-i18n="guide.status.closed">Cerrado según la última fuente verificada.</p>' : ''}
+        ${closed ? '<p class="catalog-warning catalog-warning--closed" data-i18n="guide.status.closed">Cerrado según la última verificación. Revisa el sitio oficial antes de viajar.</p>' : ''}
         ${ratingHtml}
-        <div class="catalog-sources"><span data-i18n="guide.sources">Fuentes</span>${sourceLinks}</div>
         <div class="catalog-actions">
           ${catalogAction(place.navigationUrl, 'guide.action.navigate', 'Navegar', 'navigation', 'catalog-action--primary')}
           ${catalogAction(place.googleMapsUrl, 'guide.action.maps', 'Abrir en Google Maps', 'maps')}

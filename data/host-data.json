@@ -1675,9 +1675,9 @@
       "en": "Explore the Valley"
     },
     "nav.nearby.s": {
-      "es": "Mapa, ruta y datos útiles",
-      "pt": "Mapa, rota e dados úteis",
-      "en": "Map, route and useful places"
+      "es": "Restaurantes, panoramas y servicios cercanos",
+      "pt": "Restaurantes, passeios e serviços próximos",
+      "en": "Restaurants, experiences and nearby services"
     },
     "guide.eyebrow": { "es": "Guía territorial CordalSur", "pt": "Guia territorial CordalSur", "en": "CordalSur destination guide" },
     "guide.title": { "es": "Tu mapa para descubrir el valle", "pt": "Seu mapa para descobrir o vale", "en": "Your map for exploring the valley" },
@@ -1740,7 +1740,7 @@
     "guide.reviews": { "es": "reseñas", "pt": "avaliações", "en": "reviews" },
     "guide.straightLine": { "es": "en línea recta", "pt": "em linha reta", "en": "straight line" },
     "guide.coordinate.warning": { "es": "Coordenada aproximada: confirma la entrada antes de viajar.", "pt": "Coordenada aproximada: confirme a entrada antes de viajar.", "en": "Approximate coordinate: confirm the entrance before travelling." },
-    "guide.status.closed": { "es": "Cerrado según la última fuente verificada. Revisa el sitio oficial antes de viajar.", "pt": "Fechado segundo a última fonte verificada. Consulte o site oficial antes de viajar.", "en": "Closed according to the latest verified source. Check the official site before travelling." },
+    "guide.status.closed": { "es": "Cerrado según la última verificación. Revisa el sitio oficial antes de viajar.", "pt": "Fechado segundo a última verificação. Consulte o site oficial antes de viajar.", "en": "Closed according to the latest verification. Check the official site before travelling." },
     "guide.sources": { "es": "Fuentes", "pt": "Fontes", "en": "Sources" },
     "guide.action.navigate": { "es": "Navegar", "pt": "Navegar", "en": "Navigate" },
     "guide.action.maps": { "es": "Abrir en Google Maps", "pt": "Abrir no Google Maps", "en": "Open in Google Maps" },
