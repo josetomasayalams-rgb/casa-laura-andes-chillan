@@ -25,7 +25,7 @@ The accessibility floor follows WCAG 2.2 success criteria 1.4.3, 1.4.11 and 1.4.
 - **Primary outcome:** mean perceived visual-aesthetics score after completing all tasks.
 - **Secondary outcomes:** task success, time on task, error count, perceived usability and intention to reuse.
 - **Scale:** use the published Lavie-Tractinsky classical and expressive aesthetics items under the instrument's applicable permissions; record reuse intention separately on a 7-point scale.
-- **Sample size:** determine before collection with an a priori power analysis based on a preregistered smallest effect of interest. Do not choose the sample size after seeing results.
+- **Sample size:** recruit 80 participants to retain at least 72 complete paired sessions, targeting 0.80 power for a standardized paired effect of 0.35. Do not change the sample after seeing results.
 - **Analysis:** mixed-effects model with participant as a random intercept, palette as the fixed effect, order as a covariate, 95% confidence intervals and effect sizes. Correct secondary comparisons with Holm's method.
 - **Exclusions:** preregister technical failures and incomplete sessions; report every exclusion and missing value.
 - **Accessibility:** record device, theme, age band and self-reported color-vision limitations; do not exclude color-vision variation merely to improve the result.
@@ -35,3 +35,5 @@ The accessibility floor follows WCAG 2.2 success criteria 1.4.3, 1.4.11 and 1.4.
 Adopt the claim “the section palette improves attraction” only when the treatment improves the primary outcome with its confidence interval above the preregistered smallest effect of interest, while task success is non-inferior and error rate does not worsen. Otherwise report the result as inconclusive or negative.
 
 The current automated result supports only this statement: all ten sections have distinct light/dark identities, every selected-state text pair is at least 6:1, and the generated CSS matches the declared palette data.
+
+The locked configuration, anonymous CSV contract and reproducible analysis procedure live in `study-config.json` and `STUDY_RUNBOOK.md`.

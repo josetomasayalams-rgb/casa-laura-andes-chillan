@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "status": "preregister-before-data-collection",
+  "design": "two-period randomized counterbalanced within-participant crossover",
+  "conditions": {
+    "control": "uniform",
+    "treatment": "section-adaptive"
+  },
+  "alpha": 0.05,
+  "targetPower": 0.8,
+  "targetStandardizedPairedEffect": 0.35,
+  "plannedCompletedParticipants": 72,
+  "plannedRecruitment": 80,
+  "primary": {
+    "column": "visual_aesthetics",
+    "label": "Perceived visual aesthetics",
+    "range": [1, 7],
+    "favorableDirection": "higher",
+    "smallestEffectOfInterest": 0.35
+  },
+  "secondary": {
+    "task_success_rate": {
+      "range": [0, 1],
+      "favorableDirection": "higher",
+      "nonInferiorityLowerBound": -0.05
+    },
+    "error_count": {
+      "range": [0, null],
+      "favorableDirection": "lower",
+      "nonInferiorityUpperBound": 0.25
+    },
+    "reuse_intention": {
+      "range": [1, 7],
+      "favorableDirection": "higher",
+      "multiplicityCorrection": "Holm"
+    }
+  },
+  "requiredSequences": [
+    "uniform-section-adaptive",
+    "section-adaptive-uniform"
+  ],
+  "allowedThemes": ["light", "dark"],
+  "allowedDevices": ["mobile", "tablet", "desktop"],
+  "exclusions": [
+    "participant withdrawal",
+    "documented technical failure that prevents task completion",
+    "missing one of the two experimental conditions"
+  ]
+}

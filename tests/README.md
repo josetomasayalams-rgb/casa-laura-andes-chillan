@@ -14,6 +14,7 @@ archivo ficticio `data/host-data.sample.json`.
 Las puertas validan:
 
 - sintaxis de JavaScript y módulos Node;
+- integridad de la preregistración, análisis cruzado e impedimento de usar datos sintéticos como evidencia;
 - paridad exacta de claves y placeholders en ES, PT-BR y EN;
 - existencia de todas las claves usadas por texto, `aria-label`, `title` y
   `placeholder`;
@@ -35,3 +36,12 @@ node scripts/apply-host-data.mjs . data/host-data.json
 Luego vuelve a ejecutar las puertas. Los nombres propios y topónimos que deban
 compartir exactamente la misma grafía se declaran de forma explícita en la
 allowlist del generador; no agregues texto traducible a esa lista.
+
+Para ensayar el análisis científico sin usar datos reales:
+
+```sh
+node scripts/analyze-section-theme-study.mjs research/fixtures/section-theme-study.sample.csv
+```
+
+El resultado debe quedar marcado como `simulation-only`; consulta
+`research/STUDY_RUNBOOK.md` antes de recolectar participantes.

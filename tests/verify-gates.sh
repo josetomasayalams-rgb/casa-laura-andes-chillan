@@ -16,11 +16,14 @@ node tests/verify-i18n.mjs
 echo "=== Gate 3: section palette evidence ==="
 node tests/verify-section-palettes.mjs
 
-echo "=== Gate 4: public CordalSur contract ==="
+echo "=== Gate 4: preregistered section-theme study ==="
+node tests/verify-section-study.mjs
+
+echo "=== Gate 5: public CordalSur contract ==="
 node tests/verify-public-contract.mjs
 node tests/verify-access-session.mjs
 
-echo "=== Gate 5: generator idempotency (temporary copy) ==="
+echo "=== Gate 6: generator idempotency (temporary copy) ==="
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 mkdir -p "$tmp/site"
@@ -62,7 +65,7 @@ test "$first" = "$second"
 node "$tmp/site/scripts/apply-host-data.mjs" "$tmp/site" "$tmp/site/data/host-data.sample.json" >/dev/null
 echo "  PASS"
 
-echo "=== Gate 6: canonical snapshot parity ==="
+echo "=== Gate 7: canonical snapshot parity ==="
 check_snapshot() {
   if ! cmp -s "$1" "$2"; then
     echo "  FAIL: snapshot $2 differs from $1" >&2
