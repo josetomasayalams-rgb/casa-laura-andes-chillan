@@ -23,8 +23,9 @@ for (const file of expectedPages) {
   if (!/<title>[^<]*CordalSur[^<]*<\/title>/i.test(html)) fail(`${file}: static title must contain CordalSur`);
   if (!/<html\b[^>]*data-i18n-title="page\.[^"]+"/i.test(html)) fail(`${file}: <html> needs a localized page.* title key`);
   if (!html.includes('js/lang.js?v=6')) fail(`${file}: localized copy must use the current cache version`);
+  if (!html.includes('css/styles.css?v=8')) fail(`${file}: shared sensory brand styles are stale`);
   if (!html.includes("document.documentElement.classList.add('access-pending')") ||
-      !html.includes('css/access.css?v=2') || !html.includes('js/access.js?v=2')) {
+      !html.includes('css/access.css?v=3') || !html.includes('js/access.js?v=2')) {
     fail(`${file}: guest gate must load before protected content is shown`);
   }
   if (html.includes('fonts.googleapis.com') || html.includes('fonts.gstatic.com')) {
@@ -77,9 +78,6 @@ for (const [file, html] of [['index.html', index], ['check-in.html', checkin]]) 
     fail(`${file} must show a safe, icon-based link to the canonical Instagram profile`);
   }
 }
-if (!checkin.includes('css/styles.css?v=7')) {
-  fail('check-in must use the current brand styles');
-}
 if (hostData.urls?.['quick.wa'] !== `https://wa.me/${phone}`) {
   fail('canonical urls.quick.wa is incorrect');
 }
@@ -118,6 +116,20 @@ if (!styles.includes('--photo-overlay-home') || !styles.includes('--photo-overla
     !styles.includes('var(--photo-overlay-home)') || !styles.includes('var(--photo-overlay-inner)') ||
     !index.includes('js/backgrounds.js?v=2')) {
   fail('photos must use the cache-busted, theme-aware green and ivory filters');
+}
+if (!styles.includes('--brand-symbol-color') ||
+    !styles.includes('html[data-theme="light"] .brand-mark') ||
+    !styles.includes('.header::after') ||
+    !styles.includes('cs-detail-reveal')) {
+  fail('all sections must share the theme-aware CordalSur mark and interaction language');
+}
+if (!accessStyles.includes('html[data-theme="dark"]') ||
+    accessStyles.includes('@media (prefers-color-scheme: dark)')) {
+  fail('the access experience must follow the saved app theme');
+}
+if (!accessStyles.includes('--cs-button-start: #e8bd79') ||
+    !accessStyles.includes('--cs-button-text: #102c26')) {
+  fail('dark access actions must keep readable gold/forest contrast');
 }
 
 if (!index.includes('href="instrucciones.html#wifi"') || !index.includes('quick-access__item--instagram')) {
@@ -196,4 +208,4 @@ if (!enterSiteCopy || !enterSiteCopy.es || !enterSiteCopy.pt || !enterSiteCopy.e
   fail('admin.enterSite must be translated in ES/PT/EN');
 }
 
-if (!process.exitCode) console.log('  PASS (brand, Instagram, Wi-Fi, emergency, admin access and page-title contract)');
+if (!process.exitCode) console.log('  PASS (brand, themes, Instagram, Wi-Fi, emergency, admin access and page-title contract)');
