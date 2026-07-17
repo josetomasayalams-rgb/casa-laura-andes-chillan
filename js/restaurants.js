@@ -17,11 +17,12 @@
   catch (e) { return; }
 
   var countEl = document.getElementById('rest-filter-count');
-  var cards = document.querySelectorAll('.rest-card');
-  var shownCount = cards.length;
+  var currentFilter = 'all';
+  var shownCount = document.querySelectorAll('.rest-card').length;
 
   function renderCount(lang) {
     if (!countEl) return;
+    var cards = document.querySelectorAll('.rest-card');
     var vars = { shown: shownCount, total: cards.length };
     if (window.GH_I18N && typeof window.GH_I18N.format === 'function') {
       countEl.textContent = window.GH_I18N.format('rest.filter.count', vars, lang);
@@ -43,6 +44,8 @@
   }
 
   function applyFilter(filter) {
+    currentFilter = filter;
+    var cards = document.querySelectorAll('.rest-card');
     var shown = 0;
     cards.forEach(function (card) {
       var cats = (card.getAttribute('data-categories') || '').split(/\s+/);
@@ -78,6 +81,8 @@
   if (window.GH_I18N && typeof window.GH_I18N.subscribe === 'function') {
     window.GH_I18N.subscribe(renderCount);
   }
+
+  document.addEventListener('catalog:updated', function () { applyFilter(currentFilter); });
 
   // Initial state
   applyFilter('all');

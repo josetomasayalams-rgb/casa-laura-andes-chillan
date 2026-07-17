@@ -2,7 +2,7 @@
 
 ## Qué puede demostrar
 
-Las pruebas automáticas demuestran cobertura de las veinte combinaciones sección-tema, contraste mínimo 6:1, ausencia de desborde a 320 px y generación determinista. No demuestran que una persona prefiera o reutilice la aplicación.
+Las pruebas automáticas demuestran cobertura de las veintidós combinaciones sección-tema, contraste mínimo 6:1, ausencia de desborde a 320 px y generación determinista. No demuestran que una persona prefiera o reutilice la aplicación.
 
 El estudio humano puede sostener una afirmación causal limitada: que la paleta adaptativa mejora la estética visual percibida frente a la paleta uniforme, sin perjudicar éxito ni errores, bajo las tareas, muestra y condiciones aquí definidas.
 
@@ -16,7 +16,7 @@ El estudio humano puede sostener una afirmación causal limitada: que la paleta 
 
 ## Aplicación
 
-- Cada participante completa las mismas ocho tareas en ambas condiciones: Wi-Fi, check-in, restaurante, actividad, clima, tickets, check-out y emergencia.
+- Cada participante completa las mismas nueve tareas en ambas condiciones: Wi-Fi, check-in, restaurante, actividad, servicio cercano, clima, tickets, check-out y emergencia.
 - Contrabalancea el orden de las tareas dentro de cada condición con una lista preparada antes de comenzar.
 - Aplica exactamente `period_1_task_order` y `period_2_task_order` de la fila anónima asignada. La lista se genera de forma determinista desde la semilla preregistrada.
 - Mantén el mismo dispositivo y tema claro/oscuro para las dos condiciones de una persona.

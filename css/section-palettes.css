@@ -41,6 +41,13 @@ html[data-theme="light"] body[data-section="actividades"] {
   --section-on-accent: #ffffff;
 }
 
+html[data-theme="light"] body[data-section="nearby"] {
+  --section-accent: #2f6267;
+  --section-accent-alt: #215054;
+  --section-accent-rgb: 47, 98, 103;
+  --section-on-accent: #ffffff;
+}
+
 html[data-theme="light"] body[data-section="clima"] {
   --section-accent: #355f70;
   --section-accent-alt: #274a58;
@@ -108,6 +115,13 @@ html[data-theme="dark"] body[data-section="actividades"] {
   --section-accent: #91cbb7;
   --section-accent-alt: #b6dbc9;
   --section-accent-rgb: 145, 203, 183;
+  --section-on-accent: #102c26;
+}
+
+html[data-theme="dark"] body[data-section="nearby"] {
+  --section-accent: #a7c9ca;
+  --section-accent-alt: #c3dddd;
+  --section-accent-rgb: 167, 201, 202;
   --section-on-accent: #102c26;
 }
 

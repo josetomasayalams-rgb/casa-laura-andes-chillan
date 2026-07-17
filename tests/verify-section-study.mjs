@@ -78,8 +78,8 @@ assert.throws(
   /visual_aesthetics/
 );
 assert.throws(
-  () => analyzeStudyCsv(fixtureText.replace('0.875,2,4.3', '0.8,2,4.3'), configText),
-  /eight tasks/
+  () => analyzeStudyCsv(fixtureText.replace('0.888888889,2,4.3', '0.8,2,4.3'), configText),
+  /9 tasks/
 );
 
 console.log('  PASS (preregistered study contract, crossover analysis and synthetic-data guard)');

@@ -248,7 +248,8 @@
     event.preventDefault();
     if (busy) return;
     var input = document.getElementById('admin-pin');
-    var value = input.value;
+    var value = String(input.value || '').trim();
+    if (/^\d{4}$/.test(value)) value = value.slice(0, 2) + '-' + value.slice(2);
     if (!/^\d{2}-\d{2}$/.test(value)) {
       notice = { type: 'error', key: 'admin.error.validation' };
       focusAfterRender = '#admin-pin';

@@ -228,7 +228,9 @@
     event.preventDefault();
     if (busy) return;
     var input = root.querySelector('#cs-access-pin');
-    if (!/^\d{2}-\d{2}$/.test(input.value)) {
+    var value = String(input.value || '').trim();
+    if (/^\d{4}$/.test(value)) value = value.slice(0, 2) + '-' + value.slice(2);
+    if (!/^\d{2}-\d{2}$/.test(value)) {
       messageKey = 'access.invalid';
       render();
       return;
@@ -240,7 +242,7 @@
       var result = await api('/v1/auth/guest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ pin: input.value })
+        body: JSON.stringify({ pin: value })
       });
       saveToken(result.token);
       unlock(result.expiresAt);

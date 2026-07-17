@@ -34,8 +34,8 @@ export function renderRandomization(config) {
     throw new Error('Randomization requires a seed and an even block size');
   }
   if (total % blockSize !== 0) throw new Error('Recruitment total must be divisible by block size');
-  if (new Set(tasks).size !== tasks.length || tasks.length !== 8) {
-    throw new Error('Randomization requires eight unique tasks');
+  if (new Set(tasks).size !== tasks.length || tasks.length < 2) {
+    throw new Error('Randomization requires at least two unique tasks');
   }
 
   const baseTasks = shuffle(tasks, seed, 'task-base');

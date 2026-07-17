@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es" data-i18n-title="page.nearby.title">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('access-pending');</script>
+  <style>html.access-pending body{visibility:hidden}</style>
+  <title>Cerca de mí · CordalSur</title>
+  <script>(function(){var t="";try{t=localStorage.getItem("gh-theme-v3")||""}catch(e){}if(t!=="light"&&t!=="dark"){t="dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
+  <link rel="stylesheet" href="css/styles.css?v=8">
+  <link rel="stylesheet" href="css/section-palettes.css?v=2">
+  <link rel="stylesheet" href="css/access.css?v=3">
+</head>
+<body class="is-winter bg-actividades" data-section="nearby" data-page="nearby">
+ <div class="app-container">
+  <header class="header">
+   <a href="index.html" class="btn-back" data-i18n-aria="common.back" aria-label="Volver">←</a>
+   <h2 style="margin:0" data-i18n="nav.nearby.t">Cerca de mí</h2>
+  </header>
+
+  <div class="lang-selector" role="group" data-i18n-aria="lang.selector" aria-label="Idioma">
+   <button type="button" data-lang="es" aria-pressed="true">ES</button>
+   <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+   <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+
+  <section class="nearby-hero card">
+   <div class="nearby-hero__icon" aria-hidden="true">📍</div>
+   <div>
+    <h1 data-i18n="nav.nearby.t">Cerca de mí</h1>
+    <p data-i18n="nearby.intro">Encuentra comida, bencina, salud y servicios ordenados por distancia.</p>
+   </div>
+   <button type="button" class="nearby-locate" id="nearby-locate" data-i18n="nearby.locate">Usar mi ubicación</button>
+   <p class="nearby-status" id="nearby-status" role="status" aria-live="polite" data-i18n="nearby.home">Mostrando distancias desde el departamento (ubicación aproximada).</p>
+  </section>
+
+  <aside class="nearby-emergency" data-i18n="nearby.emergency">En una emergencia llama de inmediato: SAMU 131 · Bomberos 132 · Carabineros 133.</aside>
+
+  <nav class="nearby-filters rest-filter-bar" id="nearby-filters">
+   <button type="button" class="rest-filter__btn rest-filter__btn--active" data-nearby-filter="all" data-i18n="nearby.cat.all">Todo</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="food" data-i18n="nearby.cat.food">Restaurantes</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="groceries" data-i18n="nearby.cat.groceries">Supermercados</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="fuel" data-i18n="nearby.cat.fuel">Bencina</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="health" data-i18n="nearby.cat.health">Salud</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="hardware" data-i18n="nearby.cat.hardware">Ferreterías</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="police" data-i18n="nearby.cat.police">Carabineros</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="fire" data-i18n="nearby.cat.fire">Bomberos</button>
+   <button type="button" class="rest-filter__btn" data-nearby-filter="activities" data-i18n="nearby.cat.activities">Actividades</button>
+  </nav>
+
+  <div class="nearby-results-heading">
+   <strong data-i18n="nearby.sort">Más cerca primero</strong>
+   <span id="nearby-count" aria-live="polite"></span>
+  </div>
+  <div class="nearby-grid" id="nearby-results"></div>
+  <p class="nearby-empty" id="nearby-empty" hidden data-i18n="nearby.empty">No hay lugares catastrados en esta categoría. Usa la búsqueda en Maps.</p>
+  <a class="nearby-search" id="nearby-search" target="_blank" rel="noopener" data-i18n="nearby.search">Buscar más cerca en Maps</a>
+ </div>
+ <script src="js/lang.js?v=6"></script>
+ <script src="js/access.js?v=2" data-api-base="https://cordal-sur-access.josetomasayalams.workers.dev"></script>
+ <script src="js/theme.js?v=5"></script>
+ <script src="js/nearby.js?v=1" defer></script>
+</body>
+</html>

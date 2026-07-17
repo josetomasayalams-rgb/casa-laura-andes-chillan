@@ -1623,6 +1623,136 @@
       "es": "Abrir WhatsApp para coordinar el buggy",
       "pt": "Abrir o WhatsApp para coordenar o buggy",
       "en": "Open WhatsApp to arrange the buggy"
+    },
+    "page.nearby.title": {
+      "es": "Cerca de mí · CordalSur",
+      "pt": "Perto de mim · CordalSur",
+      "en": "Near me · CordalSur"
+    },
+    "nav.nearby.t": {
+      "es": "Cerca de mí",
+      "pt": "Perto de mim",
+      "en": "Near me"
+    },
+    "nav.nearby.s": {
+      "es": "Lo esencial según tu ubicación",
+      "pt": "O essencial conforme sua localização",
+      "en": "Essentials based on your location"
+    },
+    "nearby.intro": {
+      "es": "Encuentra comida, bencina, salud y servicios ordenados por distancia.",
+      "pt": "Encontre comida, combustível, saúde e serviços ordenados por distância.",
+      "en": "Find food, fuel, healthcare and services sorted by distance."
+    },
+    "nearby.locate": {
+      "es": "Usar mi ubicación",
+      "pt": "Usar minha localização",
+      "en": "Use my location"
+    },
+    "nearby.locating": {
+      "es": "Buscando tu ubicación…",
+      "pt": "Buscando sua localização…",
+      "en": "Finding your location…"
+    },
+    "nearby.home": {
+      "es": "Mostrando distancias desde el departamento (ubicación aproximada).",
+      "pt": "Mostrando distâncias desde o apartamento (localização aproximada).",
+      "en": "Showing distances from the apartment (approximate location)."
+    },
+    "nearby.live": {
+      "es": "Ordenado desde tu ubicación actual. Tu posición no se guarda ni se envía automáticamente.",
+      "pt": "Ordenado desde sua localização atual. Sua posição não é armazenada nem enviada automaticamente.",
+      "en": "Sorted from your current location. Your position is not stored or sent automatically."
+    },
+    "nearby.denied": {
+      "es": "No pudimos usar tu ubicación. Seguimos mostrando las distancias desde el departamento.",
+      "pt": "Não foi possível usar sua localização. Continuamos mostrando as distâncias desde o apartamento.",
+      "en": "We could not use your location. Distances from the apartment are still shown."
+    },
+    "nearby.approx": {
+      "es": "Ubicación aproximada",
+      "pt": "Localização aproximada",
+      "en": "Approximate location"
+    },
+    "nearby.directions": {
+      "es": "Cómo llegar",
+      "pt": "Como chegar",
+      "en": "Directions"
+    },
+    "nearby.call": {
+      "es": "Llamar",
+      "pt": "Ligar",
+      "en": "Call"
+    },
+    "nearby.search": {
+      "es": "Buscar más cerca en Maps",
+      "pt": "Buscar mais perto no Maps",
+      "en": "Search nearby in Maps"
+    },
+    "nearby.empty": {
+      "es": "No hay lugares catastrados en esta categoría. Usa la búsqueda en Maps.",
+      "pt": "Não há locais cadastrados nesta categoria. Use a busca no Maps.",
+      "en": "No mapped places in this category. Use the Maps search."
+    },
+    "nearby.emergency": {
+      "es": "En una emergencia llama de inmediato: SAMU 131 · Bomberos 132 · Carabineros 133.",
+      "pt": "Em uma emergência, ligue imediatamente: SAMU 131 · Bombeiros 132 · Carabineros 133.",
+      "en": "In an emergency call immediately: SAMU 131 · Fire 132 · Police 133."
+    },
+    "nearby.cat.all": {
+      "es": "Todo",
+      "pt": "Tudo",
+      "en": "All"
+    },
+    "nearby.cat.food": {
+      "es": "Restaurantes",
+      "pt": "Restaurantes",
+      "en": "Restaurants"
+    },
+    "nearby.cat.groceries": {
+      "es": "Supermercados",
+      "pt": "Mercados",
+      "en": "Groceries"
+    },
+    "nearby.cat.fuel": {
+      "es": "Bencina",
+      "pt": "Combustível",
+      "en": "Fuel"
+    },
+    "nearby.cat.health": {
+      "es": "Salud",
+      "pt": "Saúde",
+      "en": "Healthcare"
+    },
+    "nearby.cat.hardware": {
+      "es": "Ferreterías",
+      "pt": "Ferragens",
+      "en": "Hardware"
+    },
+    "nearby.cat.police": {
+      "es": "Carabineros",
+      "pt": "Polícia",
+      "en": "Police"
+    },
+    "nearby.cat.fire": {
+      "es": "Bomberos",
+      "pt": "Bombeiros",
+      "en": "Fire stations"
+    },
+    "nearby.cat.activities": {
+      "es": "Actividades",
+      "pt": "Atividades",
+      "en": "Activities"
+    },
+    "nearby.sort": {
+      "es": "Más cerca primero",
+      "pt": "Mais perto primeiro",
+      "en": "Nearest first"
+    },
+    "nearby.distance.unknown": {
+      "es": "Distancia no verificada",
+      "pt": "Distância não verificada",
+      "en": "Distance not verified"
     }
   },
   "urls": {

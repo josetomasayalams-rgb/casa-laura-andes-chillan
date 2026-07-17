@@ -1,0 +1,47 @@
+{
+  "version": "2026-07-17",
+  "coverage": {
+    "description": "Corredor CordalSur entre Recinto/Los Lleuques, Valle Las Trancas y Nevados de Chillán; incluye el radio de 15 km de Los Pincheira y Quincho del Valle.",
+    "home": { "name": "Condominio Andes Chillán", "lat": -36.9082176, "lon": -71.4205745, "precision": "approximate" },
+    "anchors": [
+      { "name": "Restaurant Los Pincheira", "lat": -36.8402926, "lon": -71.660382 },
+      { "name": "Quincho del Valle", "lat": -36.84846, "lon": -71.65265 }
+    ]
+  },
+  "categories": ["food", "groceries", "fuel", "health", "hardware", "police", "fire", "activities"],
+  "places": [
+    { "id": "los-pincheiras-restaurant", "name": "Restaurant Los Pincheira", "category": "food", "sector": "Recinto", "lat": -36.8402926, "lon": -71.660382, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "quincho-del-valle", "name": "Quincho del Valle", "category": "food", "sector": "Recinto km 48,5", "lat": -36.84846, "lon": -71.65265, "catalog": "restaurants", "phone": "+56958969259", "source": "Google Maps / Tripadvisor" },
+    { "id": "don-quelo", "name": "Don Quelo", "category": "food", "sector": "Recinto km 47,6", "lat": -36.8439, "lon": -71.6578, "precision": "approximate", "catalog": "restaurants", "phone": "+56986041204", "source": "Tripadvisor / catastro territorial" },
+    { "id": "cumbres-restaurante", "name": "Cumbres Restaurante", "category": "food", "sector": "Recinto km 48,5", "lat": -36.8487, "lon": -71.6524, "precision": "approximate", "catalog": "restaurants", "phone": "+56951507951", "source": "Tripadvisor" },
+    { "id": "rendez-vous", "name": "Rendez-vous", "category": "food", "sector": "Los Lleuques", "lat": -36.8539889, "lon": -71.6446708, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "oliva-s-restaurant", "name": "Oliva's Restaurant", "category": "food", "sector": "Valle Las Trancas", "lat": -36.9151134, "lon": -71.497154, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "snow-pub", "name": "Snow Pub", "category": "food", "sector": "Valle Las Trancas", "lat": -36.9150917, "lon": -71.501154, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "cafeteria-tata", "name": "Cafetería Tata", "category": "food", "sector": "Nevados de Chillán", "lat": -36.9097103, "lon": -71.4232945, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "cafeteria-tio-willy", "name": "Cafetería Tío Willy", "category": "food", "sector": "Centro de Ski", "lat": -36.9040813, "lon": -71.411916, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "observatorio-cafe", "name": "Observatorio Café", "category": "food", "sector": "Centro de Ski", "lat": -36.9059473, "lon": -71.4133902, "catalog": "restaurants", "source": "OpenStreetMap" },
+
+    { "id": "la-pileta", "name": "Supermercado La Pileta", "category": "groceries", "sector": "Los Lleuques", "lat": -36.854283, "lon": -71.6445502, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "minimarket-el-varon", "name": "Minimarket El Varón", "category": "groceries", "sector": "Los Lleuques", "lat": -36.8540055, "lon": -71.6443989, "catalog": "restaurants", "source": "OpenStreetMap / catastro territorial" },
+    { "id": "rucahue", "name": "Rucahue", "category": "groceries", "sector": "Valle Las Trancas", "lat": -36.9147223, "lon": -71.4950079, "catalog": "restaurants", "source": "OpenStreetMap" },
+    { "id": "copec-recinto", "name": "Copec Recinto", "category": "fuel", "sector": "Recinto", "lat": -36.8417547, "lon": -71.6595886, "source": "OpenStreetMap" },
+    { "id": "ferreteria-don-lalo", "name": "Ferretería Don Lalo", "category": "hardware", "sector": "Los Lleuques", "lat": -36.8578642, "lon": -71.6405143, "precision": "approximate", "source": "OpenStreetMap / catastro territorial" },
+
+    { "id": "posta-recinto", "name": "Posta de Salud Rural Recinto", "category": "health", "sector": "Recinto", "lat": -36.8432188, "lon": -71.6589894, "source": "OpenStreetMap" },
+    { "id": "reten-recinto", "name": "Retén Recinto", "category": "police", "sector": "Recinto", "lat": -36.8457358, "lon": -71.6581052, "phone": "133", "source": "OpenStreetMap" },
+    { "id": "tenencia-las-trancas", "name": "Tenencia Las Trancas", "category": "police", "sector": "Valle Las Trancas", "lat": -36.9110413, "lon": -71.4797249, "phone": "133", "source": "OpenStreetMap" },
+    { "id": "bomberos-los-lleuques", "name": "Bomberos Los Lleuques", "category": "fire", "sector": "Los Lleuques", "lat": -36.857018, "lon": -71.6413578, "phone": "132", "source": "OpenStreetMap" },
+    { "id": "bomberos-las-trancas", "name": "3ª Compañía Bomberos Las Trancas", "category": "fire", "sector": "Valle Las Trancas", "lat": -36.9148225, "lon": -71.4913626, "phone": "132", "source": "OpenStreetMap" },
+
+    { "id": "la-playita", "name": "La Playita", "category": "activities", "sector": "Los Lleuques", "lat": -36.8584668, "lon": -71.6390635, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "saltito-renegado", "name": "Saltito del Renegado", "category": "activities", "sector": "Recinto / Los Lleuques", "lat": -36.8604338, "lon": -71.6494587, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "parque-las-turbinas", "name": "Parque Las Turbinas", "category": "activities", "sector": "Camino a Las Trancas", "lat": -36.8721877, "lon": -71.6529795, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "atr-cueva-pincheira", "name": "Cueva de los Pincheira", "category": "activities", "sector": "Camino a Las Trancas", "lat": -36.8972866, "lon": -71.553625, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "bosque-encantado", "name": "Bosque Encantado", "category": "activities", "sector": "Valle Las Trancas", "lat": -36.9085011, "lon": -71.5170986, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "mirador-del-valle", "name": "Mirador del Valle", "category": "activities", "sector": "Valle Las Trancas", "lat": -36.9173437, "lon": -71.4938787, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "term-valle-hermoso", "name": "Valle Hermoso", "category": "activities", "sector": "Nevados de Chillán", "lat": -36.9181858, "lon": -71.4220867, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "mtb-bike-park", "name": "Bike Park Nevados", "category": "activities", "sector": "Nevados de Chillán", "lat": -36.9093109, "lon": -71.4230894, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "termas-de-chillan", "name": "Termas de Chillán", "category": "activities", "sector": "Nevados de Chillán", "lat": -36.9039319, "lon": -71.4082212, "catalog": "activities", "source": "OpenStreetMap" },
+    { "id": "fumarolas-olla-del-mote", "name": "Fumarolas Olla del Mote", "category": "activities", "sector": "Nevados de Chillán", "lat": -36.9053669, "lon": -71.4014365, "catalog": "activities", "source": "OpenStreetMap" }
+  ]
+}

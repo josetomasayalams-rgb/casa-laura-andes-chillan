@@ -459,6 +459,7 @@ const actFilterBar = `      <div id="act-filter-bar" class="rest-filter-bar">
         <button type="button" class="rest-filter__btn" data-filter="bici" data-i18n="act.filter.bici">Bici</button>
         <button type="button" class="rest-filter__btn" data-filter="aventura" data-i18n="act.filter.aventura">Aventura</button>
         <button type="button" class="rest-filter__btn" data-filter="servicios" data-i18n="act.filter.servicios">Servicios</button>
+        <button type="button" class="rest-filter__btn rest-filter__btn--sort" data-sort-distance data-i18n="nearby.sort">Más cerca primero</button>
         <span class="rest-filter__count" id="act-filter-count" aria-live="polite">${allActivities.length} / ${allActivities.length}</span>
       </div>
       <script type="application/json" id="activities-data">${JSON.stringify(allActivities).replace(/<\//g, '<\\/').replace(/&/g, '\\u0026')}</script>`;
@@ -610,6 +611,7 @@ const filterBar = `      <div id="rest-filter-bar" class="rest-filter-bar">
         <button type="button" class="rest-filter__btn" data-filter="cervecería" data-i18n="rest.filter.cerveceria">Cervecería</button>
         <button type="button" class="rest-filter__btn" data-filter="supermercado" data-i18n="rest.filter.supermercado">Supermercado</button>
         <button type="button" class="rest-filter__btn" data-filter="compras-gourmet" data-i18n="rest.filter.compras">Compras gourmet</button>
+        <button type="button" class="rest-filter__btn rest-filter__btn--sort" data-sort-distance data-i18n="nearby.sort">Más cerca primero</button>
         <span class="rest-filter__count" id="rest-filter-count" aria-live="polite">${publicar.length} / ${publicar.length}</span>
       </div>
       <script type="application/json" id="restaurants-data">${safeJson}</script>`;
@@ -632,7 +634,8 @@ const PAGE_TITLE_KEYS = {
   'tickets.html': 'page.tickets.title',
   'instrucciones.html': 'page.manual.title',
   'botiquin.html': 'page.firstaid.title',
-  'buggy.html': 'page.buggy.title'
+  'buggy.html': 'page.buggy.title',
+  'cerca-de-mi.html': 'page.nearby.title'
 };
 
 function setAttribute(tag, name, value) {

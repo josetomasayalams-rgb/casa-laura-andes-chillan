@@ -37,6 +37,13 @@
       "light": { "accent": "#285e52", "accentAlt": "#19483e", "onAccent": "#ffffff" },
       "dark": { "accent": "#91cbb7", "accentAlt": "#b6dbc9", "onAccent": "#102c26" }
     },
+    "nearby": {
+      "page": "cerca-de-mi.html",
+      "label": "Cerca de mí",
+      "rationale": "Turquesa cordillerano para orientación espacial y servicios cercanos",
+      "light": { "accent": "#2f6267", "accentAlt": "#215054", "onAccent": "#ffffff" },
+      "dark": { "accent": "#a7c9ca", "accentAlt": "#c3dddd", "onAccent": "#102c26" }
+    },
     "clima": {
       "page": "clima.html",
       "label": "Clima y nieve",

@@ -15,7 +15,7 @@ const htmlFiles = fs.readdirSync(ROOT).filter((file) => file.endsWith('.html')).
 const expectedPages = [
   'index.html', 'check-in.html', 'check-out.html', 'restaurantes.html',
   'actividades.html', 'clima.html', 'tickets.html', 'instrucciones.html',
-  'botiquin.html', 'buggy.html'
+  'botiquin.html', 'buggy.html', 'cerca-de-mi.html'
 ];
 for (const file of expectedPages) {
   if (!htmlFiles.includes(file)) fail(`missing canonical page ${file}`);
@@ -39,6 +39,32 @@ for (const file of expectedPages) {
 const index = read('index.html');
 const checkin = read('check-in.html');
 const manual = read('instrucciones.html');
+const nearbyHtml = read('cerca-de-mi.html');
+const nearbyScript = read('js/nearby.js');
+const nearbyData = JSON.parse(read('data/nearby.json'));
+if (!index.includes('href="cerca-de-mi.html"') || !nearbyHtml.includes('js/nearby.js?v=1')) {
+  fail('home must expose the protected nearby essentials tool');
+}
+if (!nearbyScript.includes('navigator.geolocation.getCurrentPosition') ||
+    /localStorage\.(?:getItem|setItem)/.test(nearbyScript)) {
+  fail('nearby tool must request location on demand without persisting it');
+}
+if (!Array.isArray(nearbyData.places) || nearbyData.places.length < 25) {
+  fail('nearby data must keep the researched corridor catalog');
+}
+for (const place of nearbyData.places || []) {
+  if (!place.id || !place.name || !place.category || !Number.isFinite(place.lat) || !Number.isFinite(place.lon)) {
+    fail(`nearby place has an invalid contract: ${place.id || '(missing id)'}`);
+  }
+}
+for (const category of ['food', 'groceries', 'fuel', 'health', 'hardware', 'police', 'fire', 'activities']) {
+  if (!nearbyData.places.some((place) => place.category === category)) fail(`nearby catalog missing ${category}`);
+}
+if (!read('js/catalog-distance.js').includes("fetch('data/nearby.json')") ||
+    !read('restaurantes.html').includes('js/catalog-distance.js?v=1') ||
+    !read('actividades.html').includes('js/catalog-distance.js?v=1')) {
+  fail('restaurant and activity catalogs must support distance ordering from shared nearby data');
+}
 const logoPath = 'assets/brand/cordal-sur-symbol-reverse-1024.png';
 if (!fs.existsSync(path.join(ROOT, logoPath))) fail(`missing official logo asset ${logoPath}`);
 if (!index.includes(`src="${logoPath}"`) ||
@@ -185,6 +211,11 @@ const adminHtml = read('admin.html');
 if (!accessScript.includes("var ADMIN_TOKEN_KEY = 'cordal-sur-admin-token-v1'") ||
     !accessScript.includes('sessionStorage.getItem(ADMIN_TOKEN_KEY)')) {
   fail('the public gate must read the administrator session from sessionStorage');
+}
+for (const [file, script] of [['js/access.js', accessScript], ['js/admin.js', adminScript]]) {
+  if (!script.includes("if (/^\\d{4}$/.test(value)) value = value.slice(0, 2) + '-' + value.slice(2);")) {
+    fail(`${file}: four consecutive PIN digits must normalize to the NN-NN server format`);
+  }
 }
 if (/localStorage\.(?:getItem|setItem)\(ADMIN_TOKEN_KEY\)/.test(accessScript)) {
   fail('the administrator token must never be persisted in localStorage');

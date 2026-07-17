@@ -15,11 +15,12 @@
   catch (e) { return; }
 
   var countEl = document.getElementById('act-filter-count');
-  var cards = document.querySelectorAll('.rest-card[data-module]');
-  var shownCount = cards.length;
+  var currentFilter = 'all';
+  var shownCount = document.querySelectorAll('.rest-card[data-module]').length;
 
   function renderCount(lang) {
     if (!countEl) return;
+    var cards = document.querySelectorAll('.rest-card[data-module]');
     var vars = { shown: shownCount, total: cards.length };
     if (window.GH_I18N && typeof window.GH_I18N.format === 'function') {
       countEl.textContent = window.GH_I18N.format('act.filter.count', vars, lang);
@@ -29,6 +30,8 @@
   }
 
   function applyFilter(filter) {
+    currentFilter = filter;
+    var cards = document.querySelectorAll('.rest-card[data-module]');
     var shown = 0;
     cards.forEach(function (card) {
       var mod = card.getAttribute('data-module') || '';
@@ -61,6 +64,8 @@
   if (window.GH_I18N && typeof window.GH_I18N.subscribe === 'function') {
     window.GH_I18N.subscribe(renderCount);
   }
+
+  document.addEventListener('catalog:updated', function () { applyFilter(currentFilter); });
 
   applyFilter('all');
 })();

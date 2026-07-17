@@ -21,7 +21,7 @@ The accessibility floor follows WCAG 2.2 success criteria 1.4.3, 1.4.11 and 1.4.
 - **Design:** randomized, counterbalanced, within-participant comparison.
 - **Control:** the previous uniform CordalSur palette.
 - **Treatment:** the section-adaptive palette in `data/section-palettes.json`.
-- **Tasks:** find Wi-Fi, identify check-in guidance, choose a restaurant, find an activity, read weather, locate ski tickets, review check-out and find emergency guidance.
+- **Tasks:** find Wi-Fi, identify check-in guidance, choose a restaurant, find an activity, locate a nearby service, read weather, locate ski tickets, review check-out and find emergency guidance.
 - **Primary outcome:** mean perceived visual-aesthetics score after completing all tasks.
 - **Secondary outcomes:** task success, time on task, error count, perceived usability and intention to reuse.
 - **Scale:** use the published Lavie-Tractinsky classical and expressive aesthetics items under the instrument's applicable permissions; record reuse intention separately on a 7-point scale.
@@ -34,6 +34,6 @@ The accessibility floor follows WCAG 2.2 success criteria 1.4.3, 1.4.11 and 1.4.
 
 Adopt the claim “the section palette improves attraction” only when the treatment improves the primary outcome with its confidence interval above the preregistered smallest effect of interest, while task success is non-inferior and error rate does not worsen. Otherwise report the result as inconclusive or negative.
 
-The current automated result supports only this statement: all ten sections have distinct light/dark identities, every selected-state text pair is at least 6:1, and the generated CSS matches the declared palette data.
+The current automated result supports only this statement: all eleven sections have distinct light/dark identities, every selected-state text pair is at least 6:1, and the generated CSS matches the declared palette data.
 
 The locked configuration, anonymous CSV contract and reproducible analysis procedure live in `study-config.json` and `STUDY_RUNBOOK.md`.

@@ -215,6 +215,57 @@ body {
   }
 }
 
+/* Nearby essentials — location stays in the browser and cards remain useful from home. */
+.nearby-home-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 20px;
+  text-decoration: none;
+}
+.nearby-home-card h3 { margin: 0 0 3px; }
+.nearby-home-card p { margin: 0; font-size: 0.86rem; color: var(--rock); }
+.nearby-home-card > span { font-size: 1.4rem; color: var(--gold); }
+.nearby-hero { display: grid; grid-template-columns: auto 1fr; gap: 12px 14px; padding: 20px; margin-bottom: 14px; }
+.nearby-hero__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--tint-forest); font-size: 1.5rem; }
+.nearby-hero h1 { margin: 0 0 4px; font-size: 1.35rem; }
+.nearby-hero p { margin: 0; color: var(--rock); line-height: 1.5; }
+.nearby-locate { grid-column: 1 / -1; min-height: 48px; border: 0; border-radius: var(--radius-md); padding: 12px 18px; background: linear-gradient(145deg, #1d5145, #153b33); color: #fff; font: 700 0.95rem/1.2 Manrope, sans-serif; cursor: pointer; }
+.nearby-locate:disabled { opacity: 0.62; cursor: wait; }
+.nearby-status { grid-column: 1 / -1; font-size: 0.8rem; }
+.nearby-emergency { margin: 0 0 14px; padding: 12px 14px; border: 1px solid rgba(196, 106, 58, 0.36); border-radius: var(--radius-md); background: rgba(196, 106, 58, 0.1); color: var(--night); font-size: 0.82rem; font-weight: 650; line-height: 1.45; }
+.nearby-filters { margin-top: 0; }
+.rest-filter__btn--sort { margin-left: auto; border-color: var(--gold); }
+.catalog-distance { margin-left: auto; align-self: flex-start; padding: 4px 8px; border-radius: var(--radius-pill); background: var(--tint-forest); color: var(--forest); font-size: 0.72rem; font-weight: 750; white-space: nowrap; }
+.rest-card--mapped { border-style: dashed; }
+.nearby-results-heading { display: flex; justify-content: space-between; align-items: center; margin: 0 2px 10px; font-size: 0.82rem; color: var(--rock); }
+.nearby-grid { display: grid; gap: 12px; }
+.nearby-card { padding: 16px; border: 1px solid var(--card-border); border-radius: var(--radius-lg); background: var(--card-bg); box-shadow: var(--shadow-soft); }
+.nearby-card__top { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+.nearby-card__icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--tint-ice); font-size: 1.25rem; }
+.nearby-card h3 { margin: 0; font-size: 0.98rem; color: var(--night); }
+.nearby-card p { margin: 3px 0 0; font-size: 0.78rem; color: var(--rock); }
+.nearby-card__distance { color: var(--forest); font-size: 0.86rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.nearby-card__meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; font-size: 0.72rem; color: var(--rock); }
+.nearby-card__meta span { padding: 3px 8px; border-radius: var(--radius-pill); background: var(--tint-forest); }
+.nearby-card__meta .nearby-approx { background: var(--tint-copper); }
+.nearby-card__actions { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.nearby-card__actions a, .nearby-search { min-height: 42px; display: inline-flex; justify-content: center; align-items: center; padding: 9px 13px; border-radius: var(--radius-md); text-decoration: none; font-weight: 700; font-size: 0.82rem; }
+.nearby-card__actions a:first-child { background: var(--forest); color: #fff; }
+.nearby-card__call { border: 1px solid var(--forest); color: var(--forest); }
+.nearby-search { margin-top: 14px; width: 100%; box-sizing: border-box; border: 1px solid var(--gold); color: var(--night); background: var(--tint-copper); }
+.nearby-empty { padding: 18px; text-align: center; color: var(--rock); }
+html[data-theme="dark"] .nearby-card { background: rgba(9, 33, 27, 0.84); }
+html[data-theme="dark"] .nearby-card__distance { color: #e8bd79; }
+html[data-theme="dark"] .catalog-distance { background: rgba(217, 162, 79, 0.18); color: #e8bd79; }
+html[data-theme="dark"] .nearby-card__call { color: #e8bd79; border-color: #e8bd79; }
+html[data-theme="dark"] .nearby-emergency { color: #f5f1e7; }
+@media (max-width: 420px) {
+  .nearby-card__top { grid-template-columns: auto minmax(0, 1fr); }
+  .nearby-card__distance { grid-column: 2; }
+}
+
 /* HOME — full-bleed hero */
 .bg-home {
   background-position: center 30%;

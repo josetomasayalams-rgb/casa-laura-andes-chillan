@@ -285,8 +285,10 @@ function prepareRows(csvRows, config) {
       normalized.task_success_rate = numeric(row.task_success_rate, `${label} task_success_rate`, 0, 1);
       normalized.error_count = numeric(row.error_count, `${label} error_count`, 0);
       normalized.reuse_intention = numeric(row.reuse_intention, `${label} reuse_intention`, 1, 7);
-      if (!Number.isInteger(normalized.task_success_rate * 8)) {
-        throw new Error(`${label} task_success_rate must represent success across eight tasks`);
+      const taskCount = config.randomization.tasks.length;
+      const completedTasks = normalized.task_success_rate * taskCount;
+      if (Math.abs(completedTasks - Math.round(completedTasks)) > 1e-6) {
+        throw new Error(`${label} task_success_rate must represent success across ${taskCount} tasks`);
       }
       if (!Number.isInteger(normalized.error_count)) throw new Error(`${label} error_count must be an integer`);
       candidateIncluded.push(normalized);
