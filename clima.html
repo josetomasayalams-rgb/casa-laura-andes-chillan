@@ -11,7 +11,7 @@
  <link rel="preload" as="image" type="image/webp" media="(min-width: 720px)" fetchpriority="high" href="css/bg/winter/clima-nieve-panoramica.webp?v=2">
   <script>(function(){var t="";try{t=localStorage.getItem("gh-theme-v3")||""}catch(e){}if(t!=="light"&&t!=="dark"){t="dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
   <script>(function(){var c=new URLSearchParams(location.search).get("condition");if(c==="a"||c==="b")document.documentElement.setAttribute("data-study-condition",c)})();</script>
-<link rel="stylesheet" href="css/styles.css?v=22">
+<link rel="stylesheet" href="css/styles.css?v=23">
 <link rel="stylesheet" href="css/section-palettes.css?v=4">
 <link rel="stylesheet" href="css/access.css?v=4">
 </head>
@@ -82,7 +82,7 @@
    <div class="forecast-widget__grid" data-grid>
     <!-- Skeleton placeholders shown until first fetch resolves -->
    </div>
-   <a class="forecast-snowforecast" href="https://es.snow-forecast.com/resorts/Chillan/6day/bot" target="_blank" rel="noopener">
+   <a class="forecast-snowforecast" href="https://es.snow-forecast.com/resorts/Chillan/6day/bot" target="_blank" rel="noopener noreferrer">
     <div class="forecast-snowforecast__icon" aria-hidden="true">
      <svg viewBox="0 0 95 107.61" fill="currentColor"><path d="M93.47,102,77.74,86.25a.37.37,0,0,1,.26-.64H93.11a.38.38,0,0,0,.38-.38V78.7a.38.38,0,0,0-.38-.38H70a.36.36,0,0,1-.26-.11L56.22,64.73a.37.37,0,0,1,.26-.64H93.11a.38.38,0,0,0,.38-.38V57.18a.38.38,0,0,0-.38-.38H56.48a.37.37,0,0,1-.26-.64L69.71,42.68a.36.36,0,0,1,.26-.11H93.11a.38.38,0,0,0,.38-.38V35.66a.38.38,0,0,0-.38-.38H78a.37.37,0,0,1-.26-.64L93.32,19.06a.37.37,0,0,0,0-.53L88.7,13.91a.39.39,0,0,0-.53,0L72.59,29.49a.37.37,0,0,1-.64-.26V14.12a.37.37,0,0,0-.37-.37H65a.37.37,0,0,0-.38.37V37.26a.39.39,0,0,1-.11.27L51.07,51a.37.37,0,0,1-.64-.26V14.12a.37.37,0,0,0-.37-.37H43.52a.36.36,0,0,0-.37.37V50.75a.37.37,0,0,1-.64.26L29.09,37.6a.39.39,0,0,1-.11-.27V14.12a.37.37,0,0,0-.37-.37H22.07a.36.36,0,0,0-.37.37V29.3a.38.38,0,0,1-.64.27L5.26,13.77a.37.37,0,0,0-.53,0L.11,18.39a.37.37,0,0,0,0,.53l15.8,15.8a.37.37,0,0,1-.27.63H.61a.38.38,0,0,0-.38.38v6.54a.38.38,0,0,0,.38.37H23.68a.38.38,0,0,1,.26.11L37.36,56.16a.38.38,0,0,1-.27.64H.61a.38.38,0,0,0-.38.38v6.53a.38.38,0,0,0,.38.38H37.09a.38.38,0,0,1,.27.64L23.87,78.21a.39.39,0,0,1-.27.11H.61a.38.38,0,0,0-.38.38v6.53a.38.38,0,0,0,.38.38h15a.38.38,0,0,1,.27.64L.25,101.83a.37.37,0,0,0,0,.52L4.88,107a.39.39,0,0,0,.53,0L21.13,91.25a.38.38,0,0,1,.64.27v15.32a.37.37,0,0,0,.37.37h6.54a.36.36,0,0,0,.37-.37V83.48a.36.36,0,0,1,.11-.26L42.51,69.88a.37.37,0,0,1,.64.26v36.63a.36.36,0,0,0,.37.37h6.54a.37.37,0,0,0,.37-.37V70.14a.37.37,0,0,1,.64-.26L64.63,83.44a.36.36,0,0,1,.11.26v23.14a.36.36,0,0,0,.37.37h6.54a.37.37,0,0,0,.37-.37V91.73a.37.37,0,0,1,.64-.26l15.65,15.65a.37.37,0,0,0,.53,0l4.63-4.62a.39.39,0,0,0,0-.53"/></svg>
     </div>
@@ -95,6 +95,28 @@
      <span class="forecast-snowforecast__arrow" aria-hidden="true">↗</span>
     </div>
    </a>
+   <a class="forecast-snowforecast forecast-resource--camera" href="https://www.nevadosdechillan.com/camaras" target="_blank" rel="noopener noreferrer">
+    <span class="forecast-snowforecast__icon mountain-resource__icon mountain-resource__icon--camera" aria-hidden="true"></span>
+    <div class="forecast-snowforecast__text">
+     <div class="forecast-snowforecast__title" data-i18n="clima.fc.cameras.title">Cámaras en vivo</div>
+     <div class="forecast-snowforecast__subtitle" data-i18n="clima.fc.cameras.subtitle">Mira Novicios y Plaza Tata en tiempo real.</div>
+    </div>
+    <div class="forecast-snowforecast__cta">
+     <span data-i18n="clima.fc.cameras.cta">Ver cámaras</span>
+     <span class="forecast-snowforecast__arrow" aria-hidden="true">↗</span>
+    </div>
+   </a>
+   <a class="forecast-snowforecast forecast-resource--report" href="https://www.nevadosdechillan.com/reporte-montana" target="_blank" rel="noopener noreferrer">
+    <span class="forecast-snowforecast__icon mountain-resource__icon mountain-resource__icon--mountain" aria-hidden="true"></span>
+    <div class="forecast-snowforecast__text">
+     <div class="forecast-snowforecast__title" data-i18n="clima.fc.report.title">Reporte de montaña</div>
+     <div class="forecast-snowforecast__subtitle" data-i18n="clima.fc.report.subtitle">Consulta el estado actualizado de andariveles y pistas.</div>
+    </div>
+    <div class="forecast-snowforecast__cta">
+     <span data-i18n="clima.fc.report.cta">Ver reporte</span>
+     <span class="forecast-snowforecast__arrow" aria-hidden="true">↗</span>
+    </div>
+   </a>
    <p class="forecast-widget__attr">
     <span data-i18n="clima.fc.attribution">Datos</span>: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
     <span data-source-indicator class="forecast-widget__source" hidden></span>
@@ -102,9 +124,9 @@
   </div>
 
  </div>
-<script src="js/lang.js?v=11"></script>
+<script src="js/lang.js?v=12"></script>
   <script src="js/access.js?v=4" data-api-base="https://cordal-sur-access.josetomasayalams.workers.dev"></script>
-<script src="js/theme.js?v=8"></script>
+<script src="js/theme.js?v=9"></script>
   <script>
  /* Forecast widget v4.
    - 6-day forecast in 3-col × 2-row cards (more info per card, less cramped).

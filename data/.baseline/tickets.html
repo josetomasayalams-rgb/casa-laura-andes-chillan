@@ -9,7 +9,7 @@
  <link rel="preload" as="image" type="image/webp" media="(min-width: 720px)" fetchpriority="high" href="css/bg/winter/tickets-pistas-nevados.webp?v=2">
   <script>(function(){var t="";try{t=localStorage.getItem("gh-theme-v3")||""}catch(e){}if(t!=="light"&&t!=="dark"){t="dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
   <script>(function(){var c=new URLSearchParams(location.search).get("condition");if(c==="a"||c==="b")document.documentElement.setAttribute("data-study-condition",c)})();</script>
-<link rel="stylesheet" href="css/styles.css?v=22">
+<link rel="stylesheet" href="css/styles.css?v=23">
 <link rel="stylesheet" href="css/section-palettes.css?v=4">
 <link rel="stylesheet" href="css/access.css?v=4">
 </head>
@@ -27,28 +27,47 @@
    <button type="button" data-lang="en" aria-pressed="false">EN</button>
   </div>
 
-  <!-- Pass card — price as missing em-dash, tabular-nums -->
+  <!-- Official day-pass reference. The final amount is confirmed on the selected date. -->
   <div class="card mb-4">
    <div class="card-header">
     <div class="icon-box bg-winter">🎟️</div>
     <h3 style="margin:0" data-i18n="tickets.pass.t">[cargado vía i18n]</h3>
    </div>
    <div class="metric">
-    <span class="val missing">—</span>
-    <span class="unit">CLP</span>
+    <span class="val ticket-price" data-i18n="tickets.pass.price">Desde $65.000</span>
+    <span class="unit" data-i18n="tickets.pass.unit">online</span>
    </div>
+   <p class="ticket-price-note" data-i18n="tickets.pass.note">Valor oficial publicado para temporada baja 2026. El precio final depende de la fecha seleccionada.</p>
   </div>
 
-  <!-- External buy link — destination is a placeholder (§7) -->
-  <a href="https://www.nevadosdechillan.com/" class="ext-link-row">
-   <span>🛒 <span data-i18n="tickets.buy">[cargado vía i18n]</span></span>
-   <span class="chev">›</span>
+  <a class="forecast-snowforecast forecast-resource--ticket" href="https://www.skipassnevadosdechillan.com/tienda/" target="_blank" rel="noopener noreferrer">
+   <span class="forecast-snowforecast__icon mountain-resource__icon mountain-resource__icon--ticket" aria-hidden="true"></span>
+   <div class="forecast-snowforecast__text">
+    <div class="forecast-snowforecast__title" data-i18n="tickets.buy.title">Comprar ticket oficial</div>
+    <div class="forecast-snowforecast__subtitle" data-i18n="tickets.buy.detail">Selecciona tu fecha y recarga la tarjeta Nevados.</div>
+   </div>
+   <div class="forecast-snowforecast__cta">
+    <span data-i18n="tickets.buy.cta">Comprar</span>
+    <span class="forecast-snowforecast__arrow" aria-hidden="true">↗</span>
+   </div>
+  </a>
+
+  <a class="forecast-snowforecast forecast-resource--report" href="https://www.nevadosdechillan.com/reporte-montana" target="_blank" rel="noopener noreferrer">
+   <span class="forecast-snowforecast__icon mountain-resource__icon mountain-resource__icon--mountain" aria-hidden="true"></span>
+   <div class="forecast-snowforecast__text">
+    <div class="forecast-snowforecast__title" data-i18n="tickets.report.title">Reporte de montaña</div>
+    <div class="forecast-snowforecast__subtitle" data-i18n="tickets.report.detail">Revisa qué andariveles y pistas están disponibles antes de subir.</div>
+   </div>
+   <div class="forecast-snowforecast__cta">
+    <span data-i18n="tickets.report.cta">Ver estado</span>
+    <span class="forecast-snowforecast__arrow" aria-hidden="true">↗</span>
+   </div>
   </a>
 
  </div>
-<script src="js/lang.js?v=11"></script>
+<script src="js/lang.js?v=12"></script>
   <script src="js/access.js?v=4" data-api-base="https://cordal-sur-access.josetomasayalams.workers.dev"></script>
-<script src="js/theme.js?v=8"></script>
+<script src="js/theme.js?v=9"></script>
  <script src="js/study-condition.js?v=1"></script>
 </body>
 </html>

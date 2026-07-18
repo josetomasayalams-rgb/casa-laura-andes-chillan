@@ -1526,25 +1526,23 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
 }
 .forecast-widget__attr a { color: var(--wood); text-decoration: underline; }
 
-/* v4.3 — Eye-catching Snow-Forecast callout card. Prominent below the grid with
-   the real Snow-Forecast snowflake icon (inlined SVG from their site) on a red
-   gradient background. Hover lifts the card. White text, copper-on-white CTA pill. */
+/* Mountain resource links share the CordalSur forest, gold and sage palette. */
 .forecast-snowforecast {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 14px;
   padding: 14px 16px;
-  background: linear-gradient(135deg, #c01b2e 0%, #8f1422 100%);
+  background: linear-gradient(135deg, #24594b 0%, #153b33 100%);
   color: #fff;
   border-radius: var(--radius-md);
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(192, 27, 46, 0.25);
+  box-shadow: 0 10px 24px rgba(21, 59, 51, 0.22);
   transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
 .forecast-snowforecast:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(192, 27, 46, 0.4);
+  box-shadow: 0 14px 30px rgba(21, 59, 51, 0.3);
 }
 .forecast-snowforecast__icon {
   width: 32px;
@@ -1588,6 +1586,50 @@ a.ext-link-row:hover .chev { transform: translateX(3px); }
 .forecast-snowforecast__arrow {
   font-size: 1rem;
   margin-left: 2px;
+}
+.forecast-resource--camera {
+  background: linear-gradient(135deg, #e8bd79 0%, #d9a24f 100%);
+  color: #102c26;
+  box-shadow: 0 10px 24px rgba(217, 162, 79, 0.25);
+}
+.forecast-resource--camera:hover { box-shadow: 0 14px 30px rgba(217, 162, 79, 0.34); }
+.forecast-resource--report { background: linear-gradient(135deg, #2d6656 0%, #183f35 100%); }
+.forecast-resource--ticket { background: linear-gradient(135deg, #1d5145 0%, #153b33 100%); }
+.mountain-resource__icon {
+  display: block;
+  width: 34px;
+  height: 34px;
+  background: currentColor;
+  -webkit-mask: var(--mountain-resource-icon) center / contain no-repeat;
+  mask: var(--mountain-resource-icon) center / contain no-repeat;
+}
+.mountain-resource__icon--camera { --mountain-resource-icon: url('../assets/icons/camera.svg'); }
+.mountain-resource__icon--mountain { --mountain-resource-icon: url('../assets/icons/mountain-snow.svg'); }
+.mountain-resource__icon--ticket { --mountain-resource-icon: url('../assets/icons/ticket.svg'); }
+.ticket-price { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+.ticket-price-note {
+  margin: 10px 0 0;
+  color: var(--ui-copy-muted);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+.parking-card__icon {
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+.parking-card .card-header { align-items: center; }
+.parking-card .tag { display: inline-flex; margin-bottom: 5px; }
+.parking-card h3 { margin: 0; }
+.parking-card > p {
+  margin: 13px 0 0;
+  color: var(--ui-copy-muted);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+@media (max-width: 520px) {
+  .forecast-snowforecast { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; }
+  .forecast-snowforecast__cta { width: 34px; min-height: 34px; justify-content: center; padding: 4px; }
+  .forecast-snowforecast__cta > span:first-child { display: none; }
 }
 .forecast-widget__source {
   font-size: 0.65rem;
@@ -4087,9 +4129,9 @@ html[data-theme="dark"] body {
   margin: 0 0 14px;
   padding: 5px;
   border: 1px solid var(--ui-border);
-  border-radius: 30px;
+  border-radius: 999px;
   overflow: clip;
-  clip-path: inset(0 round 30px);
+  clip-path: inset(0 round 999px);
   background: var(--ui-surface-raised);
   box-shadow: var(--ui-shadow-soft);
   backdrop-filter: blur(18px) saturate(1.15);
@@ -4121,8 +4163,11 @@ html[data-theme="dark"] body {
 .theme-selector__buttons { gap: 3px; }
 .theme-selector button,
 .lang-selector button {
+  display: grid;
+  place-items: center;
   min-width: 44px;
   min-height: 44px;
+  padding: 0;
   border: 1px solid transparent;
   border-radius: 15px;
   color: inherit;
@@ -4130,6 +4175,8 @@ html[data-theme="dark"] body {
 .preference-bar .lang-selector button,
 .preference-bar .theme-selector button { min-width: 44px !important; min-height: 44px !important; }
 .theme-selector__icon {
+  display: block;
+  flex: 0 0 auto;
   width: 19px;
   height: 19px;
   fill: none;
@@ -4218,9 +4265,16 @@ body[data-section="home"] .top-controls.preference-bar {
   max-width: none;
   margin: 0 0 14px;
   padding: 7px 10px;
-  border-radius: 30px;
+  border-radius: 999px;
   overflow: clip;
-  clip-path: inset(0 round 30px);
+  clip-path: inset(0 round 999px);
+  background: var(--ui-surface-raised) !important;
+}
+html[data-theme="light"] body[data-section="home"] .top-controls.preference-bar {
+  background: rgba(255, 253, 247, .975) !important;
+}
+html[data-theme="dark"] body[data-section="home"] .top-controls.preference-bar {
+  background: rgba(12, 37, 31, .97) !important;
 }
 body[data-section="home"] .top-controls.preference-bar::after {
   content: "";

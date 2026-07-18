@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Fase contenido: copy real cargada vía i18n. TODO(host): confirmar hora, código de puerta, estacionamiento, acceso al portón. -->
+<!-- Fase contenido: copy real cargada vía i18n. TODO(host): confirmar hora, código de puerta y acceso al portón. -->
 <html lang="es" data-i18n-title="page.checkin.title">
 <head>
  <meta charset="UTF-8">
@@ -10,7 +10,7 @@
  <link rel="preload" as="image" type="image/webp" media="(min-width: 720px)" fetchpriority="high" href="css/bg/winter/checkin-camino-nieve.webp?v=2">
   <script>(function(){var t="";try{t=localStorage.getItem("gh-theme-v3")||""}catch(e){}if(t!=="light"&&t!=="dark"){t="dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
   <script>(function(){var c=new URLSearchParams(location.search).get("condition");if(c==="a"||c==="b")document.documentElement.setAttribute("data-study-condition",c)})();</script>
-<link rel="stylesheet" href="css/styles.css?v=22">
+<link rel="stylesheet" href="css/styles.css?v=23">
  <link rel="stylesheet" href="css/section-palettes.css?v=4">
  <link rel="stylesheet" href="css/access.css?v=4">
 </head>
@@ -45,6 +45,17 @@
     <span>📍 <span data-i18n="checkin.maps">Google Maps</span></span>
     <span class="chev">›</span>
    </a>
+  </div>
+
+  <div class="card parking-card mb-4">
+   <div class="card-header">
+    <div class="icon-box parking-card__icon" aria-hidden="true">P</div>
+    <div>
+     <span class="tag tag-summer" data-i18n="checkin.parking.tag">Estacionamiento</span>
+     <h3 data-i18n="checkin.parking.title">Subterráneo · DEPTO-34</h3>
+    </div>
+   </div>
+   <p data-i18n="checkin.parking.body">Busca el espacio que dice DEPTO-34 en grande sobre la pared. Mirando hacia la escalera de acceso al edificio, es el estacionamiento inmediatamente a mano izquierda, pegado a la escalera.</p>
   </div>
 
   <!-- Access steps — host-private, kept as TODO(host) placeholders (.ph) -->
@@ -87,10 +98,10 @@
   </div>
 
  </div>
-<script src="js/lang.js?v=11"></script>
+<script src="js/lang.js?v=12"></script>
  <script src="js/access.js?v=4" data-api-base="https://cordal-sur-access.josetomasayalams.workers.dev"></script>
   <script src="js/whatsapp.js"></script>
-<script src="js/theme.js?v=8"></script>
+<script src="js/theme.js?v=9"></script>
  <script src="js/study-condition.js?v=1"></script>
 </body>
 </html>

@@ -29,7 +29,8 @@ for (const file of ['js/nearby.js', 'js/catalog-guide.js', 'js/lang.js']) {
   assert.doesNotMatch(read(file).toString(), /straightLine|en línea recta|em linha reta|straight line/i);
 }
 const styles = read('css/styles.css').toString();
-assert.match(styles, /\.preference-bar,[\s\S]*?border-radius:\s*30px;[\s\S]*?clip-path:\s*inset\(0 round 30px\)/);
+assert.match(styles, /\.preference-bar,[\s\S]*?border-radius:\s*999px;[\s\S]*?clip-path:\s*inset\(0 round 999px\)/);
+assert.match(styles, /\.theme-selector button,[\s\S]*?display:\s*grid;[\s\S]*?place-items:\s*center;[\s\S]*?padding:\s*0/);
 assert.match(styles, /\.preference-bar,[\s\S]*?width:\s*100% !important;[\s\S]*?max-width:\s*none/);
 assert.doesNotMatch(styles, /prefs-stack--inline\.preference-bar\s*\{[^}]*width:\s*max-content/);
 assert.match(styles, /\.catalog-filters::\-webkit-scrollbar\s*\{\s*display:\s*none/);

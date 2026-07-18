@@ -40,9 +40,49 @@
       "en": "Day pass"
     },
     "tickets.pass.price": {
-      "es": "[TODO(host): precio del ticket]",
-      "pt": "[TODO(host): preço do ticket]",
-      "en": "[TODO(host): ticket price]"
+      "es": "Desde $65.000",
+      "pt": "A partir de $65.000",
+      "en": "From $65,000"
+    },
+    "tickets.pass.unit": {
+      "es": "online",
+      "pt": "online",
+      "en": "online"
+    },
+    "tickets.pass.note": {
+      "es": "Valor oficial publicado para temporada baja 2026. El precio final depende de la fecha seleccionada.",
+      "pt": "Valor oficial publicado para a baixa temporada de 2026. O preço final depende da data selecionada.",
+      "en": "Official published price for the 2026 low season. The final price depends on the selected date."
+    },
+    "tickets.buy.title": {
+      "es": "Comprar ticket oficial",
+      "pt": "Comprar ticket oficial",
+      "en": "Buy an official ticket"
+    },
+    "tickets.buy.detail": {
+      "es": "Selecciona tu fecha y recarga la tarjeta Nevados.",
+      "pt": "Selecione a data e recarregue o cartão Nevados.",
+      "en": "Select your date and top up your Nevados card."
+    },
+    "tickets.buy.cta": {
+      "es": "Comprar",
+      "pt": "Comprar",
+      "en": "Buy"
+    },
+    "tickets.report.title": {
+      "es": "Reporte de montaña",
+      "pt": "Relatório da montanha",
+      "en": "Mountain report"
+    },
+    "tickets.report.detail": {
+      "es": "Revisa qué andariveles y pistas están disponibles antes de subir.",
+      "pt": "Confira quais meios de elevação e pistas estão disponíveis antes de subir.",
+      "en": "Check which lifts and runs are available before heading up."
+    },
+    "tickets.report.cta": {
+      "es": "Ver estado",
+      "pt": "Ver estado",
+      "en": "View status"
     },
     "rest.empty": {
       "es": "Pronto cargaremos nuestros lugares favoritos.",
@@ -379,6 +419,21 @@
       "pt": "Estamos em Las Trancas, a poucos minutos do centro de esqui Nevados de Chillán. Enviaremos o endereço exato e as indicações pelo WhatsApp antes da sua chegada.",
       "en": "We are in Las Trancas, a few minutes from the Nevados de Chillán ski center. We will send you the exact address and directions via WhatsApp before your arrival."
     },
+    "checkin.parking.tag": {
+      "es": "Estacionamiento",
+      "pt": "Estacionamento",
+      "en": "Parking"
+    },
+    "checkin.parking.title": {
+      "es": "Subterráneo · DEPTO-34",
+      "pt": "Subsolo · DEPTO-34",
+      "en": "Underground · DEPTO-34"
+    },
+    "checkin.parking.body": {
+      "es": "Busca el espacio que dice DEPTO-34 en grande sobre la pared. Mirando hacia la escalera de acceso al edificio, es el estacionamiento inmediatamente a mano izquierda, pegado a la escalera.",
+      "pt": "Procure a vaga com DEPTO-34 escrito em letras grandes na parede. De frente para a escada de acesso ao edifício, é a vaga imediatamente à esquerda, junto à escada.",
+      "en": "Look for the space marked DEPTO-34 in large letters on the wall. Facing the building access stairs, it is the space immediately to the left, right beside the stairs."
+    },
     "checkin.access.t": {
       "es": "Acceso al departamento",
       "pt": "Acesso ao apartamento",
@@ -508,6 +563,36 @@
       "es": "Ver en Snow-Forecast",
       "pt": "Ver no Snow-Forecast",
       "en": "View on Snow-Forecast"
+    },
+    "clima.fc.cameras.title": {
+      "es": "Cámaras en vivo",
+      "pt": "Câmeras ao vivo",
+      "en": "Live cameras"
+    },
+    "clima.fc.cameras.subtitle": {
+      "es": "Mira Novicios y Plaza Tata en tiempo real.",
+      "pt": "Veja Novicios e Plaza Tata em tempo real.",
+      "en": "See Novicios and Plaza Tata in real time."
+    },
+    "clima.fc.cameras.cta": {
+      "es": "Ver cámaras",
+      "pt": "Ver câmeras",
+      "en": "View cameras"
+    },
+    "clima.fc.report.title": {
+      "es": "Reporte de montaña",
+      "pt": "Relatório da montanha",
+      "en": "Mountain report"
+    },
+    "clima.fc.report.subtitle": {
+      "es": "Consulta el estado actualizado de andariveles y pistas.",
+      "pt": "Consulte o estado atualizado dos meios de elevação e das pistas.",
+      "en": "Check the latest lift and run status."
+    },
+    "clima.fc.report.cta": {
+      "es": "Ver reporte",
+      "pt": "Ver relatório",
+      "en": "View report"
     },
     "clima.fc.units.metric": {
       "es": "Métrico",
@@ -1930,8 +2015,11 @@
   },
   "urls": {
     "checkin.maps": "https://www.google.com/maps/search/?api=1&query=Condominio+Andes+Chill%C3%A1n",
-    "clima.forecast": "https://www.snow-forecast.com/resorts/Nevados-de-Chillan",
-    "tickets.buy": "https://www.nevadosdechillan.com/",
+    "clima.forecast": "https://es.snow-forecast.com/resorts/Chillan/6day/bot",
+    "clima.cameras": "https://www.nevadosdechillan.com/camaras",
+    "clima.mountainReport": "https://www.nevadosdechillan.com/reporte-montana",
+    "tickets.buy": "https://www.skipassnevadosdechillan.com/tienda/",
+    "tickets.mountainReport": "https://www.nevadosdechillan.com/reporte-montana",
     "quick.wa": "https://wa.me/56990137732",
     "emergency.tel": "tel:131"
   },
