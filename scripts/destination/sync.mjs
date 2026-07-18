@@ -10,6 +10,7 @@ import { fetchOsmTile } from './providers/osm.mjs';
 import { fetchGoogleTile } from './providers/google.mjs';
 import { fetchTripadvisorTile } from './providers/tripadvisor.mjs';
 import { applyPlaceOverrides, loadPlaceOverrides, mergeOverrides, recordsFromAddOverrides } from './overrides.mjs';
+import { applyCatalogAccessTargets, catalogDistanceIsValid, loadCatalogAccessTargets, withBaselineDistance } from './distance-metadata.mjs';
 
 const args = new Map(process.argv.slice(2).map((arg) => {
   const [key, ...rest] = arg.replace(/^--/, '').split('=');
@@ -88,7 +89,9 @@ function modes(place) {
   };
 }
 
-function applyModes(place) { return { ...place, discovery: modes(place) }; }
+function applyModes(place) {
+  return withBaselineDistance({ ...place, discovery: modes(place) }, config.apartment);
+}
 
 function pisteRoute(place) {
   const tags = place.sourceTags || {};
@@ -129,6 +132,7 @@ function validateGuide(guide) {
     if (place.instagram && place.instagram.verifiedBy !== 'osm_contact_tag' && place.instagram.provider !== 'manual') errors.push(`unverified Instagram: ${place.id}`);
     if (place.googleRating && place.googleRating.provider !== 'google') errors.push(`Google rating source mismatch: ${place.id}`);
     if (place.tripadvisorRating && place.tripadvisorRating.provider !== 'tripadvisor') errors.push(`Tripadvisor rating source mismatch: ${place.id}`);
+    if (place.discovery?.apartment && !['hotel', 'cabin'].includes(place.category) && !catalogDistanceIsValid(place)) errors.push(`missing catalog distance: ${place.id}`);
   }
   if (errors.length) throw new Error(`Destination guide validation failed:\n- ${errors.slice(0, 20).join('\n- ')}`);
 }
@@ -141,6 +145,7 @@ async function main() {
   const providerStatus = [];
   const overrideFile = path.resolve(PROJECT_ROOT, String(args.get('overrides') || path.join(LANDING_ROOT, 'data/place-overrides.json')));
   const overrides = loadPlaceOverrides(overrideFile);
+  const accessTargets = loadCatalogAccessTargets(path.join(LANDING_ROOT, 'data/catalog-access-targets.json'));
   let offerings = [];
   let routes = [];
   let manual = [];
@@ -190,7 +195,8 @@ async function main() {
   routes.push(...uniquePistes.map(pisteRoute));
   const placeRecords = records.filter((record) => !record.sourceTags?.['piste:type']);
   const deduplicated = mergePlaces(placeRecords, mergeOverrides(overrides));
-  const places = applyPlaceOverrides(deduplicated.places, overrides).map(applyModes).filter((place) => place.discovery.apartment || place.discovery.corridor);
+  const overriddenPlaces = applyPlaceOverrides(deduplicated.places, overrides);
+  const places = applyCatalogAccessTargets(overriddenPlaces, accessTargets).map(applyModes).filter((place) => place.discovery.apartment || place.discovery.corridor);
   const categoryCounts = Object.fromEntries(categoryEntries().map((category) => [category.id, places.filter((place) => place.category === category.id).length]));
   const providerCounts = Object.fromEntries(providerStatus.map((provider) => [provider.id, places.filter((place) => place.sources.some((source) => source.provider === provider.id)).length]));
   const guide = {

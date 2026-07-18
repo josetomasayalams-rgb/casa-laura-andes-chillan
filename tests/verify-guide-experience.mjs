@@ -119,7 +119,8 @@ if (!locationController.includes('geolocation.watchPosition') || !locationContro
   fail('the shared controller must refine one-time GPS, throttle session reroutes and clear private coordinates');
 }
 if (!nearby.includes('CordalLocationController.create') || !catalog.includes('CordalLocationController.create') ||
-    !nearby.includes("place._distanceSource = 'direct-current'") || !catalog.includes("source: 'direct-current'") ||
+    !nearby.includes("place._distanceSource = 'direct-current'") || !catalog.includes("'direct-current'") ||
+    !catalog.includes("'direct-trailhead-current'") || !catalog.includes("'sector-current'") ||
     !nearby.includes('travelHeadingReliable') || !nearby.includes('forwardDirection') ||
     !nearby.includes('locationGeneration') || !catalog.includes('locationGeneration')) {
   fail('all three guides must share GPS, show direct results immediately, infer direction and discard obsolete routes');

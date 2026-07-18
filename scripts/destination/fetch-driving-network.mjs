@@ -3,8 +3,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { LANDING_ROOT, PROJECT_ROOT, ROAD_CORE_URL, SCRIPT_ROOT } from './paths.mjs';
+import { applyCatalogAccessTargets, distanceTarget, loadCatalogAccessTargets, withRoadDistance } from './distance-metadata.mjs';
 
-const { haversineMeters, prepareNetwork, routeDistances, snapToNetwork } = await import(ROAD_CORE_URL);
+const { prepareNetwork, routeDistances, snapToNetwork } = await import(ROAD_CORE_URL);
 const config = JSON.parse(fs.readFileSync(path.join(SCRIPT_ROOT, 'config.json'), 'utf8'));
 const guidePath = path.join(LANDING_ROOT, 'data/destination-guide.json');
 const outputPath = path.join(LANDING_ROOT, 'data/driving-network.json');
@@ -199,6 +200,51 @@ function writeJsonPairAtomically(network, guide) {
   }
 }
 
+function routableDestinations(guide) {
+  return guide.places
+    .filter((place) => place.location && place.routingEligible !== false && place.status !== 'candidate_coordinate')
+    .map((place) => ({ id: place.id, location: distanceTarget(place).location }));
+}
+
+function finalizeDestinations(raw, guide) {
+  const destinations = routableDestinations(guide);
+  const network = prepareNetwork(raw);
+  raw.apartment = {
+    lat: config.apartment.lat,
+    lon: config.apartment.lon,
+    snap: snapToNetwork(network, config.apartment, SNAP_LIMIT_METERS)
+  };
+  raw.destinations = destinations.map((destination) => ({
+    id: destination.id,
+    location: destination.location,
+    snap: snapToNetwork(network, destination.location, SNAP_LIMIT_METERS)
+  }));
+  raw.statistics = {
+    ...raw.statistics,
+    destinations: raw.destinations.length,
+    snappedDestinations: raw.destinations.filter((destination) => destination.snap).length
+  };
+  raw.destinationSetSha256 = sha256(raw.destinations.map(({ id, location, snap }) => ({ id, location, snap })));
+  raw.networkHash = sha256({
+    schemaVersion: raw.schemaVersion,
+    profile: raw.profile,
+    nodes: raw.nodes,
+    segments: raw.segments,
+    apartment: raw.apartment,
+    destinations: raw.destinations
+  });
+  raw.artifactSha256 = raw.networkHash;
+  raw.networkVersion = `road-v2-${raw.networkHash.slice(0, 16)}`;
+  return raw;
+}
+
+export function refreshNetworkDestinations(previous, guide) {
+  if (!previous) throw new Error('A previous driving network is required for --reuse-network');
+  const refreshed = JSON.parse(JSON.stringify(previous));
+  refreshed.generatedAt = new Date().toISOString();
+  return finalizeDestinations(refreshed, guide);
+}
+
 function buildRawNetwork(payload, guide, query, elapsedMs) {
   const nodeByOsmId = new Map();
   for (const element of payload.elements || []) {
@@ -250,9 +296,7 @@ function buildRawNetwork(payload, guide, query, elapsedMs) {
   const segments = [...segmentsByKey.values()]
     .sort((left, right) => left.firstId - right.firstId || left.secondId - right.secondId)
     .map((segment) => [localIndex.get(segment.firstId), localIndex.get(segment.secondId), segment.meters, segment.flags, segment.impedanceFactor]);
-  const destinations = guide.places
-    .filter((place) => place.location && place.routingEligible !== false && place.status !== 'candidate_coordinate')
-    .map((place) => ({ id: place.id, location: place.location }));
+  const destinations = routableDestinations(guide);
   const raw = {
     schemaVersion: 2,
     generatedAt: new Date().toISOString(),
@@ -292,47 +336,18 @@ function buildRawNetwork(payload, guide, query, elapsedMs) {
       wayProfiles: wayStatistics
     }
   };
-  const network = prepareNetwork(raw);
-  raw.apartment.snap = snapToNetwork(network, config.apartment, SNAP_LIMIT_METERS);
-  raw.destinations = destinations.map((destination) => ({
-    id: destination.id,
-    location: destination.location,
-    snap: snapToNetwork(network, destination.location, SNAP_LIMIT_METERS)
-  }));
-  raw.statistics.snappedDestinations = raw.destinations.filter((destination) => destination.snap).length;
   raw.statistics.impedance = impedanceRange(segments.map((segment) => segment[4]));
-  raw.destinationSetSha256 = sha256(raw.destinations.map(({ id, location, snap }) => ({ id, location, snap })));
-  raw.networkHash = sha256({
-    schemaVersion: raw.schemaVersion,
-    profile: raw.profile,
-    nodes: raw.nodes,
-    segments: raw.segments,
-    apartment: raw.apartment,
-    destinations: raw.destinations
-  });
-  raw.artifactSha256 = raw.networkHash;
-  raw.networkVersion = `road-v2-${raw.networkHash.slice(0, 16)}`;
-  return raw;
+  return finalizeDestinations(raw, guide);
 }
 
-function mergeRoadMetadata(guide, network) {
+export function mergeRoadMetadata(guide, network) {
   const prepared = prepareNetwork(network);
   const result = routeDistances(prepared, network.apartment, network.destinations);
-  const directById = new Map(guide.places.map((place) => [place.id, place.location ? haversineMeters(config.apartment, place.location) : null]));
-  for (const place of guide.places) {
+  guide.places = guide.places.map((place) => {
     const route = result.distances[place.id];
     const snap = network.destinations.find((destination) => destination.id === place.id)?.snap || null;
-    let roadMeters = route?.meters ?? null;
-    const directMeters = directById.get(place.id);
-    if (roadMeters !== null && Number.isFinite(directMeters) && roadMeters + 1 < directMeters) roadMeters = null;
-    place.discovery = {
-      ...place.discovery,
-      apartmentRoadDistanceMeters: roadMeters,
-      roadSnapStatus: snap?.quality || 'unavailable',
-      roadSnapMeters: snap?.offsetMeters ?? null,
-      roadAccessNearby: Boolean(route?.accessNearby)
-    };
-  }
+    return withRoadDistance(place, config.apartment, route, snap);
+  });
   guide.meta = {
     ...guide.meta,
     drivingNetwork: {
@@ -351,7 +366,20 @@ function mergeRoadMetadata(guide, network) {
 
 async function main() {
   const guide = JSON.parse(fs.readFileSync(guidePath, 'utf8'));
+  guide.places = applyCatalogAccessTargets(
+    guide.places,
+    loadCatalogAccessTargets(path.join(LANDING_ROOT, 'data/catalog-access-targets.json'))
+  );
   const previousNetwork = readPreviousNetwork();
+  if (process.argv.includes('--reuse-network')) {
+    const network = refreshNetworkDestinations(previousNetwork, guide);
+    validateNetworkCandidate(network, previousNetwork);
+    const updatedGuide = mergeRoadMetadata(guide, network);
+    writeJsonPairAtomically(network, updatedGuide);
+    console.log(`Refreshed ${path.relative(PROJECT_ROOT, outputPath)} without downloading the OSM graph`);
+    console.log(`${network.statistics.nodes} nodes · ${network.statistics.segments} segments · ${network.statistics.snappedDestinations}/${network.statistics.destinations} destinations snapped`);
+    return;
+  }
   const query = overpassQuery();
   const started = performance.now();
   const payload = await requestOverpass(query);

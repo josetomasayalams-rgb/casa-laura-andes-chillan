@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "targets": [
+    {
+      "placeId": "osm-way-1266965162-refugio-garganta-del-diablo",
+      "label": {
+        "key": "catalog.access.garganta",
+        "es": "Inicio por Andarivel Tata",
+        "pt": "Início pelo Andarivel Tata",
+        "en": "Andarivel Tata trailhead"
+      },
+      "location": {
+        "lat": -36.9097103,
+        "lon": -71.4232945
+      },
+      "confidence": "verified",
+      "roadDestinationId": "manual-cafeteria-tata",
+      "source": {
+        "url": "https://trancas.cl/ruta-refugio-garganta-del-diablo-chillan/",
+        "checkedAt": "2026-07-18T00:00:00.000Z",
+        "note": "La guía oficial describe Andarivel Tata como uno de los inicios de la ruta; la coordenada coincide con Cafetería Tata en el catálogo cartográfico."
+      }
+    }
+  ]
+}

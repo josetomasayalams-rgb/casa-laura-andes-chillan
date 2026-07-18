@@ -9,6 +9,7 @@
     "sync:geometry": "node scripts/destination/fetch-route.mjs",
     "sync:destination": "node scripts/destination/sync.mjs --providers=manual,editorial,osm,google,tripadvisor",
     "sync:driving": "node scripts/destination/fetch-driving-network.mjs",
+    "sync:distances": "node scripts/destination/fetch-driving-network.mjs --reuse-network",
     "report:destination": "node scripts/destination/report.mjs",
     "test:destination": "node --test tests/destination/*.test.mjs",
     "test:landing": "bash tests/verify-gates.sh",

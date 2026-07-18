@@ -453,8 +453,8 @@ function isRoutingEligible(place) {
 }
 
 function sortableRoadDistance(place) {
-  return isRoutingEligible(place) && Number.isFinite(place.discovery?.apartmentRoadDistanceMeters)
-    ? place.discovery.apartmentRoadDistanceMeters
+  return Number.isFinite(place.distanceFromApartment?.meters)
+    ? place.distanceFromApartment.meters
     : Infinity;
 }
 
@@ -486,11 +486,22 @@ function catalogAction(url, key, label, type, className = '') {
 function canonicalCard(place) {
   const category = categoryFor(place.category);
   const routingEligible = isRoutingEligible(place);
-  const distanceMeters = routingEligible && Number.isFinite(place.discovery.apartmentRoadDistanceMeters) ? place.discovery.apartmentRoadDistanceMeters : null;
+  const apartmentDistance = place.distanceFromApartment;
+  if (!apartmentDistance || !Number.isFinite(Number(apartmentDistance.meters))) throw new Error(`${place.id}: canonical catalog distance is missing`);
+  const distanceMeters = Number(apartmentDistance.meters);
+  const distanceSource = apartmentDistance.source;
+  const distanceTarget = apartmentDistance.target;
+  const targetLocation = place.catalogAccess?.location || place.location;
+  const navigationUrl = place.catalogAccess?.navigationUrl || place.navigationUrl;
+  const googleMapsUrl = place.catalogAccess?.googleMapsUrl || place.googleMapsUrl;
   const address = fieldValue(place.address) || place.municipality || '';
   const pendingLocation = `${address ? `${attrEsc(address)} <span aria-hidden="true">·</span> ` : ''}<span data-i18n="guide.coordinate.pendingLocation">Ubicación exacta por confirmar</span>`;
-  const approximate = place.coordinateKind === 'center_candidate' || place.status === 'candidate_coordinate';
+  const approximate = apartmentDistance.confidence === 'approximate';
   const precision = place.coordinatePrecision || (routingEligible ? place.coordinateKind : 'unverified');
+  const accessLabel = place.catalogAccess?.label;
+  const locationLine = accessLabel
+    ? `<span data-i18n="${attrEsc(accessLabel.key)}">${attrEsc(tVal(accessLabel, 'es'))}</span>`
+    : routingEligible ? (address ? attrEsc(address) : '<span data-i18n="guide.location.unknown">Sector por confirmar</span>') : pendingLocation;
   const closed = place.operatingStatus === 'closed';
   const phone = fieldValue(place.phone);
   const website = fieldValue(place.website);
@@ -500,22 +511,22 @@ function canonicalCard(place) {
     ? `<span class="catalog-rating"><b>★ ${attrEsc(rating.value)}</b><span aria-hidden="true"> · </span>${attrEsc(rating.reviewCount || 0)} <span data-i18n="guide.reviews">reseñas</span></span>`
     : '';
   const phoneHref = phone ? `tel:${String(phone).replace(/[^+\d]/g, '')}` : '';
-  return `      <article class="rest-card catalog-card" data-id="${attrEsc(place.id)}" data-category="${attrEsc(place.category)}" data-lat="${attrEsc(place.location.lat)}" data-lon="${attrEsc(place.location.lon)}" data-routing-eligible="${routingEligible ? 'true' : 'false'}" data-coordinate-precision="${attrEsc(precision)}" data-distance="${distanceMeters ?? ''}" data-distance-source="${distanceMeters === null ? 'unknown' : 'road-apartment'}" data-apartment-distance="${distanceMeters ?? ''}" data-apartment-access-nearby="${routingEligible && place.discovery.roadAccessNearby ? 'true' : 'false'}" data-road-access-nearby="${routingEligible && place.discovery.roadAccessNearby ? 'true' : 'false'}" style="--catalog-color:${attrEsc(category.color)}">
+  return `      <article class="rest-card catalog-card" data-id="${attrEsc(place.id)}" data-category="${attrEsc(place.category)}" data-lat="${attrEsc(targetLocation.lat)}" data-lon="${attrEsc(targetLocation.lon)}" data-routing-eligible="${routingEligible ? 'true' : 'false'}" data-coordinate-precision="${attrEsc(precision)}" data-distance="${distanceMeters}" data-distance-source="${attrEsc(distanceSource)}" data-distance-target="${attrEsc(distanceTarget)}" data-distance-confidence="${attrEsc(apartmentDistance.confidence)}" data-apartment-distance="${distanceMeters}" data-apartment-distance-source="${attrEsc(distanceSource)}" data-apartment-distance-coverage="${attrEsc(apartmentDistance.coverage || 'direct')}" data-apartment-access-nearby="${apartmentDistance.accessNearby ? 'true' : 'false'}" data-road-access-nearby="${apartmentDistance.accessNearby ? 'true' : 'false'}" style="--catalog-color:${attrEsc(category.color)}">
         <header class="catalog-card__head">
           <span class="catalog-card__marker" aria-hidden="true"></span>
           <div class="catalog-card__identity">
             <span class="catalog-card__category" data-i18n="guide.cat.${attrEsc(place.category)}">${attrEsc(category.label)}</span>
             <h3 class="rest-card__name">${attrEsc(place.name)}</h3>
-            <p>${routingEligible ? (address ? attrEsc(address) : '<span data-i18n="guide.location.unknown">Sector por confirmar</span>') : pendingLocation}</p>
+            <p>${locationLine}</p>
           </div>
-          ${routingEligible ? '<strong class="catalog-distance"><span data-distance-label>—</span><small data-road-distance-note></small></strong>' : ''}
+          <strong class="catalog-distance"><span data-distance-label>—</span><small data-road-distance-note></small></strong>
         </header>
-        ${approximate && routingEligible ? '<p class="catalog-warning" data-i18n="guide.coordinate.warning">Coordenada aproximada: confirma la entrada antes de viajar.</p>' : ''}
+        ${approximate ? '<p class="catalog-warning" data-i18n="guide.coordinate.warning">Coordenada aproximada: confirma la entrada antes de viajar.</p>' : ''}
         ${closed ? '<p class="catalog-warning catalog-warning--closed" data-i18n="guide.status.closed">Cerrado según la última verificación. Revisa el sitio oficial antes de viajar.</p>' : ''}
         ${ratingHtml}
         <div class="catalog-actions">
-          ${catalogAction(place.navigationUrl, 'guide.action.navigate', 'Navegar', 'navigation', 'catalog-action--primary')}
-          ${catalogAction(place.googleMapsUrl, 'guide.action.maps', 'Abrir en Google Maps', 'maps')}
+          ${catalogAction(navigationUrl, 'guide.action.navigate', 'Navegar', 'navigation', 'catalog-action--primary')}
+          ${catalogAction(googleMapsUrl, 'guide.action.maps', 'Abrir en Google Maps', 'maps')}
           ${catalogAction(website, 'guide.action.website', 'Sitio oficial', 'website')}
           ${catalogAction(instagram, 'guide.action.instagram', 'Abrir en Instagram', 'instagram')}
           ${catalogAction(phoneHref, 'nearby.call', 'Llamar', 'phone')}

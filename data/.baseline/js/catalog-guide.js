@@ -52,7 +52,6 @@
   }
 
   function distance(card) {
-    if (!isRoutingEligible(card)) return Number.POSITIVE_INFINITY;
     var raw = card.getAttribute('data-distance');
     return raw === '' ? Number.POSITIVE_INFINITY : Number(raw);
   }
@@ -62,13 +61,6 @@
   }
 
   function setDistance(card, result) {
-    if (!isRoutingEligible(card)) {
-      card.setAttribute('data-distance', '');
-      card.setAttribute('data-distance-source', 'unknown');
-      card.setAttribute('data-road-access-nearby', 'false');
-      card.setAttribute('data-distance-coverage', 'unavailable');
-      return;
-    }
     var rawMeters = result && result.meters;
     var meters = rawMeters === '' || rawMeters === null || rawMeters === undefined ? NaN : Number(rawMeters);
     card.setAttribute('data-distance', Number.isFinite(meters) ? String(meters) : '');
@@ -88,7 +80,6 @@
   function renderDistances() {
     var language = window.GH_I18N && window.GH_I18N.getLang ? window.GH_I18N.getLang() : 'es';
     cards.forEach(function (card) {
-      if (!isRoutingEligible(card)) return;
       var meters = distance(card);
       var source = card.getAttribute('data-distance-source') || 'unknown';
       var label = card.querySelector('[data-distance-label]');
@@ -100,8 +91,15 @@
         return;
       }
       label.textContent = window.CordalRoadDistances.formatMeters(meters, language);
-      if (source === 'direct-current') note.textContent = translate('guide.road.direct', 'en línea recta · aprox.');
-      else if (source === 'road-current' || source === 'road-apartment') {
+      if (source === 'sector-apartment' || source === 'sector-current') {
+        note.textContent = translate('guide.distance.sector', 'hasta el sector · aprox.');
+      } else if (source === 'direct-trailhead-apartment' || source === 'direct-trailhead-current') {
+        note.textContent = translate('guide.distance.trailheadDirect', 'hasta el inicio · en línea recta');
+      } else if (source === 'road-trailhead-apartment' || source === 'road-trailhead-current') {
+        note.textContent = translate('guide.distance.trailheadRoad', 'hasta el inicio · por camino') + (card.getAttribute('data-road-access-nearby') === 'true' ? ' · ' + translate('guide.road.access', 'hasta acceso cercano') : '');
+      } else if (source === 'direct-current' || source === 'direct-apartment') {
+        note.textContent = translate('guide.road.direct', 'en línea recta · aprox.');
+      } else if (source === 'road-current' || source === 'road-apartment') {
         note.textContent = translate('guide.road.approx', 'por camino · aprox.') + (card.getAttribute('data-road-access-nearby') === 'true' ? ' · ' + translate('guide.road.access', 'hasta acceso cercano') : '');
       } else note.textContent = '';
     });
@@ -135,15 +133,11 @@
     if (stopController !== false && controller) controller.stop();
     if (window.CordalRoadDistances) window.CordalRoadDistances.destroy();
     cards.forEach(function (card) {
-      if (!isRoutingEligible(card)) {
-        setDistance(card, null);
-        return;
-      }
       setDistance(card, {
         meters: card.getAttribute('data-apartment-distance'),
-        source: card.getAttribute('data-apartment-distance') ? 'road-apartment' : 'unknown',
+        source: card.getAttribute('data-apartment-distance-source') || 'unknown',
         accessNearby: card.getAttribute('data-apartment-access-nearby') === 'true',
-        coverage: 'covered'
+        coverage: card.getAttribute('data-apartment-distance-coverage') || 'unknown'
       });
     });
     setOrigin('apartment');
@@ -153,14 +147,11 @@
 
   function applyDirect(snapshot) {
     cards.forEach(function (card) {
-      if (!isRoutingEligible(card)) {
-        setDistance(card, null);
-        return;
-      }
       var destination = { lat: Number(card.getAttribute('data-lat')), lon: Number(card.getAttribute('data-lon')) };
+      var target = card.getAttribute('data-distance-target');
       setDistance(card, {
         meters: window.CordalLocationMotion.distanceMeters(snapshot, destination),
-        source: 'direct-current',
+        source: target === 'trailhead' ? 'direct-trailhead-current' : target === 'locality' ? 'sector-current' : 'direct-current',
         accessNearby: false,
         coverage: 'direct'
       });
@@ -189,7 +180,7 @@
         if (!route || !Number.isFinite(Number(route.meters))) return;
         setDistance(card, {
           meters: route.meters,
-          source: 'road-current',
+          source: card.getAttribute('data-distance-target') === 'trailhead' ? 'road-trailhead-current' : 'road-current',
           accessNearby: Boolean(route.accessNearby),
           coverage: 'covered'
         });

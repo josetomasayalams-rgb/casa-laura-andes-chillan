@@ -1975,6 +1975,9 @@
     "guide.road.calculating": { "es": "Calculando distancias viales en este dispositivo…", "pt": "Calculando distâncias rodoviárias neste dispositivo…", "en": "Calculating road distances on this device…" },
     "guide.road.error": { "es": "No pudimos calcular la distancia vial. Los lugares siguen disponibles.", "pt": "Não foi possível calcular a distância rodoviária. Os lugares continuam disponíveis.", "en": "We could not calculate the road distance. Places remain available." },
     "guide.road.direct": { "es": "en línea recta · aprox.", "pt": "em linha reta · aprox.", "en": "straight line · approx." },
+    "guide.distance.sector": { "es": "hasta el sector · aprox.", "pt": "até o setor · aprox.", "en": "to the area · approx." },
+    "guide.distance.trailheadRoad": { "es": "hasta el inicio · por camino", "pt": "até o início · por estrada", "en": "to the trailhead · by road" },
+    "guide.distance.trailheadDirect": { "es": "hasta el inicio · en línea recta", "pt": "até o início · em linha reta", "en": "to the trailhead · straight line" },
     "guide.road.outsideNetwork": { "es": "Estás fuera de la red vial disponible; conservamos las distancias aproximadas en línea recta.", "pt": "Você está fora da rede viária disponível; mantemos as distâncias aproximadas em linha reta.", "en": "You are outside the available road network; approximate straight-line distances remain visible." },
     "guide.road.errorDirect": { "es": "La mejora vial no respondió; conservamos las distancias aproximadas en línea recta.", "pt": "A melhoria viária não respondeu; mantemos as distâncias aproximadas em linha reta.", "en": "Road routing did not respond; approximate straight-line distances remain visible." },
     "guide.coordinate.warning": { "es": "Coordenada aproximada: confirma la entrada antes de viajar.", "pt": "Coordenada aproximada: confirme a entrada antes de viajar.", "en": "Approximate coordinate: confirm the entrance before travelling." },
@@ -2026,6 +2029,7 @@
     "catalog.origin.calculating": { "es": "Calculando distancias viales…", "pt": "Calculando distâncias rodoviárias…", "en": "Calculating road distances…" },
     "catalog.origin.ready": { "es": "Distancias desde tu ubicación · sólo en este dispositivo", "pt": "Distâncias da sua localização · somente neste dispositivo", "en": "Distances from your location · only on this device" },
     "catalog.origin.directReady": { "es": "Resultados cercanos listos · mejorando rutas en segundo plano", "pt": "Resultados próximos prontos · melhorando rotas em segundo plano", "en": "Nearby results ready · improving routes in the background" },
+    "catalog.access.garganta": { "es": "Inicio por Andarivel Tata", "pt": "Início pelo Andarivel Tata", "en": "Andarivel Tata trailhead" },
     "catalog.empty": { "es": "No hay lugares que coincidan. Prueba otra búsqueda o categoría.", "pt": "Não há lugares correspondentes. Tente outra busca ou categoria.", "en": "No places match. Try another search or category." },
     "nearby.intro": {
       "es": "Encuentra comida, bencina, salud y servicios ordenados por distancia.",

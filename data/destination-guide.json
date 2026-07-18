@@ -57,13 +57,13 @@
     ],
     "drivingNetwork": {
       "schemaVersion": 2,
-      "generatedAt": "2026-07-18T20:33:23.120Z",
-      "networkVersion": "road-v2-b6747887bbfd6ee5",
+      "generatedAt": "2026-07-18T21:25:26.634Z",
+      "networkVersion": "road-v2-81fdae3d14caabe6",
       "osmBaseTimestamp": "2026-07-18T20:31:42Z",
       "responseSha256": "16755d4a0e28911b57f11d399ab2cbc2451cdb09222dd105f68c9412eda20116",
-      "networkHash": "b6747887bbfd6ee52db0eb285e0c8e0a23cd8986c7725e8fd66d7ae67ea43561",
-      "artifactSha256": "b6747887bbfd6ee52db0eb285e0c8e0a23cd8986c7725e8fd66d7ae67ea43561",
-      "destinationSetSha256": "6953b7d8fbe60c41ece66aa98c341c2bfc13d2ef4d52cb6580f63bd766c87f12"
+      "networkHash": "81fdae3d14caabe6676396fd128870acf101c526d6dd323f53e4c0510ffe712b",
+      "artifactSha256": "81fdae3d14caabe6676396fd128870acf101c526d6dd323f53e4c0510ffe712b",
+      "destinationSetSha256": "ee41f911f38bdbefda5e5d52df30d55a287e1bf83657ce37ef8ba79133747e5f"
     }
   },
   "geometry": {
@@ -3534,6 +3534,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 17.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 27095.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-los-pincheiras-restaurant",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -3597,6 +3607,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 78.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 25928.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-quincho-del-valle",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -3660,6 +3680,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 22280,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Recinto km 47,6",
+        "roadDestinationId": "manual-don-quelo",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -3723,6 +3753,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 21656,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Recinto km 48,5",
+        "roadDestinationId": "manual-cumbres-restaurante",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -3802,6 +3842,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 8.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 24864.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-rendez-vous",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -3895,6 +3945,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 25.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8441.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-oliva-s-restaurant",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -3986,6 +4046,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 23.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8794.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-snow-pub",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4067,6 +4137,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 89,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 587.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-cafeteria-tata",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4146,6 +4226,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2086.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-cafeteria-tio-willy",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4227,6 +4317,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 36.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 686.9,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-observatorio-cafe",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -4308,6 +4408,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 6.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 24828.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-la-pileta",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4366,6 +4476,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 24862.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-minimarket-el-varon",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4478,6 +4598,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 5.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8187.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "manual-rucahue",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4559,6 +4689,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 1.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 26897.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-copec-recinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4617,6 +4757,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 20347.1,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Los Lleuques",
+        "roadDestinationId": "manual-ferreteria-don-lalo",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -4696,6 +4846,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 41.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 26753.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-posta-recinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4780,6 +4940,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 26437.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-reten-recinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4864,6 +5034,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 17.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6757.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-tenencia-las-trancas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -4948,6 +5128,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 11.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 24416.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-bomberos-los-lleuques",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5034,6 +5224,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 27.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7931.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-bomberos-las-trancas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5115,6 +5315,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 36.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 24125.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-la-playita",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5194,6 +5404,16 @@
         "roadSnapStatus": "access_nearby",
         "roadSnapMeters": 159.7,
         "roadAccessNearby": true
+      },
+      "distanceFromApartment": {
+        "meters": 25926.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-saltito-renegado",
+        "accessNearby": true,
+        "coverage": "covered"
       }
     },
     {
@@ -5277,6 +5497,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 26.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 27847.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-parque-las-turbinas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5368,6 +5598,16 @@
         "roadSnapStatus": "access_nearby",
         "roadSnapMeters": 239.3,
         "roadAccessNearby": true
+      },
+      "distanceFromApartment": {
+        "meters": 14791,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-atr-cueva-pincheira",
+        "accessNearby": true,
+        "coverage": "covered"
       }
     },
     {
@@ -5452,6 +5692,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 6.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10970.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-bosque-encantado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5531,6 +5781,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 124.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8720.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-mirador-del-valle",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5635,6 +5895,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 44.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2403.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-term-valle-hermoso",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5750,6 +6020,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 78.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 576.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-mtb-bike-park",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5834,6 +6114,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 57.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2030.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-termas-de-chillan",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -5925,6 +6215,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 1730.9,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "manual-fumarolas-olla-del-mote",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -5995,6 +6295,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 19.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8055.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-sitari-tapas-y-brasas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6065,6 +6375,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 11.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9023.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-bagual",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6135,6 +6455,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10134.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-restaurant-borde-andino",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6198,6 +6528,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-los-hualles-restobar",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -6268,6 +6608,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8578.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-miski-lirio",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6338,6 +6688,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 40.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8162.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-restaurante-pizzer-a-chil-in",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6408,6 +6768,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 3.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8246.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-pizzas-and-beers-del-valle",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6471,6 +6841,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-steak-house",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -6534,6 +6914,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-restobar-shangrila",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -6597,6 +6987,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-las-bravas-cafe",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -6667,6 +7067,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 37.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8433.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-dulce-monta-a",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6737,6 +7147,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 17.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9449.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-koiwe-cafe-boutique",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6807,6 +7227,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 34.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9323.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-lux-petit-club-cafe-bar",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -6870,6 +7300,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-las-cacha-as",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -6940,6 +7380,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 31.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8442.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-caramba-helados",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -7010,6 +7460,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9357.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-che-cami",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -7073,6 +7533,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-valdo",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7136,6 +7606,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-malcontenta-panader-a",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7206,6 +7686,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9027.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-cervecer-a-garganta-del-diablo",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -7269,6 +7759,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-cervecer-a-shangrila",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7339,6 +7839,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8546.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-la-cava-de-la-monta-a",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -7409,6 +7919,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 25.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8622.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-charcuter-a-las-cabras",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -7468,6 +7988,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-patio-tranquino",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7527,6 +8057,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-charlie-bowl",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7586,6 +8126,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-restaurant-patrimonial-el-tren",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7645,6 +8195,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-monte-carla-las-trancas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7711,6 +8271,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 6.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9686.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-alto-las-trancas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -7777,6 +8347,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 20195.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-el-pared-n",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -7836,6 +8416,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 0,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Nevados de Chillán",
+        "roadDestinationId": "editorial-gastronom-a-nevados-de-chill-n",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7899,6 +8489,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-fauna-lounge",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -7969,6 +8569,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 11.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8822.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-super-el-refugio",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -8039,6 +8649,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 13.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8339.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "verified",
+        "label": null,
+        "roadDestinationId": "editorial-super-mcpato",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -8098,6 +8718,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6718.9,
+        "source": "sector-apartment",
+        "target": "locality",
+        "confidence": "approximate",
+        "label": "Valle Las Trancas",
+        "roadDestinationId": "editorial-val-panaderia-bravas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8157,6 +8787,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 18644.2,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-343576255-mirador-salto-el-blanquillo",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8219,6 +8859,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 21584.6,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-501242743-cerro-las-mariposas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8279,6 +8929,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 20313.8,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-7821351357-cerro-come-callao",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8338,6 +8998,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 59.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 13685.5,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-30929847-termas-los-peucos",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8398,6 +9068,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 20679.2,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1350744475-cerro-el-planchon",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8458,6 +9138,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11207.4,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-317670757-mirador-mariposa-del-chagual",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8518,6 +9208,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 17015,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-502735387-cerro-negro",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8577,6 +9277,16 @@
         "roadSnapStatus": "access_nearby",
         "roadSnapMeters": 340.4,
         "roadAccessNearby": true
+      },
+      "distanceFromApartment": {
+        "meters": 42270.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-308136377-mirador-huella-huemul",
+        "accessNearby": true,
+        "coverage": "covered"
       }
     },
     {
@@ -8636,6 +9346,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 142.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 42044.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5254437521-zona-de-merienda",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -8696,6 +9416,16 @@
         "roadSnapStatus": "access_nearby",
         "roadSnapMeters": 154.8,
         "roadAccessNearby": true
+      },
+      "distanceFromApartment": {
+        "meters": 41941.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-11135357983-mirador-relbun",
+        "accessNearby": true,
+        "coverage": "covered"
       }
     },
     {
@@ -8760,6 +9490,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 5.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 41890.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-13461557007-bienvenido-a-la-reserva-nacional-nuble",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -8822,6 +9562,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 19271.3,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-498484311-cerro-las-aguilas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8890,6 +9640,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 20408.4,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202584796-cerro-pelado",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -8957,6 +9717,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 16071.5,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-501242591-cerro-las-yeguas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -9016,6 +9786,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 111.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 41200.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1115038017-austin",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9083,6 +9863,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9256.1,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202589759-picos-las-bravas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -9150,6 +9940,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9436,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5314140516-cumbre-sur",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -9209,6 +10009,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9269.7,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5918847284-pared-mastodonde",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -9271,6 +10081,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7913.6,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202592478-cerro-la-pila",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -9337,6 +10157,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7617.6,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5918848485-sector-pared-blanca-y-pared-deportiva",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -9403,6 +10233,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 69.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 16444.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135960-cabannas-las-comadres",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9475,6 +10315,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 15.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9787,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-311431218-cabanas-los-andes",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9547,6 +10397,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 36.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9504.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305603-cabanas-entre-rocas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9619,6 +10479,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9346.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305655-complejo-turistico-los-trineos",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9691,6 +10561,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 21.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9769.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271311321-cabanas-rukapukem",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9763,6 +10643,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 40.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9828,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271311327-cabanas-la-baita",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9829,6 +10719,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 62.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 12058.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135953-hotel-terra-nevada",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9902,6 +10802,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 43,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11011.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135955-cabanas-el-esquiador",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -9974,6 +10884,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 46,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11543,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135956-cabanas-bafemadi",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10046,6 +10966,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 51.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 15859.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135957-cabanas-roble-huacho",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10112,6 +11042,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 75.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11881.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135958-cabanas-yancatu",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10178,6 +11118,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 21.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 12479,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135961-casita-de-te",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10250,6 +11200,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 41.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 15192.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135963-hostal-junta-los-rios",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10322,6 +11282,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 49.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11286.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135965-cabanas-aguanieve",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10407,6 +11377,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 39.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 15178,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2750524518-cabanas-astromelia",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10479,6 +11459,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 19.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10030.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-3041392733-entre-curvas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10554,6 +11544,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 13.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9951.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4088884738-condominio-patagonia",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10627,6 +11627,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 12.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11687.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4116261796-villa-parma",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10721,6 +11731,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 23,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11784.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4362126390-cabanas-roble-quemado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10799,6 +11819,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 33.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11069.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-7633684619-domos-treepod",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10885,6 +11915,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11632.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-12503354027-duub-hostel-cabanas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -10957,6 +11997,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 23.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8765.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-311431047-bordenieve",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11029,6 +12079,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 13.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9091.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-311431147-los-nevados",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11101,6 +12161,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 12.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8988.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-311431151-balcacura",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11173,6 +12243,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 22.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9182.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-311431214-cumbres-blancas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11245,6 +12325,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 10.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8613.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-311431242-las-cabras",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11338,6 +12428,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 15.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6873.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-311431245-la-araucana-jamon-pan-y-vino",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11404,6 +12504,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2944.4,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-367739102-mirador-pino-huacho",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -11476,6 +12586,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 26.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8512,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305622-cabanas-quitrahue",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11548,6 +12668,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 21.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8843.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305625-cabanas-ananukas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11620,6 +12750,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 26.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8359.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305671-cabanas-piremapu",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11692,6 +12832,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 23.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8624.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305693-santa-rosa-lodge",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11764,6 +12914,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 27.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8166,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305704-cabanas-chil-in",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11856,6 +13016,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 27.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7461.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305720-cabanas-pacha-pulay",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11928,6 +13098,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 26.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8907.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-988305724-cabanas-lenador",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -11994,6 +13174,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7154.6,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202587653-cerro-las-canas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -12093,6 +13283,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8106.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271274061-cabanas-ecobox-andino",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12165,6 +13365,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8207,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271285819-cabanas-mamalu",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12237,6 +13447,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 51.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8276.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271285821-cabanas-rucahue",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12329,6 +13549,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 23.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7251.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271285823-hotel-vegmont",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12401,6 +13631,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8355.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271285825-cabanas-mittenwald",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12473,6 +13713,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7445.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271285829-cabanas-valle-las-trancas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12545,6 +13795,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 32.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9185.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271311316-cabanas-antue",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12637,6 +13897,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9368.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1271311320-cabanas-los-nirres",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12703,6 +13973,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 3606.1,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2282636000-cerro-purgatorio",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -12770,6 +14050,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 10.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6738.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-3463619787-informacion-turistica",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12837,6 +14127,16 @@
         "roadSnapStatus": "access_nearby",
         "roadSnapMeters": 163,
         "roadAccessNearby": true
+      },
+      "distanceFromApartment": {
+        "meters": 9969.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4528793299-cabanas-nido-de-condor",
+        "accessNearby": true,
+        "coverage": "covered"
       }
     },
     {
@@ -12903,6 +14203,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 10.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 9248,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5569759224-cabana-fuentes-moya",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -12970,6 +14280,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 2.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10590.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5659855021-cabana-del-huem",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13064,6 +14384,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 25.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7024.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5843178085-riding",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13146,6 +14476,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 146.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10636.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-7416155147-lodge-roca-negra",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13213,6 +14553,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 3915,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-13646131879-mirador-los-coltrahues",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -13286,6 +14636,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 29.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8534.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-28355923-robledal",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13359,6 +14719,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 18.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10195.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-101886327-mi-lodge",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13426,6 +14796,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 22.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6683.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-111626322-hostelling-valle-las-trancas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13493,6 +14873,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 15.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 7650.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-593911599-hotel-vivo-montana",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13560,6 +14950,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2595.3,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202593438-cerro-coltrahue",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -13626,6 +15026,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 76.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 1280.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1262100859-mirador-el-regalo",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13693,6 +15103,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2036.2,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2220466858-cerro-el-gato",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -13768,6 +15188,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 17.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 1952.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2471159073-centro-de-ski-nevados-de-chillan",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13846,6 +15276,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 47,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2346.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5683454521-chil-in-hostel",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -13912,6 +15352,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2375.1,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-6629435738-buena-vista-bar",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -13978,6 +15428,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 43.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2357.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-28256625-valle-hermoso",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14051,6 +15511,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 76.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2062.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-97509060-hotel-alto-nevados",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14126,6 +15596,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 49.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 174.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-97509064-nevados-de-chillan",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14206,6 +15686,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 26.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 622.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-97509069-hotel-termas-chillan",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14269,10 +15759,47 @@
         "corridorDistanceMeters": 2257,
         "routeProgressMeters": 52495.2,
         "routeLengthMeters": 52495.2,
-        "apartmentRoadDistanceMeters": null,
-        "roadSnapStatus": "unavailable",
-        "roadSnapMeters": null,
+        "apartmentRoadDistanceMeters": 587.2,
+        "roadSnapStatus": "near",
+        "roadSnapMeters": 89,
         "roadAccessNearby": false
+      },
+      "catalogAccess": {
+        "type": "trailhead",
+        "label": {
+          "key": "catalog.access.garganta",
+          "es": "Inicio por Andarivel Tata",
+          "pt": "Início pelo Andarivel Tata",
+          "en": "Andarivel Tata trailhead"
+        },
+        "location": {
+          "lat": -36.9097103,
+          "lon": -71.4232945
+        },
+        "confidence": "verified",
+        "roadDestinationId": "manual-cafeteria-tata",
+        "navigationUrl": "https://www.google.com/maps/dir/?api=1&destination=-36.9097103%2C-71.4232945",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=-36.9097103%2C-71.4232945",
+        "source": {
+          "url": "https://trancas.cl/ruta-refugio-garganta-del-diablo-chillan/",
+          "checkedAt": "2026-07-18T00:00:00.000Z",
+          "note": "La guía oficial describe Andarivel Tata como uno de los inicios de la ruta; la coordenada coincide con Cafetería Tata en el catálogo cartográfico."
+        }
+      },
+      "distanceFromApartment": {
+        "meters": 587.2,
+        "source": "road-trailhead-apartment",
+        "target": "trailhead",
+        "confidence": "verified",
+        "label": {
+          "key": "catalog.access.garganta",
+          "es": "Inicio por Andarivel Tata",
+          "pt": "Início pelo Andarivel Tata",
+          "en": "Andarivel Tata trailhead"
+        },
+        "roadDestinationId": "manual-cafeteria-tata",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14340,6 +15867,16 @@
         "roadSnapStatus": "access_nearby",
         "roadSnapMeters": 324.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 3224.1,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-382037906-cerro-pirigallo",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -14402,6 +15939,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8580.1,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-501242961-cerro-las-minas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -14462,6 +16009,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 11536.1,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1350393964-cerro-los-metales",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -14521,6 +16078,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8045.8,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2282637066-cerro-pichi-minas",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -14580,6 +16147,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 12772,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1350393957-cerro-el-feo",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -14646,6 +16223,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 27.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 25849.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-307557294-cabanas-ayun-koyam",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14712,6 +16299,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 28.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 26075.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-307557295-cabanas-la-piedra",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14778,6 +16375,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 51.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 28972.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1251260272-mirador-recinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14845,6 +16452,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 24820.9,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2258420956-bosque-los-lleuques",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -14912,6 +16529,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 75.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 26019.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4463992989-mirador-los-lleuques",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15002,6 +16629,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 27.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 24738.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4573807262-cabanas-copihual",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15068,6 +16705,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 21.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 25836.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-6484823533-cabanas-recinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15135,6 +16782,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 22307.4,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-13207466680-mirador-casapiedra",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -15207,6 +16864,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 38.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 17390.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135954-cabanas-acantilado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15273,6 +16940,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 55.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 19035.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135959-cabana-la-invernada",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15339,6 +17016,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 62.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 19793.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135966-rio-renegado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15405,6 +17092,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 47.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 19497.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1289135967-cabanas-del-valle",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15492,6 +17189,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 18.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 20277.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4082994727-noric-lodge",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15558,6 +17265,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 19338.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-7195378895-papahu",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -15625,6 +17342,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10009.2,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-501243122-cerro-torrecilla",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -15693,6 +17420,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 6902.7,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202593309-cerro-las-cabras",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -15761,6 +17498,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 2865.5,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5203403421-anfiteatro",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -15820,6 +17567,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10833,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202592790-cerro-colorado",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -15880,6 +17637,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 8418.4,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2282637065-cerro-piramide",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -15939,6 +17706,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 10636.5,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4342083113-cerro-consuelo",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -15998,6 +17775,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 13344.4,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1202586063-cerro-las-miras",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -16058,6 +17845,16 @@
         "roadSnapStatus": "unavailable",
         "roadSnapMeters": null,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 20160.8,
+        "source": "direct-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-5808319559-cerro-arrayan",
+        "accessNearby": false,
+        "coverage": "direct"
       }
     },
     {
@@ -16117,6 +17914,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 63.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 30310.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1189483667-mirador-el-macal",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16176,6 +17983,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 15.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 33222,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-1189531669-el-chacay",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16236,6 +18053,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 11.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 50846.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-11978125701-posta-de-salud-rural-ciruelito",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16305,6 +18132,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 102.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 39222.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-2020891243-casa-del-sol",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16372,6 +18209,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 25.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 63715.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-539944872-reten-tanilvoro",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16447,6 +18294,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 21.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53917.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-268892414-almacen",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16513,6 +18370,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 11.8,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 54014.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-268892416-tenencia-pinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16572,6 +18439,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 6.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53430.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-268892418-shell",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16631,6 +18508,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 13,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 51121.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-308161486-los-adobes",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16696,6 +18583,16 @@
         "roadSnapStatus": "near",
         "roadSnapMeters": 35.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 50401.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-308161487-organicos-brita",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16760,6 +18657,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 18.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53975.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-308161534-bancoestado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16833,6 +18740,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 16.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53782.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-632091719-ferreteria-san-sebastian",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16908,6 +18825,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53917.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-3588420773-mahuida-cafe",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -16977,6 +18904,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 14.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53985,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494113896-farmacia-becerra",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17037,6 +18974,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53910.1,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494132493-supermercado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17113,6 +19060,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 4.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53819.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494132496-comida-rapida",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17173,6 +19130,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 11.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53049,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494132497-almacen",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17233,6 +19200,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 5.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53557.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494177192-caja-vecina-banco-estado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17302,6 +19279,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 20.1,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53994.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494177194-doctor-rubilar",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17362,6 +19349,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 15.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 54668,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494178490-almacen-el-magnolio",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17422,6 +19419,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53824.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494178491-entre-vigas",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17482,6 +19489,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53749.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494178494-supermercado-javiera",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17549,6 +19566,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 10.7,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 54400.2,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494181889-supermercado",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17616,6 +19643,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 9.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 54385,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-4494191494-panaderia",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17676,6 +19713,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 11.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53895.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-11230095703-ciudades",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17735,6 +19782,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 21,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53724.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-11230095722-supermercado-pinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17804,6 +19861,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 3.4,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53835.6,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-13502766797-sabores-mexicanos",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17872,6 +19939,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 6.9,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53332.5,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-node-13502766799-sushi-oasis-pinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -17936,6 +20013,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 25.5,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53948.7,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-351442219-cesfam-pinto",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -18004,6 +20091,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 19.3,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53544.3,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-353004595-panaderia-fenix",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -18070,6 +20167,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 17.6,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53328.8,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-353042656-la-palmera",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     },
     {
@@ -18139,6 +20246,16 @@
         "roadSnapStatus": "on_road",
         "roadSnapMeters": 15.2,
         "roadAccessNearby": false
+      },
+      "distanceFromApartment": {
+        "meters": 53324.4,
+        "source": "road-apartment",
+        "target": "place",
+        "confidence": "mapped",
+        "label": null,
+        "roadDestinationId": "osm-way-353042657-the-burguer-company",
+        "accessNearby": false,
+        "coverage": "covered"
       }
     }
   ],

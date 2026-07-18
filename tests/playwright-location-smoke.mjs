@@ -100,7 +100,8 @@ async function runPrimaryCase(browser, browserName, scenario) {
     assert.ok(new Set(firstRoadDistances).size >= 15, `${browserName}: nearby food distances collapsed onto repeated values`);
     const candidates = page.locator('.catalog-card:visible[data-routing-eligible="false"]');
     assert.ok(await candidates.count() >= 15, `${browserName}: unresolved places should remain visible`);
-    assert.equal(await candidates.locator('.catalog-distance').count(), 0, `${browserName}: unresolved places must not display fake distances`);
+    assert.equal(await candidates.locator('.catalog-distance').count(), await candidates.count(), `${browserName}: every unresolved place must retain its honest sector distance`);
+    assert.equal(await candidates.locator('[data-road-distance-note]').count(), await candidates.count(), `${browserName}: sector distances need an explicit qualifier`);
   }
 
   if (scenario.kind === 'guide') {

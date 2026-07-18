@@ -33,8 +33,10 @@ La red vial `data/driving-network.json` se calcula desde OpenStreetMap y se
 resuelve íntegramente en el navegador, sin enviar la posición a un router
 externo. El perfil v2 respeta sentidos y restricciones de automóvil, evita
 caminos intransitables y penaliza huellas, estacionamientos y accesos de
-servicio. Las fichas sin coordenada exacta permanecen visibles por nombre y
-sector, pero no muestran kilómetros ni participan en el orden por cercanía.
+servicio. Cada ficha publicada conserva una distancia desde el departamento:
+vial cuando existe ruta, en línea recta para un punto cartografiado o hasta el
+sector cuando la entrada exacta sigue pendiente. Los senderos usan un inicio
+verificado y nunca la cumbre o el refugio como supuesto punto de partida.
 
 Para regenerar catálogo, red y reporte:
 
@@ -44,6 +46,10 @@ npm run sync:driving
 npm run report:destination
 npm test
 ```
+
+Si la topología vial ya está vigente y sólo cambiaron fichas o accesos,
+`npm run sync:distances` vuelve a enlazar y medir todos los destinos sobre el
+grafo validado sin descargar otra vez OpenStreetMap.
 
 `sync:driving` falla sin sobrescribir el artefacto sano si Overpass entrega una
 respuesta parcial, cae bajo los pisos de cobertura o pierde más del 25% del
