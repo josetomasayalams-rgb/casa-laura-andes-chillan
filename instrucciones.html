@@ -10,7 +10,7 @@
  <link rel="preload" as="image" type="image/webp" media="(min-width: 720px)" fetchpriority="high" href="css/bg/winter/instrucciones-termas-nieve.webp?v=2">
  <script>(function(){var t="";try{t=localStorage.getItem("gh-theme-v3")||""}catch(e){}if(t!=="light"&&t!=="dark"){t="dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
   <script>(function(){var c=new URLSearchParams(location.search).get("condition");if(c==="a"||c==="b")document.documentElement.setAttribute("data-study-condition",c)})();</script>
-<link rel="stylesheet" href="css/styles.css?v=25">
+<link rel="stylesheet" href="css/styles.css?v=26">
  <link rel="stylesheet" href="css/section-palettes.css?v=5">
  <link rel="stylesheet" href="css/access.css?v=4">
 </head>
@@ -19,13 +19,38 @@
 
   <header class="header">
    <a href="index.html" class="btn-back" data-i18n-aria="common.back" aria-label="Volver">←</a>
-   <h2 style="margin:0" data-i18n="nav.info.t">Manual</h2>
+   <h1 class="manual-page-title" data-i18n="nav.info.t">Manual</h1>
   </header>
   <div class="lang-selector" role="group" data-i18n-aria="lang.selector" aria-label="Idioma">
    <button type="button" data-lang="es" aria-pressed="true">ES</button>
    <button type="button" data-lang="pt" aria-pressed="false">PT</button>
    <button type="button" data-lang="en" aria-pressed="false">EN</button>
   </div>
+
+  <section class="manual-intro" aria-labelledby="manual-intro-title">
+   <span class="manual-eyebrow" data-i18n="manual.intro.eyebrow">Guía de la estadía</span>
+   <h2 id="manual-intro-title" data-i18n="manual.intro.title">Todo claro, para disfrutar tranquilo</h2>
+   <p data-i18n="manual.intro.body">Encuentra aquí las instrucciones del departamento y las normas que nos ayudan a cuidar CordalSur y convivir bien con los vecinos.</p>
+  </section>
+
+  <nav class="manual-jump-nav" data-i18n-aria="manual.jump.aria" aria-label="Secciones del manual">
+   <a href="#wifi">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><path d="M12 20h.01"/></svg>
+    <span data-i18n="manual.jump.wifi">Wi-Fi</span>
+   </a>
+   <a href="#calefaccion">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V5a4 4 0 0 0-8 0v9.76a6 6 0 1 0 8 0Z"/><path d="M10 11v6"/></svg>
+    <span data-i18n="manual.jump.heating">Calefacción</span>
+   </a>
+   <a href="#normas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    <span data-i18n="manual.jump.rules">Reglamento</span>
+   </a>
+   <a href="#llaves">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m12 12 8.5-8.5M15 9l3 3M18 6l3 3"/></svg>
+    <span data-i18n="manual.jump.keys">Llave del locker</span>
+   </a>
+  </nav>
 
   <section class="wifi-card" id="wifi" data-i18n-aria="wifi.card.aria" aria-label="Wi-Fi del alojamiento">
    <div class="wifi-card__heading">
@@ -52,23 +77,155 @@
    <p class="wifi-card__status" data-wifi-status role="status" aria-live="polite"></p>
   </section>
 
-  <!-- FAQ accordion — calefacción y normas. Native <details>. -->
-  <h3 class="section-title" data-i18n="info.faq.t">Preguntas frecuentes</h3>
-  <div class="accordion mb-4">
-   <details>
-    <summary data-i18n="info.q2">[cargado vía i18n]</summary>
-    <div class="body" data-i18n="info.a2">[cargado vía i18n]</div>
-   </details>
-   <details>
-    <summary data-i18n="info.q3">[cargado vía i18n]</summary>
-    <div class="body" data-i18n="info.a3">[cargado vía i18n]</div>
-   </details>
-  </div>
+  <section class="thermostat-guide" id="calefaccion" aria-labelledby="thermostat-title">
+   <div class="manual-section-heading">
+    <span class="manual-eyebrow" data-i18n="manual.thermostat.eyebrow">Calefacción</span>
+    <h2 id="thermostat-title" data-i18n="manual.thermostat.title">El termostato tiene una pequeña maña</h2>
+    <p data-i18n="manual.thermostat.intro">Una vez que la conoces, es muy simple. Sigue este ciclo para mantener el departamento a gusto.</p>
+   </div>
+   <ol class="thermostat-steps">
+    <li data-thermostat-step="set">
+     <span class="thermostat-steps__number" aria-hidden="true">1</span>
+     <div><h3 data-i18n="manual.thermostat.step.set.title">Elige la temperatura</h3><p data-i18n="manual.thermostat.step.set.body">Comienza en 21 °C y dale unos minutos para trabajar.</p></div>
+    </li>
+    <li data-thermostat-step="reach">
+     <span class="thermostat-steps__number" aria-hidden="true">2</span>
+     <div><h3 data-i18n="manual.thermostat.step.reach.title">Deja que llegue a la meta</h3><p data-i18n="manual.thermostat.step.reach.body">La calefacción funciona hasta alcanzar la temperatura que elegiste.</p></div>
+    </li>
+    <li data-thermostat-step="reset">
+     <span class="thermostat-steps__number" aria-hidden="true">3</span>
+     <div><h3 data-i18n="manual.thermostat.step.reset.title">El sensor se reinicia</h3><p data-i18n="manual.thermostat.step.reset.body">Al llegar a la temperatura fijada, el sensor se reinicia y ese ciclo se detiene. Es normal.</p></div>
+    </li>
+    <li data-thermostat-step="raise">
+     <span class="thermostat-steps__number" aria-hidden="true">4</span>
+     <div><h3 data-i18n="manual.thermostat.step.raise.title">Si quieres más calor, vuelve a subirlo</h3><p data-i18n="manual.thermostat.step.raise.body">Sube el ajuste 1 o 2 °C para iniciar un nuevo ciclo. Repítelo cada vez que se reinicie y todavía quieras más calor.</p></div>
+    </li>
+   </ol>
+   <div class="thermostat-decision" data-i18n-aria="manual.thermostat.decision.aria" aria-label="Ayuda para decidir el próximo ajuste del termostato">
+    <div>
+     <h3 data-i18n="manual.thermostat.decision.title">¿Ya estás a gusto?</h3>
+     <p data-i18n="manual.thermostat.decision.body">Elige una opción y te recordamos qué hacer.</p>
+    </div>
+    <div class="thermostat-decision__choices">
+     <button type="button" data-thermostat-choice="comfortable" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+      <span data-i18n="manual.thermostat.choice.comfortable">Sí, está perfecto</span>
+     </button>
+     <button type="button" data-thermostat-choice="warmer" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      <span data-i18n="manual.thermostat.choice.warmer">Quiero un poco más de calor</span>
+     </button>
+    </div>
+    <p class="thermostat-decision__answer" data-thermostat-answer data-answer-key="manual.thermostat.answer.idle" role="status" aria-live="polite" data-i18n="manual.thermostat.answer.idle">Cuando el sensor se reinicie, decide según cómo se sienta el ambiente.</p>
+   </div>
+  </section>
 
-  <!-- Emergency card — real generic sub-copy; action phone is TODO(host) -->
+  <aside class="locker-notice" id="llaves" aria-labelledby="locker-notice-title">
+   <div class="locker-notice__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m12 12 8.5-8.5M15 9l3 3M18 6l3 3"/></svg>
+   </div>
+   <div class="locker-notice__copy">
+    <span class="manual-eyebrow" data-i18n="manual.locker.eyebrow">Importante</span>
+    <h2 id="locker-notice-title" data-i18n="manual.locker.title">Cuida la llave del locker 23</h2>
+    <p data-i18n="manual.locker.body">La entregamos junto con las llaves de la estadía. Devuélvela según las indicaciones de Check-out para evitar una reposición.</p>
+   </div>
+   <div class="locker-notice__fee">
+    <span data-i18n="manual.locker.fee.label">Pérdida de la llave · cargo de reposición</span>
+    <strong data-fee-clp="20000" data-i18n="manual.locker.fee.value">$20.000 CLP</strong>
+   </div>
+  </aside>
+
+  <section class="manual-rules" id="normas" aria-labelledby="manual-rules-title">
+   <div class="manual-section-heading">
+    <span class="manual-eyebrow" data-i18n="manual.rules.eyebrow">Convivencia y cuidado</span>
+    <h2 id="manual-rules-title" data-i18n="manual.rules.title">Reglamento de la estadía</h2>
+    <p data-i18n="manual.rules.intro">Son reglas simples para cuidar el departamento, el edificio y la tranquilidad de todos. Puedes filtrarlas por tema o abrirlas completas.</p>
+   </div>
+
+   <div class="manual-essentials" role="list" data-i18n-aria="manual.quick.aria" aria-label="Reglas esenciales">
+    <div role="listitem"><strong data-i18n="manual.quick.guests.value">Máximo 7</strong><span data-i18n="manual.quick.guests.detail">Solo huéspedes de la reserva</span></div>
+    <div role="listitem"><strong data-i18n="manual.quick.quiet.value">Desde las 22:00</strong><span data-i18n="manual.quick.quiet.detail">Respeta el descanso</span></div>
+    <div role="listitem"><strong data-i18n="manual.quick.smoking.value">Solo en terraza</strong><span data-i18n="manual.quick.smoking.detail">No fumar en el interior</span></div>
+    <div role="listitem"><strong data-i18n="manual.locker.fee.value">$20.000 CLP</strong><span data-i18n="manual.locker.fee.label">Pérdida de la llave · cargo de reposición</span></div>
+   </div>
+
+   <div class="manual-rule-toolbar">
+    <div class="manual-rule-filters" role="group" data-i18n-aria="manual.rules.filters.aria" aria-label="Filtrar reglas por tema">
+     <button type="button" data-rule-filter="all" aria-controls="manual-rule-list" aria-pressed="true" data-i18n="manual.rules.filter.all">Todas</button>
+     <button type="button" data-rule-filter="arrival" aria-controls="manual-rule-list" aria-pressed="false" data-i18n="manual.rules.filter.arrival">Llegada y acceso</button>
+     <button type="button" data-rule-filter="coexistence" aria-controls="manual-rule-list" aria-pressed="false" data-i18n="manual.rules.filter.coexistence">Convivencia</button>
+     <button type="button" data-rule-filter="care" aria-controls="manual-rule-list" aria-pressed="false" data-i18n="manual.rules.filter.care">Cuidado</button>
+     <button type="button" data-rule-filter="responsibility" aria-controls="manual-rule-list" aria-pressed="false" data-i18n="manual.rules.filter.responsibility">Responsabilidad</button>
+    </div>
+    <div class="manual-rule-actions" role="group" data-i18n-aria="manual.rules.actions.aria" aria-label="Acciones del reglamento">
+     <button type="button" data-rules-expand aria-controls="manual-rule-list"><span aria-hidden="true">+</span><span data-i18n="manual.rules.expand">Abrir visibles</span></button>
+     <button type="button" data-rules-collapse aria-controls="manual-rule-list"><span aria-hidden="true">−</span><span data-i18n="manual.rules.collapse">Cerrar todas</span></button>
+    </div>
+   </div>
+   <p class="manual-rule-count" data-rule-count role="status" aria-live="polite">13 de 13 reglas</p>
+
+   <div class="manual-rule-list" id="manual-rule-list">
+    <details class="manual-rule" id="regla-arrival-departure" data-manual-rule="arrival-departure" data-rule-category="arrival">
+     <summary><span class="manual-rule__number" aria-hidden="true">01</span><span data-i18n="manual.rule.arrival-departure.title">Check-in y Check-out</span></summary>
+     <div class="manual-rule__body">
+      <p data-i18n="manual.rule.arrival-departure.body">Los horarios exactos están en las pantallas de Check-in y Check-out. Cualquier ingreso anticipado o salida tardía debe solicitarse y depende de disponibilidad. Al partir, deja el espacio ordenado, cierra puertas y ventanas, apaga luces, calefacción y artefactos eléctricos, y entrega las llaves como se indicó.</p>
+      <div class="manual-rule__links"><a href="check-in.html" data-i18n="manual.rule.arrival-departure.checkin">Ver Check-in</a><a href="check-out.html" data-i18n="manual.rule.arrival-departure.checkout">Ver Check-out</a></div>
+     </div>
+    </details>
+    <details class="manual-rule" id="regla-guests" data-manual-rule="guests" data-rule-category="coexistence">
+     <summary><span class="manual-rule__number" aria-hidden="true">02</span><span data-i18n="manual.rule.guests.title">Número de huéspedes</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.guests.body">Solo pueden entrar y alojarse las personas incluidas en la reserva. La capacidad máxima del departamento es de 7 personas.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-quiet-parties" data-manual-rule="quiet-parties" data-rule-category="coexistence">
+     <summary><span class="manual-rule__number" aria-hidden="true">03</span><span data-i18n="manual.rule.quiet-parties.title">Convivencia, fiestas y ruidos</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.quiet-parties.body">No se permiten fiestas. Evita música alta, gritos, parlantes excesivos y molestias en el departamento, terraza, pasillos o áreas comunes; respeta el descanso desde las 22:00. Reclamos justificados pueden terminar anticipadamente la estadía y generar cobros por daños o multas del edificio.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-lodging-use" data-manual-rule="lodging-use" data-rule-category="coexistence">
+     <summary><span class="manual-rule__number" aria-hidden="true">04</span><span data-i18n="manual.rule.lodging-use.title">Uso del alojamiento</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.lodging-use.body">El departamento se ofrece exclusivamente para alojamiento habitacional y turístico. No puede usarse para actividades comerciales, eventos ni otros fines.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-cleaning-trash" data-manual-rule="cleaning-trash" data-rule-category="care">
+     <summary><span class="manual-rule__number" aria-hidden="true">05</span><span data-i18n="manual.rule.cleaning-trash.title">Limpieza y basura</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.cleaning-trash.body">Mantén un nivel razonable de orden y limpieza. Deposita la basura en bolsas cerradas en el ducto del edificio y separa vidrio, plástico y papel en los contenedores señalados. Al salir, deja los platos limpios.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-smoking" data-manual-rule="smoking" data-rule-category="coexistence">
+     <summary><span class="manual-rule__number" aria-hidden="true">06</span><span data-i18n="manual.rule.smoking.title">Fumar</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.smoking.body">Está prohibido fumar dentro del departamento. La terraza es el único lugar autorizado: apaga y elimina bien las colillas, sin arrojarlas al exterior, jardines, áreas comunes ni terrazas vecinas. Olores persistentes, quemaduras, cenizas o daños pueden generar cobros de limpieza o reparación.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-textiles" data-manual-rule="textiles" data-rule-category="care">
+     <summary><span class="manual-rule__number" aria-hidden="true">07</span><span data-i18n="manual.rule.textiles.title">Toallas, ropa de cama y textiles</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.textiles.body">Usa las toallas de baño solo para secarte. No las uses para maquillaje, zapatos, pisos, cocina, barro ni superficies. Manchas permanentes, daños o pérdida de toallas, sábanas, cubrecamas u otros textiles pueden generar cobros de limpieza especial o reposición.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-locker-key" data-manual-rule="locker-key" data-rule-category="arrival">
+     <summary><span class="manual-rule__number" aria-hidden="true">08</span><span data-i18n="manual.rule.locker-key.title">Seguridad y llave del locker</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.locker-key.body">Mantén segura la llave del locker 23 y devuélvela junto con los demás accesos. Si se pierde, se cobra la reposición de la llave, el cambio de cerradura y la gestión asociada.</p><p class="manual-rule__fee"><span data-i18n="manual.locker.fee.label">Pérdida de la llave · cargo de reposición</span><strong data-i18n="manual.locker.fee.value">$20.000 CLP</strong></p></div>
+    </details>
+    <details class="manual-rule" id="regla-parking" data-manual-rule="parking" data-rule-category="arrival">
+     <summary><span class="manual-rule__number" aria-hidden="true">09</span><span data-i18n="manual.rule.parking.title">Estacionamiento</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.parking.body">Usa únicamente el estacionamiento subterráneo asignado DEPTO-34. Las multas, reclamos o problemas causados por ocupar otro espacio son responsabilidad del huésped.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-common-areas" data-manual-rule="common-areas" data-rule-category="arrival">
+     <summary><span class="manual-rule__number" aria-hidden="true">10</span><span data-i18n="manual.rule.common-areas.title">Áreas comunes y reglamento del edificio</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.common-areas.body">El uso de áreas comunes depende de las reglas, horarios y disponibilidad del edificio. El huésped responde por multas, daños o sanciones causados por sí mismo, sus acompañantes o cualquier persona asociada a la reserva.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-damage-loss" data-manual-rule="damage-loss" data-rule-category="care">
+     <summary><span class="manual-rule__number" aria-hidden="true">11</span><span data-i18n="manual.rule.damage-loss.title">Daños, pérdidas y objetos faltantes</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.damage-loss.body">Avísanos de inmediato si ocurre una rotura, mancha, pérdida, mal uso o desperfecto. El huésped responde por reparaciones, limpieza especial, reposiciones, multas del edificio y otros costos originados por el incumplimiento.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-personal-items" data-manual-rule="personal-items" data-rule-category="responsibility">
+     <summary><span class="manual-rule__number" aria-hidden="true">12</span><span data-i18n="manual.rule.personal-items.title">Objetos personales</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.personal-items.body">El anfitrión no se responsabiliza por pertenencias olvidadas, perdidas o dañadas. Si encontramos algo, coordinaremos su devolución; el envío o transporte es pagado por el huésped.</p></div>
+    </details>
+    <details class="manual-rule" id="regla-noncompliance" data-manual-rule="noncompliance" data-rule-category="responsibility">
+     <summary><span class="manual-rule__number" aria-hidden="true">13</span><span data-i18n="manual.rule.noncompliance.title">Incumplimiento del reglamento</span></summary>
+     <div class="manual-rule__body"><p data-i18n="manual.rule.noncompliance.body">Según la gravedad, el incumplimiento puede generar cobros adicionales, término anticipado de la estadía, reparación de daños, multas u otras acciones. Al confirmar la reserva, el huésped declara conocer y aceptar este reglamento.</p></div>
+    </details>
+   </div>
+  </section>
+
   <div class="emergency-card">
    <div class="card-header">
-    <div class="icon-box bg-copper">⚠️</div>
+    <div class="icon-box bg-copper" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 2.9 1.8 17a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 2.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
     <div>
      <h3 data-i18n="emergency.title">Emergencias</h3>
      <p style="margin:0;font-size:0.9rem" data-i18n="emergency.sub">[cargado vía i18n]</p>
@@ -78,9 +235,9 @@
   </div>
 
  </div>
-<script src="js/lang.js?v=15"></script>
+<script src="js/lang.js?v=16"></script>
  <script src="js/access.js?v=4" data-api-base="https://cordal-sur-access.josetomasayalams.workers.dev"></script>
- <script src="js/manual.js?v=1"></script>
+ <script src="js/manual.js?v=2"></script>
 <script src="js/theme.js?v=10"></script>
  <script src="js/study-condition.js?v=1"></script>
 </body>

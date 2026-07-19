@@ -28,9 +28,9 @@ for (const file of expectedPages) {
   const html = read(file);
   if (!/<title>[^<]*CordalSur[^<]*<\/title>/i.test(html)) fail(`${file}: static title must contain CordalSur`);
   if (!/<html\b[^>]*data-i18n-title="page\.[^"]+"/i.test(html)) fail(`${file}: <html> needs a localized page.* title key`);
-  if (!html.includes('js/lang.js?v=15')) fail(`${file}: localized copy must use the current cache version`);
+  if (!html.includes('js/lang.js?v=16')) fail(`${file}: localized copy must use the current cache version`);
   if (!html.includes('js/theme.js?v=10')) fail(`${file}: theme control must use the current cache version`);
-  if (!html.includes('css/styles.css?v=25')) fail(`${file}: shared sensory brand styles are stale`);
+  if (!html.includes('css/styles.css?v=26')) fail(`${file}: shared sensory brand styles are stale`);
   if (!html.includes("document.documentElement.classList.add('access-pending')") ||
       !html.includes('css/access.css?v=4') || !html.includes('js/access.js?v=4')) {
     fail(`${file}: guest gate must load before protected content is shown`);
@@ -234,7 +234,7 @@ if (!index.includes('href="instrucciones.html#wifi"') || !index.includes('quick-
   fail('home must expose the Wi-Fi and Instagram quick-access tiles after Check-in');
 }
 if (!manual.includes('id="wifi"') || !manual.includes('data-wifi-copy') ||
-    !manual.includes('js/manual.js?v=1') || !manual.includes('data-i18n="wifi.password.value"')) {
+    !manual.includes('js/manual.js?v=2') || !manual.includes('data-i18n="wifi.password.value"')) {
   fail('Manual must expose the translated Wi-Fi card and copy action');
 }
 if (manual.includes('data-i18n="info.q1"') || manual.includes('data-i18n="info.a1"')) {
@@ -303,7 +303,7 @@ if (!accessScript.includes('async function restoreGuestSession()') ||
   fail('administrator access must revalidate after history restores and safely fall back to a valid guest session');
 }
 if (!adminScript.includes('href="index.html"') || !adminScript.includes("t('admin.enterSite')") ||
-    !adminHtml.includes('js/lang.js?v=15') || !adminHtml.includes('js/admin.js?v=4')) {
+    !adminHtml.includes('js/lang.js?v=16') || !adminHtml.includes('js/admin.js?v=4')) {
   fail('Administration must expose the localized same-tab platform entry action');
 }
 const enterSiteCopy = hostData.scalar?.['admin.enterSite'];

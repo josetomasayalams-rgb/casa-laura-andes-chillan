@@ -930,9 +930,9 @@
       "en": "How does the heating work?"
     },
     "info.a2": {
-      "es": "Usa el termostato del living para ajustar la temperatura. Recomendamos mantener 21 °C para un calor parejo durante todo el día.",
-      "pt": "Use o termostato da sala para ajustar a temperatura. Recomendamos manter 21 °C para um calor uniforme durante todo o dia.",
-      "en": "Use the living-room thermostat to adjust the temperature. We recommend keeping it at 21 °C for even warmth throughout the day."
+      "es": "Parte ajustando el termostato del living a 21 °C. Cuando alcanza la temperatura elegida, el sensor se reinicia; si todavía quieres más calor, vuelve a subir el ajuste 1 o 2 °C para iniciar otro ciclo.",
+      "pt": "Comece ajustando o termostato da sala para 21 °C. Quando ele atinge a temperatura escolhida, o sensor reinicia; se você ainda quiser mais calor, aumente novamente o ajuste em 1 ou 2 °C para iniciar outro ciclo.",
+      "en": "Start by setting the living-room thermostat to 21 °C. When it reaches the selected temperature, the sensor resets; if you would still like more heat, raise the setting by 1 or 2 °C to start another cycle."
     },
     "info.q3": {
       "es": "¿Cuáles son las reglas de la casa y el reciclaje?",
@@ -943,6 +943,406 @@
       "es": "No fumar dentro, respeta el descanso tras las 22:00 y apaga luces y calefacción al salir. Separa vidrio, plástico y papel en los contenedores señalados.",
       "pt": "Não fume dentro, respeite o horário de silêncio após as 22h e desligue as luzes e o aquecimento ao sair. Separe vidro, plástico e papel nos recipientes indicados.",
       "en": "Do not smoke indoors, respect quiet hours after 10:00 p.m., and turn off the lights and heating when you leave. Separate glass, plastic, and paper in the marked bins."
+    },
+    "manual.jump.aria": {
+      "es": "Secciones del manual",
+      "pt": "Seções do manual",
+      "en": "Manual sections"
+    },
+    "manual.jump.wifi": {
+      "es": "Wi-Fi",
+      "pt": "Wi-Fi",
+      "en": "Wi-Fi"
+    },
+    "manual.jump.heating": {
+      "es": "Calefacción",
+      "pt": "Aquecimento",
+      "en": "Heating"
+    },
+    "manual.jump.rules": {
+      "es": "Reglamento",
+      "pt": "Regras",
+      "en": "House rules"
+    },
+    "manual.jump.keys": {
+      "es": "Llave del locker",
+      "pt": "Chave do armário",
+      "en": "Locker key"
+    },
+    "manual.intro.eyebrow": {
+      "es": "Guía de la estadía",
+      "pt": "Guia da estadia",
+      "en": "Stay guide"
+    },
+    "manual.intro.title": {
+      "es": "Todo claro, para disfrutar tranquilo",
+      "pt": "Tudo claro para aproveitar com tranquilidade",
+      "en": "Everything clear, so you can relax"
+    },
+    "manual.intro.body": {
+      "es": "Encuentra aquí las instrucciones del departamento y las normas que nos ayudan a cuidar CordalSur y convivir bien con los vecinos.",
+      "pt": "Encontre aqui as instruções do apartamento e as regras que nos ajudam a cuidar da CordalSur e a conviver bem com os vizinhos.",
+      "en": "Find the apartment instructions and the rules that help us care for CordalSur and be considerate of our neighbours."
+    },
+    "manual.thermostat.eyebrow": {
+      "es": "Calefacción",
+      "pt": "Aquecimento",
+      "en": "Heating"
+    },
+    "manual.thermostat.title": {
+      "es": "El termostato tiene una pequeña maña",
+      "pt": "O termostato tem um pequeno truque",
+      "en": "The thermostat has one small quirk"
+    },
+    "manual.thermostat.intro": {
+      "es": "Una vez que la conoces, es muy simple. Sigue este ciclo para mantener el departamento a gusto.",
+      "pt": "Depois que você entende, é bem simples. Siga este ciclo para manter o apartamento confortável.",
+      "en": "Once you know it, it is very simple. Follow this cycle to keep the apartment comfortable."
+    },
+    "manual.thermostat.step.set.title": {
+      "es": "Elige la temperatura",
+      "pt": "Escolha a temperatura",
+      "en": "Choose the temperature"
+    },
+    "manual.thermostat.step.set.body": {
+      "es": "Comienza en 21 °C y dale unos minutos para trabajar.",
+      "pt": "Comece em 21 °C e aguarde alguns minutos para que funcione.",
+      "en": "Start at 21 °C and give it a few minutes to work."
+    },
+    "manual.thermostat.step.reach.title": {
+      "es": "Deja que llegue a la meta",
+      "pt": "Deixe chegar à temperatura",
+      "en": "Let it reach the target"
+    },
+    "manual.thermostat.step.reach.body": {
+      "es": "La calefacción funciona hasta alcanzar la temperatura que elegiste.",
+      "pt": "O aquecimento funciona até atingir a temperatura escolhida.",
+      "en": "The heating runs until it reaches the temperature you selected."
+    },
+    "manual.thermostat.step.reset.title": {
+      "es": "El sensor se reinicia",
+      "pt": "O sensor reinicia",
+      "en": "The sensor resets"
+    },
+    "manual.thermostat.step.reset.body": {
+      "es": "Al llegar a la temperatura fijada, el sensor se reinicia y ese ciclo se detiene. Es normal.",
+      "pt": "Ao chegar à temperatura definida, o sensor reinicia e esse ciclo para. Isso é normal.",
+      "en": "When the set temperature is reached, the sensor resets and that cycle stops. This is normal."
+    },
+    "manual.thermostat.step.raise.title": {
+      "es": "Si quieres más calor, vuelve a subirlo",
+      "pt": "Se quiser mais calor, aumente novamente",
+      "en": "For more heat, raise it again"
+    },
+    "manual.thermostat.step.raise.body": {
+      "es": "Sube el ajuste 1 o 2 °C para iniciar un nuevo ciclo. Repítelo cada vez que se reinicie y todavía quieras más calor.",
+      "pt": "Aumente o ajuste em 1 ou 2 °C para iniciar um novo ciclo. Repita sempre que reiniciar e você ainda quiser mais calor.",
+      "en": "Raise the setting by 1 or 2 °C to start a new cycle. Repeat whenever it resets and you would still like more heat."
+    },
+    "manual.thermostat.decision.title": {
+      "es": "¿Ya estás a gusto?",
+      "pt": "Já está confortável?",
+      "en": "Are you comfortable now?"
+    },
+    "manual.thermostat.decision.body": {
+      "es": "Elige una opción y te recordamos qué hacer.",
+      "pt": "Escolha uma opção e nós lembramos o que fazer.",
+      "en": "Choose an option for a quick reminder."
+    },
+    "manual.thermostat.choice.comfortable": {
+      "es": "Sí, está perfecto",
+      "pt": "Sim, está perfeito",
+      "en": "Yes, it is perfect"
+    },
+    "manual.thermostat.choice.warmer": {
+      "es": "Quiero un poco más de calor",
+      "pt": "Quero um pouco mais de calor",
+      "en": "I would like a little more heat"
+    },
+    "manual.thermostat.answer.idle": {
+      "es": "Cuando el sensor se reinicie, decide según cómo se sienta el ambiente.",
+      "pt": "Quando o sensor reiniciar, decida de acordo com a temperatura do ambiente.",
+      "en": "When the sensor resets, decide based on how the room feels."
+    },
+    "manual.thermostat.answer.comfortable": {
+      "es": "Perfecto. No necesitas tocar nada: deja el termostato en ese ajuste.",
+      "pt": "Perfeito. Não é preciso mexer em nada: deixe o termostato nesse ajuste.",
+      "en": "Perfect. You do not need to change anything: leave the thermostat at that setting."
+    },
+    "manual.thermostat.answer.warmer": {
+      "es": "Sube el ajuste 1 o 2 °C para iniciar otro ciclo. Luego vuelve a evaluar cómo se siente.",
+      "pt": "Aumente o ajuste em 1 ou 2 °C para iniciar outro ciclo. Depois, avalie novamente a temperatura do ambiente.",
+      "en": "Raise the setting by 1 or 2 °C to start another cycle, then check how the room feels again."
+    },
+    "manual.thermostat.decision.aria": {
+      "es": "Ayuda para decidir el próximo ajuste del termostato",
+      "pt": "Ajuda para decidir o próximo ajuste do termostato",
+      "en": "Help choosing the thermostat's next setting"
+    },
+    "manual.locker.eyebrow": {
+      "es": "Importante",
+      "pt": "Importante",
+      "en": "Important"
+    },
+    "manual.locker.title": {
+      "es": "Cuida la llave del locker 23",
+      "pt": "Cuide da chave do armário 23",
+      "en": "Please look after the key to locker 23"
+    },
+    "manual.locker.body": {
+      "es": "La entregamos junto con las llaves de la estadía. Devuélvela según las indicaciones de Check-out para evitar una reposición.",
+      "pt": "Ela é entregue junto com as chaves da estadia. Devolva-a conforme as instruções de Check-out para evitar uma reposição.",
+      "en": "It is provided with the stay keys. Return it as instructed at Check-out to avoid a replacement charge."
+    },
+    "manual.locker.fee.label": {
+      "es": "Pérdida de la llave · cargo de reposición",
+      "pt": "Perda da chave · taxa de reposição",
+      "en": "Lost key · replacement charge"
+    },
+    "manual.locker.fee.value": {
+      "es": "$20.000 CLP",
+      "pt": "CLP 20.000",
+      "en": "CLP 20,000"
+    },
+    "manual.quick.aria": {
+      "es": "Reglas esenciales",
+      "pt": "Regras essenciais",
+      "en": "Essential rules"
+    },
+    "manual.quick.guests.value": {
+      "es": "Máximo 7",
+      "pt": "Máximo 7",
+      "en": "Maximum 7"
+    },
+    "manual.quick.guests.detail": {
+      "es": "Solo huéspedes de la reserva",
+      "pt": "Somente hóspedes da reserva",
+      "en": "Registered guests only"
+    },
+    "manual.quick.quiet.value": {
+      "es": "Desde las 22:00",
+      "pt": "A partir das 22h",
+      "en": "From 10:00 p.m."
+    },
+    "manual.quick.quiet.detail": {
+      "es": "Respeta el descanso",
+      "pt": "Respeite o descanso",
+      "en": "Please keep noise down"
+    },
+    "manual.quick.smoking.value": {
+      "es": "Solo en terraza",
+      "pt": "Somente no terraço",
+      "en": "Terrace only"
+    },
+    "manual.quick.smoking.detail": {
+      "es": "No fumar en el interior",
+      "pt": "Não fume no interior",
+      "en": "No smoking indoors"
+    },
+    "manual.rules.eyebrow": {
+      "es": "Convivencia y cuidado",
+      "pt": "Convivência e cuidado",
+      "en": "Consideration and care"
+    },
+    "manual.rules.title": {
+      "es": "Reglamento de la estadía",
+      "pt": "Regras da estadia",
+      "en": "House rules"
+    },
+    "manual.rules.intro": {
+      "es": "Son reglas simples para cuidar el departamento, el edificio y la tranquilidad de todos. Puedes filtrarlas por tema o abrirlas completas.",
+      "pt": "São regras simples para cuidar do apartamento, do edifício e da tranquilidade de todos. Você pode filtrar por tema ou abrir todas.",
+      "en": "These simple rules help care for the apartment, the building and everyone's peace and quiet. Filter them by topic or open them all."
+    },
+    "manual.rules.filters.aria": {
+      "es": "Filtrar reglas por tema",
+      "pt": "Filtrar regras por tema",
+      "en": "Filter rules by topic"
+    },
+    "manual.rules.filter.all": {
+      "es": "Todas",
+      "pt": "Todas",
+      "en": "All"
+    },
+    "manual.rules.filter.arrival": {
+      "es": "Llegada y acceso",
+      "pt": "Chegada e acesso",
+      "en": "Arrival and access"
+    },
+    "manual.rules.filter.coexistence": {
+      "es": "Convivencia",
+      "pt": "Convivência",
+      "en": "Consideration"
+    },
+    "manual.rules.filter.care": {
+      "es": "Cuidado",
+      "pt": "Cuidado",
+      "en": "Care"
+    },
+    "manual.rules.filter.responsibility": {
+      "es": "Responsabilidad",
+      "pt": "Responsabilidade",
+      "en": "Responsibility"
+    },
+    "manual.rules.actions.aria": {
+      "es": "Acciones del reglamento",
+      "pt": "Ações das regras",
+      "en": "House rule actions"
+    },
+    "manual.rules.expand": {
+      "es": "Abrir visibles",
+      "pt": "Abrir visíveis",
+      "en": "Open visible rules"
+    },
+    "manual.rules.collapse": {
+      "es": "Cerrar todas",
+      "pt": "Fechar todas",
+      "en": "Close all"
+    },
+    "manual.rules.count": {
+      "es": "{shown} de {total} reglas",
+      "pt": "{shown} de {total} regras",
+      "en": "{shown} of {total} rules"
+    },
+    "manual.rule.arrival-departure.title": {
+      "es": "Check-in y Check-out",
+      "pt": "Check-in e Check-out",
+      "en": "Check-in and Check-out"
+    },
+    "manual.rule.arrival-departure.body": {
+      "es": "Los horarios exactos están en las pantallas de Check-in y Check-out. Cualquier ingreso anticipado o salida tardía debe solicitarse y depende de disponibilidad. Al partir, deja el espacio ordenado, cierra puertas y ventanas, apaga luces, calefacción y artefactos eléctricos, y entrega las llaves como se indicó.",
+      "pt": "Os horários exatos estão nas telas de Check-in e Check-out. Qualquer entrada antecipada ou saída tardia deve ser solicitada e depende de disponibilidade. Ao partir, deixe o espaço organizado, feche portas e janelas, desligue luzes, aquecimento e aparelhos elétricos, e entregue as chaves conforme indicado.",
+      "en": "Exact times are shown on the Check-in and Check-out screens. Early arrival or late departure must be requested and is subject to availability. Before leaving, tidy the space, close doors and windows, turn off lights, heating and electrical items, and return the keys as instructed."
+    },
+    "manual.rule.arrival-departure.checkin": {
+      "es": "Ver Check-in",
+      "pt": "Ver Check-in",
+      "en": "View Check-in"
+    },
+    "manual.rule.arrival-departure.checkout": {
+      "es": "Ver Check-out",
+      "pt": "Ver Check-out",
+      "en": "View Check-out"
+    },
+    "manual.rule.guests.title": {
+      "es": "Número de huéspedes",
+      "pt": "Número de hóspedes",
+      "en": "Number of guests"
+    },
+    "manual.rule.guests.body": {
+      "es": "Solo pueden entrar y alojarse las personas incluidas en la reserva. La capacidad máxima del departamento es de 7 personas.",
+      "pt": "Somente as pessoas incluídas na reserva podem entrar e se hospedar. A capacidade máxima do apartamento é de 7 pessoas.",
+      "en": "Only the people included in the reservation may enter and stay. The apartment's maximum capacity is 7 people."
+    },
+    "manual.rule.quiet-parties.title": {
+      "es": "Convivencia, fiestas y ruidos",
+      "pt": "Convivência, festas e ruídos",
+      "en": "Consideration, parties and noise"
+    },
+    "manual.rule.quiet-parties.body": {
+      "es": "No se permiten fiestas. Evita música alta, gritos, parlantes excesivos y molestias en el departamento, terraza, pasillos o áreas comunes; respeta el descanso desde las 22:00. Reclamos justificados pueden terminar anticipadamente la estadía y generar cobros por daños o multas del edificio.",
+      "pt": "Festas não são permitidas. Evite música alta, gritos, caixas de som em volume excessivo e incômodos no apartamento, terraço, corredores ou áreas comuns; respeite o descanso a partir das 22h. Reclamações justificadas podem encerrar a estadia antecipadamente e gerar cobranças por danos ou multas do edifício.",
+      "en": "Parties are not allowed. Avoid loud music, shouting, excessive speaker volume and disturbances in the apartment, terrace, corridors or common areas; keep noise down after 10:00 p.m. Justified complaints may end the stay early and lead to charges for damage or building fines."
+    },
+    "manual.rule.lodging-use.title": {
+      "es": "Uso del alojamiento",
+      "pt": "Uso da acomodação",
+      "en": "Use of the accommodation"
+    },
+    "manual.rule.lodging-use.body": {
+      "es": "El departamento se ofrece exclusivamente para alojamiento habitacional y turístico. No puede usarse para actividades comerciales, eventos ni otros fines.",
+      "pt": "O apartamento é oferecido exclusivamente para hospedagem residencial e turística. Não pode ser usado para atividades comerciais, eventos ou outros fins.",
+      "en": "The apartment is provided solely for residential and tourist accommodation. It may not be used for commercial activities, events or other purposes."
+    },
+    "manual.rule.cleaning-trash.title": {
+      "es": "Limpieza y basura",
+      "pt": "Limpeza e lixo",
+      "en": "Cleaning and rubbish"
+    },
+    "manual.rule.cleaning-trash.body": {
+      "es": "Mantén un nivel razonable de orden y limpieza. Deposita la basura en bolsas cerradas en el ducto del edificio y separa vidrio, plástico y papel en los contenedores señalados. Al salir, deja los platos limpios.",
+      "pt": "Mantenha um nível razoável de organização e limpeza. Coloque o lixo em sacos fechados no duto do edifício e separe vidro, plástico e papel nos recipientes indicados. Na saída, deixe a louça limpa.",
+      "en": "Keep the apartment reasonably tidy and clean. Put rubbish in closed bags in the building's rubbish chute, and separate glass, plastic and paper in the marked bins. Leave dishes clean at departure."
+    },
+    "manual.rule.smoking.title": {
+      "es": "Fumar",
+      "pt": "Fumar",
+      "en": "Smoking"
+    },
+    "manual.rule.smoking.body": {
+      "es": "Está prohibido fumar dentro del departamento. La terraza es el único lugar autorizado: apaga y elimina bien las colillas, sin arrojarlas al exterior, jardines, áreas comunes ni terrazas vecinas. Olores persistentes, quemaduras, cenizas o daños pueden generar cobros de limpieza o reparación.",
+      "pt": "É proibido fumar dentro do apartamento. O terraço é o único local autorizado: apague e descarte corretamente as pontas de cigarro, sem jogá-las para fora, nos jardins, áreas comuns ou terraços vizinhos. Odores persistentes, queimaduras, cinzas ou danos podem gerar cobranças de limpeza ou reparo.",
+      "en": "Smoking inside the apartment is prohibited. The terrace is the only permitted area: extinguish and dispose of cigarette ends properly, never throwing them outside, into gardens, common areas or neighbouring terraces. Persistent odour, burns, ash or damage may lead to cleaning or repair charges."
+    },
+    "manual.rule.textiles.title": {
+      "es": "Toallas, ropa de cama y textiles",
+      "pt": "Toalhas, roupa de cama e tecidos",
+      "en": "Towels, bed linen and textiles"
+    },
+    "manual.rule.textiles.body": {
+      "es": "Usa las toallas de baño solo para secarte. No las uses para maquillaje, zapatos, pisos, cocina, barro ni superficies. Manchas permanentes, daños o pérdida de toallas, sábanas, cubrecamas u otros textiles pueden generar cobros de limpieza especial o reposición.",
+      "pt": "Use as toalhas de banho somente para se secar. Não as use para maquiagem, sapatos, pisos, cozinha, lama ou superfícies. Manchas permanentes, danos ou perda de toalhas, lençóis, colchas ou outros tecidos podem gerar cobranças de limpeza especial ou reposição.",
+      "en": "Use bath towels only for drying yourself. Do not use them for makeup, shoes, floors, kitchen tasks, mud or surfaces. Permanent stains, damage or loss of towels, sheets, bedspreads or other textiles may lead to special-cleaning or replacement charges."
+    },
+    "manual.rule.locker-key.title": {
+      "es": "Seguridad y llave del locker",
+      "pt": "Segurança e chave do armário",
+      "en": "Security and locker key"
+    },
+    "manual.rule.locker-key.body": {
+      "es": "Mantén segura la llave del locker 23 y devuélvela junto con los demás accesos. Si se pierde, se cobra la reposición de la llave, el cambio de cerradura y la gestión asociada.",
+      "pt": "Mantenha a chave do armário 23 em segurança e devolva-a junto com os demais acessos. Em caso de perda, será cobrada a reposição da chave, a troca da fechadura e a gestão associada.",
+      "en": "Keep the key to locker 23 safe and return it with the other access items. If it is lost, the charge covers key replacement, lock changes and related handling."
+    },
+    "manual.rule.parking.title": {
+      "es": "Estacionamiento",
+      "pt": "Estacionamento",
+      "en": "Parking"
+    },
+    "manual.rule.parking.body": {
+      "es": "Usa únicamente el estacionamiento subterráneo asignado DEPTO-34. Las multas, reclamos o problemas causados por ocupar otro espacio son responsabilidad del huésped.",
+      "pt": "Use somente a vaga subterrânea designada DEPTO-34. Multas, reclamações ou problemas causados pelo uso de outra vaga são de responsabilidade do hóspede.",
+      "en": "Use only the assigned underground parking space, DEPTO-34. Any fines, complaints or issues caused by using another space are the guest's responsibility."
+    },
+    "manual.rule.common-areas.title": {
+      "es": "Áreas comunes y reglamento del edificio",
+      "pt": "Áreas comuns e regras do edifício",
+      "en": "Common areas and building rules"
+    },
+    "manual.rule.common-areas.body": {
+      "es": "El uso de áreas comunes depende de las reglas, horarios y disponibilidad del edificio. El huésped responde por multas, daños o sanciones causados por sí mismo, sus acompañantes o cualquier persona asociada a la reserva.",
+      "pt": "O uso das áreas comuns depende das regras, horários e disponibilidade do edifício. O hóspede responde por multas, danos ou sanções causados por si, seus acompanhantes ou qualquer pessoa associada à reserva.",
+      "en": "Use of common areas is subject to the building's rules, opening times and availability. The guest is responsible for fines, damage or penalties caused by themselves, their companions or anyone associated with the reservation."
+    },
+    "manual.rule.damage-loss.title": {
+      "es": "Daños, pérdidas y objetos faltantes",
+      "pt": "Danos, perdas e itens faltantes",
+      "en": "Damage, loss and missing items"
+    },
+    "manual.rule.damage-loss.body": {
+      "es": "Avísanos de inmediato si ocurre una rotura, mancha, pérdida, mal uso o desperfecto. El huésped responde por reparaciones, limpieza especial, reposiciones, multas del edificio y otros costos originados por el incumplimiento.",
+      "pt": "Avise-nos imediatamente se ocorrer quebra, mancha, perda, uso indevido ou defeito. O hóspede responde por reparos, limpeza especial, reposições, multas do edifício e outros custos causados pelo descumprimento.",
+      "en": "Tell us immediately about any breakage, stain, loss, misuse or defect. The guest is responsible for repairs, special cleaning, replacements, building fines and other costs caused by non-compliance."
+    },
+    "manual.rule.personal-items.title": {
+      "es": "Objetos personales",
+      "pt": "Objetos pessoais",
+      "en": "Personal belongings"
+    },
+    "manual.rule.personal-items.body": {
+      "es": "El anfitrión no se responsabiliza por pertenencias olvidadas, perdidas o dañadas. Si encontramos algo, coordinaremos su devolución; el envío o transporte es pagado por el huésped.",
+      "pt": "O anfitrião não se responsabiliza por pertences esquecidos, perdidos ou danificados. Se encontrarmos algo, coordenaremos a devolução; o envio ou transporte será pago pelo hóspede.",
+      "en": "The host is not responsible for belongings that are forgotten, lost or damaged. If we find something, we will arrange its return; shipping or transport is paid by the guest."
+    },
+    "manual.rule.noncompliance.title": {
+      "es": "Incumplimiento del reglamento",
+      "pt": "Descumprimento das regras",
+      "en": "Failure to follow the rules"
+    },
+    "manual.rule.noncompliance.body": {
+      "es": "Según la gravedad, el incumplimiento puede generar cobros adicionales, término anticipado de la estadía, reparación de daños, multas u otras acciones. Al confirmar la reserva, el huésped declara conocer y aceptar este reglamento.",
+      "pt": "Conforme a gravidade, o descumprimento pode gerar cobranças adicionais, encerramento antecipado da estadia, reparação de danos, multas ou outras medidas. Ao confirmar a reserva, o hóspede declara conhecer e aceitar estas regras.",
+      "en": "Depending on severity, non-compliance may lead to additional charges, early termination of the stay, damage recovery, fines or other action. By confirming the reservation, the guest acknowledges and accepts these rules."
     },
     "act.cta.guia": {
       "es": "Reservar con guía",

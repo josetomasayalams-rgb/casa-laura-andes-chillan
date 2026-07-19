@@ -23,6 +23,8 @@ node tests/verify-study-preregistration.mjs
 
 echo "=== Gate 5: public CordalSur contract ==="
 node tests/verify-public-contract.mjs
+node tests/verify-manual-contract.mjs
+node --test tests/manual-interaction.test.mjs
 node tests/verify-mountain-links.mjs
 node --test tests/verify-ski-prices.mjs
 node tests/verify-access-session.mjs
@@ -98,6 +100,7 @@ check_snapshot js/lang.js data/.baseline/js-lang.js
 check_snapshot js/lang.js data/.baseline/lang.js
 check_snapshot js/catalog-guide.js data/.baseline/js/catalog-guide.js
 check_snapshot js/nearby.js data/.baseline/js/nearby.js
+check_snapshot js/manual.js data/.baseline/js/manual.js
 check_snapshot js/study-condition.js data/.baseline/js/study-condition.js
 check_snapshot staff/README.md data/.baseline/staff/README.md
 echo "  PASS"

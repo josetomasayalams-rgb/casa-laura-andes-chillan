@@ -23,6 +23,8 @@ Las puertas validan:
 - ausencia de atributos accesibles congelados en un solo idioma;
 - contrato público de CordalSur: diez títulos, WhatsApp, Instagram, Wi-Fi,
   assets de marca locales y cinco teléfonos de emergencia;
+- contrato del Manual: 13 reglas exactas en ES/PT/EN, cargo canónico de
+  $20.000 CLP, ciclo del termostato y controles accesibles de filtro/apertura;
 - comportamiento de sesión administrador: entrada a la guía, validación de rol,
   fallback a huésped, expiración en segundo plano y conservación ante cortes de red;
 - fuente canónica estricta `{ es, pt, en }`, sin fallback silencioso;
